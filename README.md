@@ -4,7 +4,20 @@ CAREERGENIE is an AI-powered career intelligence and employability platform desi
 
 The platform brings Resume Building, Resume Analysis, Job Intelligence, Skill Analysis, Company Requirements, AI Exams, Interview Preparation, Mock Interviews, Career Guidance, and Employability Analysis into one integrated platform.
 
----
+
+-------------------------------
+
+🌐 Live Demo
+🚀 CAREERGENIE Live Application
+
+Live Demo:
+
+PASTE_YOUR_RENDER_LINK_HERE
+
+Replace PASTE_YOUR_RENDER_LINK_HERE with your actual Render deployment URL.
+
+-----------------------------------------
+
 
 ## 🎯 Project Overview
 
@@ -658,18 +671,6 @@ Deploy
       ↓
 Live Application
 
-
--------------------------------
-
-🌐 Live Demo
-🚀 CAREERGENIE Live Application
-
-Live Demo:
-
-PASTE_YOUR_RENDER_LINK_HERE
-
-Replace PASTE_YOUR_RENDER_LINK_HERE with your actual Render deployment URL.
-
 -----------------------------------------
 
 ## 📌 GitHub Repository
@@ -754,7 +755,8 @@ Then create a Pull Request on GitHub.
 
 ## 👨‍💻 Author
 SHAIK AHAMMAD BI
-https://github.com/Ahammadbi123
+
+- https://github.com/Ahammadbi123
 
 ---------------------------
 
