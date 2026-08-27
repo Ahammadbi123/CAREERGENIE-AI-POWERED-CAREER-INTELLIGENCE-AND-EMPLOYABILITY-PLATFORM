@@ -412,6 +412,7 @@ CAREERGENIE/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+---------------------------
 
 ## ⚙️ Installation & Setup
 1. Clone the Repository
