@@ -332,7 +332,6 @@ The project also includes a knowledge-based response system for selected technic
 
 # 🏗️ System Workflow
 
-```text
                     ┌──────────────────────┐
                     │        USER          │
                     └──────────┬───────────┘
@@ -377,4 +376,76 @@ The project also includes a knowledge-based response system for selected technic
                     │ Employability    │
                     │ Insights          │
                     └──────────────────┘
-eady GitHub ki vellunte **those keys ni revoke/regenerate cheyyadam safest**.
+---
+
+
+## 🛠️ Technology Stack
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+- Responsive UI
+- Charts and Data Visualization
+
+### Backend
+- Python
+- Flask
+- Flask Blueprints
+- REST APIs
+
+### Artificial Intelligence
+- Google Gemini API
+- Groq API
+- Generative AI
+- AI Text Generation
+- Resume Optimization
+- Interview Question Generation
+- Career Assistance
+- Skill Analysis
+
+### Machine Learning
+- Python
+- Scikit-learn
+- TF-IDF
+- Logistic Regression
+- Natural Language Processing
+- Text Classification
+
+### Database
+- SQLite
+- SQLAlchemy
+
+### Authentication
+- Google OAuth
+- Authlib
+- Session-based Authentication
+
+### External APIs
+- Adzuna API
+- Job Search APIs
+- Career and Skill Datasets
+
+
+## 📁 Project Structure
+
+
+CAREERGENIE/
+│
+├── career_intelligence/
+├── data/
+├── genai_modules/
+├── output/
+├── resume_module/
+├── routes/
+├── routes_genai/
+├── services/
+├── static/
+├── templates/
+├── utils/
+│
+├── app.py
+├── chatbot_logic.py
+├── requirements.txt
+├── .gitignore
+└── README.md
