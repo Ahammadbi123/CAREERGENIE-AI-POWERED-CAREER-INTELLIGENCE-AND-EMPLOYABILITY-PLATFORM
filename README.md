@@ -534,7 +534,7 @@ API keys are loaded through environment variables.
 
 ---------------------
 
-```
+``````text
 
 ## 📄 Resume Optimization Workflow
 
@@ -588,19 +588,19 @@ Interview Readiness
 
 
 ------------------------------------
-
+``` 
 ## 🎓 Target Users
 
 CAREERGENIE is designed for:
 
-1.B.Tech Students
-2.Engineering Students
-3.Freshers
-4.Job Seekers
-5.Internship Seekers
-6.Placement Aspirants
-7.Technical Interview Candidates
-8.Career Switchers
+B.Tech Students
+Engineering Students
+Freshers
+Job Seekers
+Internship Seekers
+Placement Aspirants
+Technical Interview Candidates
+Career Switchers
 
 
 -----------------------------
