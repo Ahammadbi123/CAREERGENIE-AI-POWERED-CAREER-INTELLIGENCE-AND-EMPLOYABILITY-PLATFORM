@@ -764,10 +764,10 @@ SHAIK AHAMMAD BI
 
 If you find CAREERGENIE useful:
 
-⭐ Star the repository
-🍴 Fork the repository
-🐛 Report issues
-💡 Suggest improvements
-🤝 Contribute
+- ⭐ Star the repository
+- 🍴 Fork the repository
+- 🐛 Report issues
+- 💡 Suggest improvements
+- 🤝 Contribute
 
 -------------------
