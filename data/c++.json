@@ -1,0 +1,81 @@
+{
+  "what is c++": {
+    "en": "C++ is an object-oriented programming language developed by Bjarne Stroustrup.",
+    "te": "C++ anedi object-oriented programming language, Bjarne Stroustrup develop chesaru."
+  },
+
+  "features of c++": {
+    "en": "C++ supports object-oriented programming, fast execution, and low-level memory control.",
+    "te": "C++ object-oriented support, fast execution mariyu memory control ivvagaladu."
+  },
+
+  "applications of c++": {
+    "en": "C++ is used in game development, system software, operating systems, and embedded systems.",
+    "te": "C++ games, operating systems, system software mariyu embedded systems lo use chestaru."
+  },
+
+  "data types in c++": {
+    "en": "C++ supports int, float, double, char, bool, and void data types.",
+    "te": "C++ lo int, float, double, char, bool, void data types untayi."
+  },
+
+  "loops in c++": {
+    "en": "C++ supports for loop, while loop, and do-while loop.",
+    "te": "C++ lo for, while, do-while loops untayi."
+  },
+
+  "oops in c++": {
+    "en": "OOPS in C++ includes class, object, inheritance, polymorphism, encapsulation, and abstraction.",
+    "te": "C++ OOPS lo class, object, inheritance, polymorphism, encapsulation, abstraction untayi."
+  },
+
+  "class and object in c++": {
+    "en": "A class is a blueprint, and an object is an instance of a class.",
+    "te": "Class blueprint, object ante class ki instance."
+  },
+
+  "inheritance in c++": {
+    "en": "Inheritance allows a class to acquire properties of another class.",
+    "te": "Inheritance ante oka class inkoka class properties ni inherit cheskovadam."
+  },
+
+  "polymorphism in c++": {
+    "en": "Polymorphism allows functions to behave differently using the same name.",
+    "te": "Polymorphism ante same function name tho different behaviour."
+  },
+
+  "encapsulation in c++": {
+    "en": "Encapsulation binds data and functions together and protects data.",
+    "te": "Encapsulation data ni protect cheyyadaniki help chestundi."
+  },
+
+  "abstraction in c++": {
+    "en": "Abstraction hides implementation details and shows only functionality.",
+    "te": "Abstraction implementation details hide chesi functionality matrame chupistundi."
+  },
+
+  "constructors in c++": {
+    "en": "Constructors are special functions used to initialize objects.",
+    "te": "Constructors objects ni initialize cheyyadaniki use chestaru."
+  },
+
+  "destructors in c++": {
+    "en": "Destructors free memory when an object is destroyed.",
+    "te": "Destructors object destroy ayyaka memory free chestayi."
+  },
+
+  "exception handling in c++": {
+    "en": "C++ uses try, catch, and throw for exception handling.",
+    "te": "C++ lo try, catch, throw exception handling kosam use chestaru."
+  },
+
+  "advantages of c++": {
+    "en": "C++ is fast, powerful, and suitable for system-level programming.",
+    "te": "C++ fast, powerful mariyu system-level programming ki suitable."
+  },
+
+  "c++ vs java": {
+    "en": "C++ supports pointers and manual memory management, Java does not.",
+    "te": "C++ pointers support chestundi, Java lo manual memory management ledu."
+  }
+}

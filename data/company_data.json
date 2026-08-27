@@ -1,0 +1,88 @@
+{
+  "Amazon": {
+    "overview": "Amazon focuses heavily on Data Structures and Algorithms with strong system design basics.",
+    "rounds": ["Online Test", "Technical Interview", "HR Interview"],
+    "technical": ["DSA", "DBMS", "OS", "System Design"],
+    "tips": ["Practice coding daily", "Focus on problem solving"]
+  },
+
+  "Google": {
+    "overview": "Google interviews test strong DSA, problem-solving, and system design skills.",
+    "rounds": ["Coding Round", "Technical Interview", "Hiring Committee"],
+    "technical": ["Graphs", "DP", "System Design"],
+    "tips": ["Solve Leetcode hard problems", "Focus on optimization"]
+  },
+
+  "Microsoft": {
+    "overview": "Microsoft focuses on DSA, problem-solving and core subjects.",
+    "rounds": ["Online Test", "Technical Interview", "HR"],
+    "technical": ["Arrays", "Trees", "OS", "DBMS"],
+    "tips": ["Practice coding", "Revise CS fundamentals"]
+  },
+
+  "Adobe": {
+    "overview": "Adobe asks medium to high-level DSA and problem-solving questions.",
+    "rounds": ["Online Test", "Technical Round", "HR"],
+    "technical": ["DP", "Strings", "Trees"],
+    "tips": ["Focus on medium-hard DSA"]
+  },
+
+  "Flipkart": {
+    "overview": "Flipkart focuses on backend systems and DSA.",
+    "rounds": ["Online Test", "Technical", "Managerial"],
+    "technical": ["DSA", "System Design"],
+    "tips": ["Practice coding", "Understand scalability"]
+  },
+
+  "Tcs": {
+    "overview": "TCS focuses on aptitude, basic coding and communication.",
+    "rounds": ["Aptitude Test", "Technical Interview", "HR"],
+    "technical": ["Basics of C", "OOPS", "DBMS"],
+    "tips": ["Practice aptitude", "Revise basics"]
+  },
+
+  "Infosys": {
+    "overview": "Infosys focuses on aptitude, puzzles, and coding basics.",
+    "rounds": ["Aptitude", "Technical", "HR"],
+    "technical": ["C", "DBMS", "OS"],
+    "tips": ["Focus on puzzles", "Practice basics"]
+  },
+
+  "Wipro": {
+    "overview": "Wipro tests aptitude, coding, and communication skills.",
+    "rounds": ["Online Test", "Technical", "HR"],
+    "technical": ["Basics", "Coding", "DBMS"],
+    "tips": ["Practice coding", "Improve communication"]
+  },
+
+  "Accenture": {
+    "overview": "Accenture has 3 rounds including Cognitive, Technical and Communication assessment.",
+    "rounds": [
+      "Behavioral Assessment",
+      "Cognitive Assessment",
+      "Technical Assessment",
+      "Coding Round",
+      "Communication Round"
+    ],
+    "technical": [
+      "Computer Fundamentals",
+      "MS Office",
+      "Pseudo Code",
+      "Networking",
+      "Cloud Basics"
+    ],
+    "tips": [
+      "Practice aptitude daily",
+      "Focus on pseudo code",
+      "Improve communication",
+      "Solve coding problems"
+    ]
+  },
+
+  "Capgemini": {
+    "overview": "Capgemini focuses on aptitude, pseudo code, and technical basics.",
+    "rounds": ["Aptitude", "Technical", "HR"],
+    "technical": ["Pseudo Code", "DBMS", "Networking"],
+    "tips": ["Practice pseudo code", "Revise basics"]
+  }
+}

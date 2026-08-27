@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gen-AI Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mock.css') }}">
+</head>
+<body>
+
+<div class="chat-wrapper">
+
+    <div class="chat-header">🤖 Gen-AI Chatbot</div>
+
+    <div id="chatArea" class="chat-area">
+        <div class="bot-msg">Ask something to start…</div>
+    </div>
+
+    <textarea id="message" placeholder="Type your message..."></textarea>
+
+    <!-- ROW 1: Ask AI + Ask Gen-AI + Speak -->
+    <div class="btn-row three">
+        <button type="button" id="askAI" class="btn blue">Ask AI</button>
+        <button type="button" id="askGenAI" class="btn blue">Ask Gen-AI</button>
+        <button type="button" id="voiceBtn" class="btn blue">🎤 Speak</button>
+    </div>
+
+    <!-- ROW 2: Clear + Copy + Download PDF -->
+    <div class="btn-row three">
+        <button type="button" id="clearBtn" class="btn blue">Clear</button>
+        <button type="button" id="copyBtn" class="btn blue">Copy</button>
+        <button type="button" id="pdfBtn" class="btn blue">📄 Download PDF</button>
+    </div>
+
+</div> <!-- chat-wrapper CLOSED -->
+
+<!-- Toast -->
+<div id="toast" class="toast">Copied ✓</div>
+
+<script src="{{ url_for('static', filename='js/mock.js') }}"></script>
+
+</body>
+</html>

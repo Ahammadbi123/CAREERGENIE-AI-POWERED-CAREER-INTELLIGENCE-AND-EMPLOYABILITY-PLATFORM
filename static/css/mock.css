@@ -1,0 +1,124 @@
+/* ---------- GLOBAL ---------- */
+body {
+    background: #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- CHAT WRAPPER ---------- */
+.chat-wrapper {
+    width: 1400px;
+    max-width: 95vw;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+
+    display: block;          /* ❗ flex remove – overlay issues stop */
+    overflow: visible;       /* ❗ important */
+}
+
+/* ---------- HEADER ---------- */
+.chat-header {
+    background: #2563eb;
+    color: white;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* ---------- CHAT AREA ---------- */
+.chat-area {
+    height: 325px;        /* ⬅️ MAIN CHANGE: ekkuva content kosam */
+    padding: 40px;
+    overflow-y: auto;
+    background: #f9fafb;
+}
+
+
+/* ---------- MESSAGE BUBBLES ---------- */
+.bot-msg,
+.user-msg {
+    max-width: 70%;
+    padding: 12px 14px;
+    margin: 8px 0;
+    border-radius: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+.bot-msg {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.user-msg {
+    background: #2563eb;
+    color: white;
+    margin-left: auto;
+}
+
+/* ---------- INPUT ---------- */
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    padding: 14px;
+    resize: none;
+    height: 60px;
+    outline: none;
+    font-size: 14px;
+
+    display: block;
+    margin-bottom: 16px;   /* ❗ buttons ki space */
+}
+
+/* ---------- BUTTON ROWS ---------- */
+.btn-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 buttons per row */
+    gap: 14px;
+    padding: 12px 20px;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #2563eb;
+    color: white;
+    transition: background 0.2s ease;
+
+    pointer-events: auto;   /* ❗ force clickable */
+}
+
+.btn:hover {
+    background: #1e40af;
+}
+
+/* ---------- TOAST ---------- */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+}

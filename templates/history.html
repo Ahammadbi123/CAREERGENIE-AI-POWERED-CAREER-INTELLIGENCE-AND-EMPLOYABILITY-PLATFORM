@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview History</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            font-family: Arial, sans-serif;
+        }
+
+        .history-card {
+            background: white;
+            width: 750px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .history-list {
+            max-height: 200px;
+            overflow-y: auto;
+            margin-bottom: 30px;
+        }
+
+        .history-item {
+            background: #f1f5f9;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        .clear-btn {
+            background: #dc2626;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .back-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .clear-btn:hover {
+            background: #b91c1c;
+        }
+
+        .back-btn:hover {
+            background: #1d4ed8;
+        }
+
+        canvas {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="history-card">
+
+    <h2>📜 Interview History</h2>
+
+    <div class="buttons">
+        <form action="/clear-history" method="POST">
+            <button class="clear-btn">🗑 Clear History</button>
+        </form>
+
+        <button class="back-btn" onclick="window.location.href='/mock-interview'">
+            🔙 Back
+        </button>
+    </div>
+
+    <!-- HISTORY LIST -->
+    <div class="history-list">
+        {% if records and records|length > 0 %}
+            {% for row in records %}
+                <div class="history-item">
+                    <strong>{{ row[0] }}/10</strong> - {{ row[1] }}
+                    <br>
+                    <small>{{ row[2] }}</small>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No history available.</p>
+        {% endif %}
+    </div>
+
+    <!-- GRAPH -->
+    <h3>📈 Performance Graph</h3>
+    <canvas id="historyChart"></canvas>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const ctx = document.getElementById("historyChart");
+
+    // Safe fallback if variables missing
+    const labels = {{ labels | tojson | safe }};
+    const scores = {{ scores | tojson | safe }};
+
+    if (ctx && labels && scores && labels.length > 0) {
+
+        new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: "Interview Score",
+                    data: scores,
+                    backgroundColor: "#2563eb"
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10
+                    }
+                }
+            }
+        });
+
+    }
+
+});
+</script>
+
+</body>
+</html>

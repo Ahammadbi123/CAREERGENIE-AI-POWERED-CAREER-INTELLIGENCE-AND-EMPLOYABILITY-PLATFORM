@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Global Employability</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI';
+    background:linear-gradient(135deg,#020617,#0f172a);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ❄️ SNOW CANVAS */
+#snow{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:0;
+}
+
+/* CONTAINER */
+.container{
+    position:relative;
+    z-index:2;
+    width:500px;
+    margin:60px auto;
+    padding:30px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 0 30px rgba(56,189,248,0.3);
+}
+
+/* TITLE */
+h2{
+    text-align:center;
+    color:#38bdf8;
+}
+
+/* INPUT */
+input, select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+    background:#1e293b;
+    color:white;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:14px;
+    background:linear-gradient(90deg,#38bdf8,#0ea5e9);
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    box-shadow:0 0 15px #38bdf8;
+}
+
+/* RESULT BOX */
+.result{
+    margin-top:25px;
+    padding:20px;
+    border-radius:15px;
+    background:#020617;
+    box-shadow:0 0 15px rgba(56,189,248,0.2);
+}
+
+ul{
+    padding-left:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ❄️ SNOW -->
+<canvas id="snow"></canvas>
+
+<div class="container">
+
+<h2>🌍 Global Employability Score</h2>
+
+<form method="POST">
+
+<input name="skills" placeholder="Python, Java">
+
+<input name="projects" type="number" placeholder="Projects">
+
+<input name="coding" type="number" placeholder="Coding count">
+
+<select name="resume">
+<option value="good">Good Resume</option>
+<option value="average">Average</option>
+<option value="poor">Poor</option>
+</select>
+
+<select name="communication">
+<option value="good">Good Communication</option>
+<option value="average">Average</option>
+<option value="poor">Poor</option>
+</select>
+
+<button type="submit">Check Score 🚀</button>
+
+</form>
+
+{% if result %}
+
+<div class="result">
+
+<h3>🎯 Score: {{result.score}}</h3>
+<p><b>Level:</b> {{result.level}}</p>
+
+</div>
+
+{% endif %}
+
+</div>
+
+<!-- ❄️ SNOW SCRIPT -->
+<script>
+const canvas = document.getElementById("snow");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let snowflakes = [];
+
+function createSnowflakes(){
+    for(let i=0;i<200;i++){ // ❄️ HEAVY SNOW (increase for more)
+        snowflakes.push({
+            x: Math.random()*canvas.width,
+            y: Math.random()*canvas.height,
+            r: Math.random()*4 + 1,
+            d: Math.random()*1
+        });
+    }
+}
+
+function drawSnowflakes(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.fillStyle="white";
+    ctx.beginPath();
+
+    for(let i=0;i<snowflakes.length;i++){
+        let f = snowflakes[i];
+        ctx.moveTo(f.x,f.y);
+        ctx.arc(f.x,f.y,f.r,0,Math.PI*2,true);
+    }
+
+    ctx.fill();
+    moveSnowflakes();
+}
+
+let angle = 0;
+
+function moveSnowflakes(){
+    angle += 0.01;
+
+    for(let i=0;i<snowflakes.length;i++){
+        let f = snowflakes[i];
+
+        f.y += Math.pow(f.d,2) + 1;
+        f.x += Math.sin(angle) * 2;
+
+        if(f.y > canvas.height){
+            snowflakes[i] = {
+                x: Math.random()*canvas.width,
+                y: 0,
+                r: f.r,
+                d: f.d
+            };
+        }
+    }
+}
+
+setInterval(drawSnowflakes, 25);
+createSnowflakes();
+
+window.addEventListener("resize", ()=>{
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+});
+</script>
+
+</body>
+</html>

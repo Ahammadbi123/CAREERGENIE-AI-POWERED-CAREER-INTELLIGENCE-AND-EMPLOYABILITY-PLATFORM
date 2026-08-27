@@ -1,0 +1,101 @@
+{
+  "what is sql": {
+    "en": "SQL stands for Structured Query Language. It is used to store, retrieve and manage data in databases.",
+    "te": "SQL ante Structured Query Language. Databases lo data ni store, retrieve mariyu manage cheyadaniki use chestaru."
+  },
+
+  "features of sql": {
+    "en": "SQL is easy to learn, platform independent, supports large databases and uses simple English-like commands.",
+    "te": "SQL easy ga nerchukovachu, platform independent mariyu simple English commands use chestundi."
+  },
+
+  "sql data types": {
+    "en": "Common SQL data types are INT, FLOAT, VARCHAR, CHAR, DATE and BOOLEAN.",
+    "te": "SQL data types lo INT, FLOAT, VARCHAR, CHAR, DATE lantivi untayi."
+  },
+
+  "primary key": {
+    "en": "A primary key uniquely identifies each record in a table and cannot be NULL.",
+    "te": "Primary key anedi table lo prathi record ni uniquely identify chestundi."
+  },
+
+  "foreign key": {
+    "en": "A foreign key is used to link two tables together.",
+    "te": "Foreign key rendu tables ni link cheyadaniki use chestaru."
+  },
+
+  "create table": {
+    "en": "CREATE TABLE is used to create a new table in a database.",
+    "te": "CREATE TABLE anedi database lo kottha table create cheyadaniki use chestaru."
+  },
+
+  "insert query": {
+    "en": "INSERT is used to add new records into a table.",
+    "te": "INSERT anedi table lo kottha records add cheyadaniki use chestaru."
+  },
+
+  "update query": {
+    "en": "UPDATE is used to modify existing records in a table.",
+    "te": "UPDATE anedi existing records ni change cheyadaniki use chestaru."
+  },
+
+  "delete query": {
+    "en": "DELETE removes specific records from a table.",
+    "te": "DELETE anedi table nundi specific records remove chestundi."
+  },
+
+  "truncate vs delete": {
+    "en": "DELETE removes specific rows, TRUNCATE removes all rows and cannot be rolled back.",
+    "te": "DELETE specific rows remove chestundi, TRUNCATE anni rows ni remove chestundi."
+  },
+
+  "aggregate functions": {
+    "en": "Aggregate functions include COUNT, SUM, AVG, MIN and MAX.",
+    "te": "Aggregate functions ante COUNT, SUM, AVG, MIN, MAX."
+  },
+
+  "group by": {
+    "en": "GROUP BY groups rows that have the same values.",
+    "te": "GROUP BY same values unna rows ni group chestundi."
+  },
+
+  "having clause": {
+    "en": "HAVING is used to filter groups after GROUP BY.",
+    "te": "HAVING anedi GROUP BY tarvata filter cheyadaniki use chestaru."
+  },
+
+  "inner join": {
+    "en": "INNER JOIN returns records that have matching values in both tables.",
+    "te": "INNER JOIN rendu tables lo match ayye records ni return chestundi."
+  },
+
+  "left join": {
+    "en": "LEFT JOIN returns all records from the left table and matching records from the right table.",
+    "te": "LEFT JOIN left table lo unna anni records ni return chestundi."
+  },
+
+  "subquery": {
+    "en": "A subquery is a query inside another query.",
+    "te": "Subquery ante oka query lopala inkoka query."
+  },
+
+  "normalization": {
+    "en": "Normalization organizes data to reduce redundancy and improve integrity.",
+    "te": "Normalization data redundancy tagginchadaniki use chestaru."
+  },
+
+  "acid properties": {
+    "en": "ACID stands for Atomicity, Consistency, Isolation and Durability.",
+    "te": "ACID ante Atomicity, Consistency, Isolation mariyu Durability."
+  },
+
+  "sql vs mysql": {
+    "en": "SQL is a language, MySQL is a database management system.",
+    "te": "SQL oka language, MySQL oka database system."
+  },
+
+  "sql interview questions": {
+    "en": "Important SQL interview topics include joins, subqueries, normalization and indexes.",
+    "te": "SQL interview lo joins, subqueries, normalization important."
+  }
+}

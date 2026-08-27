@@ -1,0 +1,1740 @@
+{
+    "Company Hiring Intelligence Reports": [
+        {
+            "versions": [
+                {
+                    "Company Name": "Amazon",
+                    "Company Type": "Product-Based",
+                    "Core Technology Base": "Amazon builds internet-scale distributed systems including AWS cloud infrastructure, high-availability e-commerce platforms, microservices-based backend systems, real-time recommendation engines, and globally scalable transaction processing platforms serving millions of concurrent users.",
+                    "Technology Domains Used": [
+                        "Distributed Systems",
+                        "Cloud Computing (AWS)",
+                        "Microservices Architecture",
+                        "High-Throughput Databases",
+                        "DevOps & CI/CD",
+                        "Event-Driven Systems",
+                        "Scalable Backend Engineering",
+                        "System Reliability Engineering"
+                    ],
+                    "Technology-Based Requirements Mapping": [
+                        "AWS Cloud Infrastructure → Cloud Architecture, Deployment, IAM, Scalability Engineering",
+                        "Distributed Systems → System Design (HLD/LLD), Concurrency, Fault Tolerance",
+                        "Microservices Architecture → REST APIs, Backend Engineering, Service Communication",
+                        "High-Throughput Databases → SQL/NoSQL Optimization, Indexing, Query Performance",
+                        "Event-Driven Systems → Messaging Queues (Kafka/SQS), Asynchronous Processing"
+                    ],
+                    "Required Programming Languages": [
+                        "Java",
+                        "Python",
+                        "C++",
+                        "Go"
+                    ],
+                    "Required Technical Skills": [
+                        "Advanced Data Structures",
+                        "Algorithm Optimization",
+                        "System Design (HLD & LLD)",
+                        "Concurrency & Multithreading",
+                        "REST API Development",
+                        "SQL & NoSQL",
+                        "AWS Cloud Services",
+                        "Performance Tuning",
+                        "Distributed Caching",
+                        "Load Balancing"
+                    ],
+                    "Required Soft Skills": [
+                        "Ownership",
+                        "Analytical Thinking",
+                        "Technical Communication",
+                        "Decision Making",
+                        "Team Collaboration",
+                        "Adaptability"
+                    ],
+                    "AI Extracted Hiring DNA": [
+                        "Strong Algorithmic Foundation",
+                        "Scalability Engineering Mindset",
+                        "Cloud-Native Backend Expertise",
+                        "High-Performance System Optimization",
+                        "Production-Ready Coding Standards"
+                    ],
+                    "Most Repeated Requirements (Top 5)": [
+                        "Data Structures & Algorithms",
+                        "System Design",
+                        "Cloud (AWS)",
+                        "Backend Engineering",
+                        "Problem Solving"
+                    ],
+                    "Hiring Base Logic": "Amazon fundamentally hires engineers with strong algorithmic depth and scalable system design capability. The focus is on building highly reliable, distributed production systems capable of handling global scale and real-world complexity.",
+                    "Hiring Weightage Model": {
+                        "Programming": 25,
+                        "DSA": 25,
+                        "OOPS": 5,
+                        "SQL": 10,
+                        "Cloud": 15,
+                        "Communication": 5,
+                        "Problem Solving": 15
+                    },
+                    "Demand Level": "Very High",
+                    "Core Required Skills (80%+)": [
+                        "Programming",
+                        "Data Structures",
+                        "Problem Solving"
+                    ],
+                    "High Demand Skills (50-80%)": [
+                        "Cloud Computing",
+                        "System Design",
+                        "Backend Development"
+                    ],
+                    "Emerging Skills (<50%)": [
+                        "DevOps",
+                        "Machine Learning Integration",
+                        "Infrastructure Automation"
+                    ]
+                },
+                {
+                    "Company Name": "Amazon",
+                    "Company Type": "Product-Based",
+                    "Core Technology Base": "Amazon builds internet-scale distributed systems including AWS cloud infrastructure, high-availability e-commerce platforms, microservices-based backend systems, real-time recommendation engines, and globally scalable transaction processing platforms serving millions of concurrent users.",
+                    "Technology Domains Used": [
+                        "Distributed Systems",
+                        "Cloud Computing (AWS)",
+                        "Microservices Architecture",
+                        "High-Throughput Databases",
+                        "DevOps & CI/CD",
+                        "Event-Driven Systems",
+                        "Scalable Backend Engineering",
+                        "System Reliability Engineering"
+                    ],
+                    "Technology-Based Requirements Mapping": [
+                        "AWS Cloud Infrastructure → Cloud Architecture, Deployment, IAM, Scalability Engineering",
+                        "Distributed Systems → System Design (HLD/LLD), Concurrency, Fault Tolerance",
+                        "Microservices Architecture → REST APIs, Backend Engineering, Service Communication",
+                        "High-Throughput Databases → SQL/NoSQL Optimization, Indexing, Query Performance",
+                        "Event-Driven Systems → Messaging Queues (Kafka/SQS), Asynchronous Processing"
+                    ],
+                    "Required Programming Languages": [
+                        "Java",
+                        "Python",
+                        "C++",
+                        "Go",
+                        "Rust"
+                    ],
+                    "Required Technical Skills": [
+                        "Advanced Data Structures",
+                        "Algorithm Optimization",
+                        "System Design (HLD & LLD)",
+                        "Concurrency & Multithreading",
+                        "REST API Development",
+                        "SQL & NoSQL",
+                        "AWS Cloud Services",
+                        "Performance Tuning",
+                        "Distributed Caching",
+                        "Load Balancing"
+                    ],
+                    "Required Soft Skills": [
+                        "Ownership",
+                        "Analytical Thinking",
+                        "Technical Communication",
+                        "Decision Making",
+                        "Team Collaboration",
+                        "Adaptability"
+                    ],
+                    "AI Extracted Hiring DNA": [
+                        "Strong Algorithmic Foundation",
+                        "Scalability Engineering Mindset",
+                        "Cloud-Native Backend Expertise",
+                        "High-Performance System Optimization",
+                        "Production-Ready Coding Standards"
+                    ],
+                    "Most Repeated Requirements (Top 5)": [
+                        "Data Structures & Algorithms",
+                        "System Design",
+                        "Cloud (AWS)",
+                        "Backend Engineering",
+                        "Problem Solving"
+                    ],
+                    "Hiring Base Logic": "Amazon fundamentally hires engineers with strong algorithmic depth and scalable system design capability. The focus is on building highly reliable, distributed production systems capable of handling global scale and real-world complexity.",
+                    "Hiring Weightage Model": {
+                        "Programming": 25,
+                        "DSA": 25,
+                        "OOPS": 5,
+                        "SQL": 10,
+                        "Cloud": 15,
+                        "Communication": 5,
+                        "Problem Solving": 15
+                    },
+                    "Demand Level": "HIGH",
+                    "Core Required Skills (80%+)": [
+                        "Programming",
+                        "Data Structures",
+                        "Problem Solving"
+                    ],
+                    "High Demand Skills (50-80%)": [
+                        "Cloud Computing",
+                        "System Design",
+                        "Backend Development"
+                    ],
+                    "Emerging Skills (<50%)": [
+                        "DevOps",
+                        "Machine Learning Integration",
+                        "Infrastructure Automation",
+                        "Blockchain"
+                    ]
+                },
+                {
+                    "Company Name": "Amazon",
+                    "Company Type": "Product-Based",
+                    "Core Technology Base": "Amazon builds internet-scale distributed systems including AWS cloud infrastructure, high-availability e-commerce platforms, microservices-based backend systems, real-time recommendation engines, and globally scalable transaction processing platforms serving millions of concurrent users.",
+                    "Technology Domains Used": [
+                        "Distributed Systems",
+                        "Cloud Computing (AWS)",
+                        "Microservices Architecture",
+                        "High-Throughput Databases",
+                        "DevOps & CI/CD",
+                        "Event-Driven Systems",
+                        "Scalable Backend Engineering",
+                        "System Reliability Engineering"
+                    ],
+                    "Technology-Based Requirements Mapping": [
+                        "AWS Cloud Infrastructure → Cloud Architecture, Deployment, IAM, Scalability Engineering",
+                        "Distributed Systems → System Design (HLD/LLD), Concurrency, Fault Tolerance",
+                        "Microservices Architecture → REST APIs, Backend Engineering, Service Communication",
+                        "High-Throughput Databases → SQL/NoSQL Optimization, Indexing, Query Performance",
+                        "Event-Driven Systems → Messaging Queues (Kafka/SQS), Asynchronous Processing"
+                    ],
+                    "Required Programming Languages": [
+                        "Java",
+                        "Python",
+                        "C++",
+                        "Go",
+                        "Rust"
+                    ],
+                    "Required Technical Skills": [
+                        "Advanced Data Structures",
+                        "Algorithm Optimization",
+                        "System Design (HLD & LLD)",
+                        "Concurrency & Multithreading",
+                        "REST API Development",
+                        "SQL & NoSQL",
+                        "AWS Cloud Services",
+                        "Performance Tuning",
+                        "Distributed Caching",
+                        "Load Balancing"
+                    ],
+                    "Required Soft Skills": [
+                        "Ownership",
+                        "Analytical Thinking",
+                        "Technical Communication",
+                        "Decision Making",
+                        "Team Collaboration",
+                        "Adaptability"
+                    ],
+                    "AI Extracted Hiring DNA": [
+                        "Strong Algorithmic Foundation",
+                        "Scalability Engineering Mindset",
+                        "Cloud-Native Backend Expertise",
+                        "High-Performance System Optimization",
+                        "Production-Ready Coding Standards"
+                    ],
+                    "Most Repeated Requirements (Top 5)": [
+                        "Data Structures & Algorithms",
+                        "System Design",
+                        "Cloud (AWS)",
+                        "Backend Engineering",
+                        "Problem Solving"
+                    ],
+                    "Hiring Base Logic": "Amazon fundamentally hires engineers with strong algorithmic depth and scalable system design capability. The focus is on building highly reliable, distributed production systems capable of handling global scale and real-world complexity.",
+                    "Hiring Weightage Model": {
+                        "Programming": 25,
+                        "DSA": 25,
+                        "OOPS": 5,
+                        "SQL": 10,
+                        "Cloud": 15,
+                        "Communication": 5,
+                        "Problem Solving": 15
+                    },
+                    "Demand Level": "LOW",
+                    "Core Required Skills (80%+)": [
+                        "Programming",
+                        "Data Structures",
+                        "Problem Solving"
+                    ],
+                    "High Demand Skills (50-80%)": [
+                        "Cloud Computing",
+                        "System Design",
+                        "Backend Development"
+                    ],
+                    "Emerging Skills (<50%)": [
+                        "DevOps",
+                        "Machine Learning Integration",
+                        "Infrastructure Automation",
+                        "Blockchain"
+                    ]
+                },
+                {
+                    "Company Name": "Amazon",
+                    "Company Type": "Product-Based",
+                    "Core Technology Base": "Amazon builds internet-scale distributed systems including AWS cloud infrastructure, high-availability e-commerce platforms, microservices-based backend systems, real-time recommendation engines, and globally scalable transaction processing platforms serving millions of concurrent users.",
+                    "Technology Domains Used": [
+                        "Distributed Systems",
+                        "Cloud Computing (AWS)",
+                        "Microservices Architecture",
+                        "High-Throughput Databases",
+                        "DevOps & CI/CD",
+                        "Event-Driven Systems",
+                        "Scalable Backend Engineering",
+                        "System Reliability Engineering"
+                    ],
+                    "Technology-Based Requirements Mapping": [
+                        "AWS Cloud Infrastructure → Cloud Architecture, Deployment, IAM, Scalability Engineering",
+                        "Distributed Systems → System Design (HLD/LLD), Concurrency, Fault Tolerance",
+                        "Microservices Architecture → REST APIs, Backend Engineering, Service Communication",
+                        "High-Throughput Databases → SQL/NoSQL Optimization, Indexing, Query Performance",
+                        "Event-Driven Systems → Messaging Queues (Kafka/SQS), Asynchronous Processing"
+                    ],
+                    "Required Programming Languages": [
+                        "Java",
+                        "Python",
+                        "C++",
+                        "Go",
+                        "Rust"
+                    ],
+                    "Required Technical Skills": [
+                        "Advanced Data Structures",
+                        "Algorithm Optimization",
+                        "System Design (HLD & LLD)",
+                        "Concurrency & Multithreading",
+                        "REST API Development",
+                        "SQL & NoSQL",
+                        "AWS Cloud Services",
+                        "Performance Tuning",
+                        "Distributed Caching",
+                        "Load Balancing"
+                    ],
+                    "Required Soft Skills": [
+                        "Ownership",
+                        "Analytical Thinking",
+                        "Technical Communication",
+                        "Decision Making",
+                        "Team Collaboration",
+                        "Adaptability"
+                    ],
+                    "AI Extracted Hiring DNA": [
+                        "Strong Algorithmic Foundation",
+                        "Scalability Engineering Mindset",
+                        "Cloud-Native Backend Expertise",
+                        "High-Performance System Optimization",
+                        "Production-Ready Coding Standards"
+                    ],
+                    "Most Repeated Requirements (Top 5)": [
+                        "Data Structures & Algorithms",
+                        "System Design",
+                        "Cloud (AWS)",
+                        "Backend Engineering",
+                        "Problem Solving"
+                    ],
+                    "Hiring Base Logic": "Amazon fundamentally hires engineers with strong algorithmic depth and scalable system design capability. The focus is on building highly reliable, distributed production systems capable of handling global scale and real-world complexity.",
+                    "Hiring Weightage Model": {
+                        "Programming": 25,
+                        "DSA": 25,
+                        "OOPS": 5,
+                        "SQL": 10,
+                        "Cloud": 15,
+                        "Communication": 5,
+                        "Problem Solving": 15
+                    },
+                    "Demand Level": "HIGH",
+                    "Core Required Skills (80%+)": [
+                        "Programming",
+                        "Data Structures",
+                        "Problem Solving"
+                    ],
+                    "High Demand Skills (50-80%)": [
+                        "Cloud Computing",
+                        "System Design",
+                        "Backend Development"
+                    ],
+                    "Emerging Skills (<50%)": [
+                        "DevOps",
+                        "Machine Learning Integration",
+                        "Infrastructure Automation",
+                        "Blockchain"
+                    ]
+                },
+                {
+                    "Company Name": "Amazon",
+                    "Company Type": "Product-Based",
+                    "Core Technology Base": "Amazon builds internet-scale distributed systems including AWS cloud infrastructure, high-availability e-commerce platforms, microservices-based backend systems, real-time recommendation engines, and globally scalable transaction processing platforms serving millions of concurrent users.",
+                    "Technology Domains Used": [
+                        "Distributed Systems",
+                        "Cloud Computing (AWS)",
+                        "Microservices Architecture",
+                        "High-Throughput Databases",
+                        "DevOps & CI/CD",
+                        "Event-Driven Systems",
+                        "Scalable Backend Engineering",
+                        "System Reliability Engineering"
+                    ],
+                    "Technology-Based Requirements Mapping": [
+                        "AWS Cloud Infrastructure → Cloud Architecture, Deployment, IAM, Scalability Engineering",
+                        "Distributed Systems → System Design (HLD/LLD), Concurrency, Fault Tolerance",
+                        "Microservices Architecture → REST APIs, Backend Engineering, Service Communication",
+                        "High-Throughput Databases → SQL/NoSQL Optimization, Indexing, Query Performance",
+                        "Event-Driven Systems → Messaging Queues (Kafka/SQS), Asynchronous Processing"
+                    ],
+                    "Required Programming Languages": [
+                        "Java",
+                        "Python",
+                        "C++",
+                        "Go",
+                        "Rust"
+                    ],
+                    "Required Technical Skills": [
+                        "Advanced Data Structures",
+                        "Algorithm Optimization",
+                        "System Design (HLD & LLD)",
+                        "Concurrency & Multithreading",
+                        "REST API Development",
+                        "SQL & NoSQL",
+                        "AWS Cloud Services",
+                        "Performance Tuning",
+                        "Distributed Caching",
+                        "Load Balancing"
+                    ],
+                    "Required Soft Skills": [
+                        "Ownership",
+                        "Analytical Thinking",
+                        "Technical Communication",
+                        "Decision Making",
+                        "Team Collaboration",
+                        "Adaptability"
+                    ],
+                    "AI Extracted Hiring DNA": [
+                        "Strong Algorithmic Foundation",
+                        "Scalability Engineering Mindset",
+                        "Cloud-Native Backend Expertise",
+                        "High-Performance System Optimization",
+                        "Production-Ready Coding Standards"
+                    ],
+                    "Most Repeated Requirements (Top 5)": [
+                        "Data Structures & Algorithms",
+                        "System Design",
+                        "Cloud (AWS)",
+                        "Backend Engineering",
+                        "Problem Solving"
+                    ],
+                    "Hiring Base Logic": "Amazon fundamentally hires engineers with strong algorithmic depth and scalable system design capability. The focus is on building highly reliable, distributed production systems capable of handling global scale and real-world complexity.",
+                    "Hiring Weightage Model": {
+                        "Programming": 25,
+                        "DSA": 25,
+                        "OOPS": 5,
+                        "SQL": 10,
+                        "Cloud": 15,
+                        "Communication": 5,
+                        "Problem Solving": 15
+                    },
+                    "Demand Level": "LOW",
+                    "Core Required Skills (80%+)": [
+                        "Programming",
+                        "Data Structures",
+                        "Problem Solving"
+                    ],
+                    "High Demand Skills (50-80%)": [
+                        "Cloud Computing",
+                        "System Design",
+                        "Backend Development"
+                    ],
+                    "Emerging Skills (<50%)": [
+                        "DevOps",
+                        "Machine Learning Integration",
+                        "Infrastructure Automation",
+                        "Blockchain"
+                    ]
+                },
+                {
+                    "Company Name": "Amazon",
+                    "Company Type": "Product-Based",
+                    "Core Technology Base": "Amazon builds internet-scale distributed systems including AWS cloud infrastructure, high-availability e-commerce platforms, microservices-based backend systems, real-time recommendation engines, and globally scalable transaction processing platforms serving millions of concurrent users.",
+                    "Technology Domains Used": [
+                        "Distributed Systems",
+                        "Cloud Computing (AWS)",
+                        "Microservices Architecture",
+                        "High-Throughput Databases",
+                        "DevOps & CI/CD",
+                        "Event-Driven Systems",
+                        "Scalable Backend Engineering",
+                        "System Reliability Engineering"
+                    ],
+                    "Technology-Based Requirements Mapping": [
+                        "AWS Cloud Infrastructure → Cloud Architecture, Deployment, IAM, Scalability Engineering",
+                        "Distributed Systems → System Design (HLD/LLD), Concurrency, Fault Tolerance",
+                        "Microservices Architecture → REST APIs, Backend Engineering, Service Communication",
+                        "High-Throughput Databases → SQL/NoSQL Optimization, Indexing, Query Performance",
+                        "Event-Driven Systems → Messaging Queues (Kafka/SQS), Asynchronous Processing"
+                    ],
+                    "Required Programming Languages": [
+                        "Java",
+                        "Python",
+                        "C++",
+                        "Go",
+                        "Rust"
+                    ],
+                    "Required Technical Skills": [
+                        "Advanced Data Structures",
+                        "Algorithm Optimization",
+                        "System Design (HLD & LLD)",
+                        "Concurrency & Multithreading",
+                        "REST API Development",
+                        "SQL & NoSQL",
+                        "AWS Cloud Services",
+                        "Performance Tuning",
+                        "Distributed Caching",
+                        "Load Balancing"
+                    ],
+                    "Required Soft Skills": [
+                        "Ownership",
+                        "Analytical Thinking",
+                        "Technical Communication",
+                        "Decision Making",
+                        "Team Collaboration",
+                        "Adaptability"
+                    ],
+                    "AI Extracted Hiring DNA": [
+                        "Strong Algorithmic Foundation",
+                        "Scalability Engineering Mindset",
+                        "Cloud-Native Backend Expertise",
+                        "High-Performance System Optimization",
+                        "Production-Ready Coding Standards"
+                    ],
+                    "Most Repeated Requirements (Top 5)": [
+                        "Data Structures & Algorithms",
+                        "System Design",
+                        "Cloud (AWS)",
+                        "Backend Engineering",
+                        "Problem Solving"
+                    ],
+                    "Hiring Base Logic": "Amazon fundamentally hires engineers with strong algorithmic depth and scalable system design capability. The focus is on building highly reliable, distributed production systems capable of handling global scale and real-world complexity.",
+                    "Hiring Weightage Model": {
+                        "Programming": 25,
+                        "DSA": 25,
+                        "OOPS": 5,
+                        "SQL": 10,
+                        "Cloud": 15,
+                        "Communication": 5,
+                        "Problem Solving": 15
+                    },
+                    "Demand Level": "HIGH",
+                    "Core Required Skills (80%+)": [
+                        "Programming",
+                        "Data Structures",
+                        "Problem Solving"
+                    ],
+                    "High Demand Skills (50-80%)": [
+                        "Cloud Computing",
+                        "System Design",
+                        "Backend Development"
+                    ],
+                    "Emerging Skills (<50%)": [
+                        "DevOps",
+                        "Machine Learning Integration",
+                        "Infrastructure Automation",
+                        "Blockchain"
+                    ]
+                }
+            ],
+            "Company Name": "Amazon",
+            "Company Type": "Product-Based",
+            "Core Technology Base": "Amazon builds internet-scale distributed systems including AWS cloud infrastructure, high-availability e-commerce platforms, microservices-based backend systems, real-time recommendation engines, and globally scalable transaction processing platforms serving millions of concurrent users.",
+            "Technology Domains Used": [
+                "Distributed Systems",
+                "Cloud Computing (AWS)",
+                "Microservices Architecture",
+                "High-Throughput Databases",
+                "DevOps & CI/CD",
+                "Event-Driven Systems",
+                "Scalable Backend Engineering",
+                "System Reliability Engineering"
+            ],
+            "Technology-Based Requirements Mapping": [
+                "AWS Cloud Infrastructure → Cloud Architecture, Deployment, IAM, Scalability Engineering",
+                "Distributed Systems → System Design (HLD/LLD), Concurrency, Fault Tolerance",
+                "Microservices Architecture → REST APIs, Backend Engineering, Service Communication",
+                "High-Throughput Databases → SQL/NoSQL Optimization, Indexing, Query Performance",
+                "Event-Driven Systems → Messaging Queues (Kafka/SQS), Asynchronous Processing"
+            ],
+            "Required Programming Languages": [
+                "Java",
+                "Python",
+                "C++",
+                "Go",
+                "Rust"
+            ],
+            "Required Technical Skills": [
+                "Advanced Data Structures",
+                "Algorithm Optimization",
+                "System Design (HLD & LLD)",
+                "Concurrency & Multithreading",
+                "REST API Development",
+                "SQL & NoSQL",
+                "AWS Cloud Services",
+                "Performance Tuning",
+                "Distributed Caching",
+                "Load Balancing"
+            ],
+            "Required Soft Skills": [
+                "Ownership",
+                "Analytical Thinking",
+                "Technical Communication",
+                "Decision Making",
+                "Team Collaboration",
+                "Adaptability"
+            ],
+            "AI Extracted Hiring DNA": [
+                "Strong Algorithmic Foundation",
+                "Scalability Engineering Mindset",
+                "Cloud-Native Backend Expertise",
+                "High-Performance System Optimization",
+                "Production-Ready Coding Standards"
+            ],
+            "Most Repeated Requirements (Top 5)": [
+                "Data Structures & Algorithms",
+                "System Design",
+                "Cloud (AWS)",
+                "Backend Engineering",
+                "Problem Solving"
+            ],
+            "Hiring Base Logic": "Amazon fundamentally hires engineers with strong algorithmic depth and scalable system design capability. The focus is on building highly reliable, distributed production systems capable of handling global scale and real-world complexity.",
+            "Hiring Weightage Model": {
+                "Programming": 25,
+                "DSA": 25,
+                "OOPS": 5,
+                "SQL": 10,
+                "Cloud": 15,
+                "Communication": 5,
+                "Problem Solving": 15
+            },
+            "Demand Level": "HIGH",
+            "Core Required Skills (80%+)": [
+                "Programming",
+                "Data Structures",
+                "Problem Solving"
+            ],
+            "High Demand Skills (50-80%)": [
+                "Cloud Computing",
+                "System Design",
+                "Backend Development"
+            ],
+            "Emerging Skills (<50%)": [
+                "DevOps",
+                "Machine Learning Integration",
+                "Infrastructure Automation",
+                "Blockchain"
+            ]
+        },
+        {
+            "versions": [],
+            "Company Name": "Google",
+            "Company Type": "Product-Based",
+            "Core Technology Base": "Google develops globally distributed computing systems including search engine infrastructure, AI-powered recommendation systems, Google Cloud Platform services, large-scale data processing frameworks (MapReduce inspired architectures), and Kubernetes-orchestrated microservices capable of serving billions of users in real-time.",
+            "Technology Domains Used": [
+                "Distributed Computing",
+                "Cloud Infrastructure (GCP)",
+                "Artificial Intelligence & Machine Learning",
+                "Big Data Processing Systems",
+                "Containerization & Kubernetes",
+                "High Performance Computing",
+                "Scalable Backend Engineering",
+                "Site Reliability Engineering"
+            ],
+            "Technology-Based Requirements Mapping": [
+                "Distributed Computing → Advanced System Design, CAP Theorem Understanding",
+                "Big Data Processing → Algorithm Optimization, Data Handling at Scale",
+                "Kubernetes & Containerization → Cloud-Native Deployment, DevOps Basics",
+                "AI & ML Systems → Machine Learning Basics, Data Structures",
+                "High Performance Infrastructure → Code Optimization, Complexity Analysis"
+            ],
+            "Required Programming Languages": [
+                "C++",
+                "Java",
+                "Python",
+                "Go"
+            ],
+            "Required Technical Skills": [
+                "Advanced Data Structures & Algorithms",
+                "Algorithm Complexity Analysis",
+                "System Design (Scalable Architecture)",
+                "Concurrency & Parallel Computing",
+                "Distributed Systems Design",
+                "API Development",
+                "Database Optimization",
+                "Performance Engineering",
+                "Cloud-Native Development",
+                "Debugging at Scale"
+            ],
+            "Required Soft Skills": [
+                "Analytical Thinking",
+                "Innovation Mindset",
+                "Clear Technical Communication",
+                "Cross-Team Collaboration",
+                "Research-Oriented Thinking",
+                "Ownership & Initiative"
+            ],
+            "AI Extracted Hiring DNA": [
+                "Deep Algorithmic Problem Solving",
+                "Scalable Distributed System Thinking",
+                "Performance & Efficiency Optimization",
+                "Clean & Maintainable Code Practices",
+                "Engineering for Billions of Users"
+            ],
+            "Most Repeated Requirements (Top 5)": [
+                "Advanced DSA",
+                "System Design",
+                "Distributed Systems",
+                "Problem Solving",
+                "Code Optimization"
+            ],
+            "Hiring Base Logic": "Google fundamentally hires engineers with exceptional algorithmic depth and the ability to design globally scalable distributed systems. The company prioritizes computational efficiency, clean system architecture, and engineers capable of building highly optimized infrastructure serving billions of users.",
+            "Hiring Weightage Model": {
+                "Programming": 20,
+                "DSA": 30,
+                "OOPS": 5,
+                "SQL": 5,
+                "Cloud": 10,
+                "Communication": 5,
+                "Problem Solving": 25
+            },
+            "Demand Level": "Very High",
+            "Core Required Skills (80%+)": [
+                "Advanced Data Structures",
+                "Algorithms",
+                "Problem Solving"
+            ],
+            "High Demand Skills (50-80%)": [
+                "System Design",
+                "Distributed Systems",
+                "Cloud Engineering"
+            ],
+            "Emerging Skills (<50%)": [
+                "AI/ML Engineering",
+                "Site Reliability Engineering",
+                "Infrastructure Automation"
+            ]
+        },
+        {
+            "versions": [],
+            "Company Name": "Microsoft",
+            "Company Type": "Product-Based",
+            "Core Technology Base": "Microsoft builds enterprise-grade cloud platforms through Azure, large-scale SaaS systems like Office 365 and Dynamics, distributed backend services, developer ecosystems (.NET), AI-powered enterprise solutions, and globally scalable infrastructure services supporting millions of organizations worldwide.",
+            "Technology Domains Used": [
+                "Cloud Computing (Azure)",
+                "Enterprise SaaS Platforms",
+                "Distributed Backend Systems",
+                ".NET Ecosystem",
+                "AI & Cognitive Services",
+                "Cybersecurity Systems",
+                "API Architecture",
+                "DevOps & CI/CD Pipelines",
+                "Database Systems (SQL Server, Cosmos DB)",
+                "Hybrid Cloud Infrastructure"
+            ],
+            "Technology-Based Requirements Mapping": [
+                "Azure Cloud Platform → Cloud Architecture, Deployment Models, DevOps",
+                ".NET Ecosystem → OOPS, C#, Backend Application Development",
+                "Enterprise SaaS Systems → Scalable Backend Design, Database Engineering",
+                "Hybrid Cloud Infrastructure → Networking Basics, Security Concepts",
+                "Security & Identity Systems → Authentication Protocols, Secure Coding Practices"
+            ],
+            "Required Programming Languages": [
+                "C#",
+                "Java",
+                "Python",
+                "C++",
+                "TypeScript"
+            ],
+            "Required Technical Skills": [
+                "Object-Oriented Programming (OOPS)",
+                "Data Structures & Algorithms",
+                "Cloud Architecture (Azure)",
+                "System Design (HLD & LLD)",
+                "RESTful API Development",
+                "SQL & Distributed Databases",
+                "Microservices Architecture",
+                "Authentication & Security Protocols",
+                "Performance Optimization",
+                "Version Control (Git)"
+            ],
+            "Required Soft Skills": [
+                "Team Collaboration",
+                "Clear Technical Communication",
+                "Problem Solving",
+                "Adaptability",
+                "Ownership",
+                "Cross-Team Coordination"
+            ],
+            "AI Extracted Hiring DNA": [
+                "Strong OOPS Foundation",
+                "Cloud Engineering Expertise",
+                "Enterprise System Design Capability",
+                "Security-Aware Development",
+                "Scalable Backend Architecture"
+            ],
+            "Most Repeated Requirements (Top 5)": [
+                "OOPS",
+                "Cloud (Azure)",
+                "System Design",
+                "Programming Fundamentals",
+                "Database Knowledge"
+            ],
+            "Hiring Base Logic": "Microsoft fundamentally hires engineers with strong object-oriented foundations and cloud architecture capability. The focus is on building secure, scalable enterprise-grade systems capable of serving global business environments.",
+            "Hiring Weightage Model": {
+                "Programming": 25,
+                "DSA": 20,
+                "OOPS": 20,
+                "SQL": 10,
+                "Cloud": 15,
+                "Communication": 5,
+                "Problem Solving": 5
+            },
+            "Demand Level": "Very High",
+            "Core Required Skills (80%+)": [
+                "Programming",
+                "OOPS",
+                "Cloud Engineering"
+            ],
+            "High Demand Skills (50-80%)": [
+                "System Design",
+                "Database Systems",
+                "Backend Development"
+            ],
+            "Emerging Skills (<50%)": [
+                "AI Integration",
+                "Cybersecurity",
+                "Infrastructure Automation"
+            ]
+        },
+        {
+            "versions": [],
+            "Company Name": "Meta",
+            "Company Type": "Product-Based",
+            "Core Technology Base": "Meta builds globally scaled social networking platforms including Facebook, Instagram, and WhatsApp. The company develops highly distributed real-time messaging systems, AI-driven recommendation engines, large-scale graph databases, high-performance backend services, and machine learning infrastructure capable of serving billions of active users simultaneously.",
+            "Technology Domains Used": [
+                "Distributed Systems",
+                "Real-Time Messaging Infrastructure",
+                "AI & Machine Learning",
+                "Recommendation Systems",
+                "High-Performance Backend Engineering",
+                "Large-Scale Graph Databases",
+                "Cloud Infrastructure",
+                "Microservices Architecture",
+                "Site Reliability Engineering",
+                "Data Engineering Pipelines"
+            ],
+            "Technology-Based Requirements Mapping": [
+                "Real-Time Messaging Systems → Concurrency, Distributed Systems",
+                "AI Recommendation Engines → Data Structures, ML Fundamentals",
+                "Graph Databases → Database Optimization, Query Design",
+                "High Performance Backend → Code Efficiency, Scalability Engineering",
+                "Large Scale Infrastructure → Load Balancing, Caching Strategies"
+            ],
+            "Required Programming Languages": [
+                "Python",
+                "C++",
+                "Hack (HHVM)",
+                "Java",
+                "Go"
+            ],
+            "Required Technical Skills": [
+                "Advanced Data Structures & Algorithms",
+                "System Design (Scalable Architecture)",
+                "Distributed Systems Engineering",
+                "Concurrency & Parallel Processing",
+                "API Development",
+                "Database Optimization",
+                "Caching Mechanisms",
+                "Load Balancing",
+                "Performance Engineering",
+                "Machine Learning Basics"
+            ],
+            "Required Soft Skills": [
+                "Strong Problem Solving",
+                "Cross-Functional Collaboration",
+                "Innovation Mindset",
+                "Clear Communication",
+                "Ownership",
+                "Adaptability in Fast-Paced Environments"
+            ],
+            "AI Extracted Hiring DNA": [
+                "High Algorithmic Strength",
+                "Scalable System Architecture Thinking",
+                "Performance-Driven Engineering",
+                "Data-Centric Development",
+                "Engineering for Billions of Users"
+            ],
+            "Most Repeated Requirements (Top 5)": [
+                "Advanced DSA",
+                "System Design",
+                "Distributed Systems",
+                "Problem Solving",
+                "Backend Performance Optimization"
+            ],
+            "Hiring Base Logic": "Meta fundamentally hires engineers capable of designing and maintaining highly scalable distributed systems that handle massive real-time user traffic. The focus is on performance optimization, algorithmic excellence, and scalable architecture capable of supporting billions of interactions daily.",
+            "Hiring Weightage Model": {
+                "Programming": 25,
+                "DSA": 25,
+                "OOPS": 5,
+                "SQL": 5,
+                "Cloud": 10,
+                "Communication": 5,
+                "Problem Solving": 25
+            },
+            "Demand Level": "Very High",
+            "Core Required Skills (80%+)": [
+                "Programming",
+                "Advanced Data Structures",
+                "Problem Solving"
+            ],
+            "High Demand Skills (50-80%)": [
+                "System Design",
+                "Distributed Systems",
+                "Backend Engineering"
+            ],
+            "Emerging Skills (<50%)": [
+                "Machine Learning Engineering",
+                "Infrastructure Automation",
+                "Data Platform Engineering"
+            ]
+        },
+        {
+            "Company Name": "Flipkart",
+            "Company Type": "Product-Based",
+            "Core Technology Base": "Flipkart builds large-scale e-commerce platforms including distributed inventory management systems, real-time order processing engines, recommendation systems, payment gateways, logistics optimization platforms, and cloud-native backend services capable of handling peak traffic during high-volume sales events.",
+            "Technology Domains Used": [
+                "Distributed Systems",
+                "E-Commerce Architecture",
+                "Microservices Architecture",
+                "Cloud Infrastructure (AWS)",
+                "Payment Systems Engineering",
+                "Inventory Management Systems",
+                "Recommendation Engines",
+                "Scalable Backend Development",
+                "High Throughput Database Systems",
+                "DevOps & Deployment Automation"
+            ],
+            "Technology-Based Requirements Mapping": [
+                "E-Commerce Architecture → Backend Engineering, Transaction Management",
+                "Cloud (AWS) → Deployment, Infrastructure Scaling",
+                "Inventory Systems → Database Design, Query Optimization",
+                "High Traffic Handling → Load Balancing, Performance Tuning",
+                "Payment Systems → Secure API Integration, System Reliability"
+            ],
+            "Required Programming Languages": [
+                "Java",
+                "Python",
+                "Kotlin",
+                "Go"
+            ],
+            "Required Technical Skills": [
+                "Data Structures & Algorithms",
+                "System Design (Scalability Focus)",
+                "REST API Development",
+                "Database Optimization (SQL & NoSQL)",
+                "Caching (Redis)",
+                "Load Balancing",
+                "Concurrency Handling",
+                "Cloud Deployment",
+                "Performance Tuning",
+                "Microservices Development"
+            ],
+            "Required Soft Skills": [
+                "Problem Solving",
+                "Collaboration",
+                "Clear Communication",
+                "Adaptability",
+                "Ownership in Fast-Paced Environments"
+            ],
+            "AI Extracted Hiring DNA": [
+                "Scalable E-Commerce Engineering",
+                "Algorithmic Problem Solving",
+                "Backend Performance Optimization",
+                "Cloud-Native Architecture",
+                "High Traffic System Handling"
+            ],
+            "Most Repeated Requirements (Top 5)": [
+                "Data Structures & Algorithms",
+                "System Design",
+                "Cloud (AWS)",
+                "Backend Development",
+                "Database Engineering"
+            ],
+            "Hiring Base Logic": "Flipkart fundamentally hires engineers who can build and maintain highly scalable e-commerce systems capable of handling massive user traffic and transaction loads during peak business events. The focus is on backend scalability, algorithmic strength, and system reliability.",
+            "Hiring Weightage Model": {
+                "Programming": 25,
+                "DSA": 25,
+                "OOPS": 5,
+                "SQL": 10,
+                "Cloud": 15,
+                "Communication": 5,
+                "Problem Solving": 15
+            },
+            "Demand Level": "High",
+            "Core Required Skills (80%+)": [
+                "Programming",
+                "Data Structures",
+                "Problem Solving"
+            ],
+            "High Demand Skills (50-80%)": [
+                "System Design",
+                "Cloud Computing",
+                "Backend Development"
+            ],
+            "Emerging Skills (<50%)": [
+                "DevOps",
+                "Infrastructure Automation",
+                "Machine Learning Integration"
+            ]
+        },
+        {
+            "Company Name": "Tata Consultancy Services (TCS)",
+            "Company Type": "Service-Based",
+            "Core Technology Base": "TCS delivers enterprise-grade client solutions including banking systems, ERP deployments, digital transformation platforms, cloud migration services, enterprise application development, IT infrastructure management, and long-term support projects for global clients across finance, healthcare, retail, and government sectors.",
+            "Technology Domains Used": [
+                "Enterprise Application Development",
+                "Cloud Migration & Deployment",
+                "Banking & Financial Systems",
+                "ERP Platforms (SAP, Oracle)",
+                "IT Infrastructure Services",
+                "Application Maintenance & Support",
+                "Digital Transformation Solutions",
+                "DevOps for Enterprise Systems",
+                "Business Process Automation",
+                "Client Delivery Platforms"
+            ],
+            "Technology-Based Requirements Mapping": [
+                "Enterprise Application Development → Programming Fundamentals, OOPS",
+                "ERP Platforms (SAP/Oracle) → SQL, Database Concepts",
+                "Cloud Migration Projects → Basic Cloud Knowledge (AWS/Azure)",
+                "IT Infrastructure Services → Networking Basics, Deployment Understanding",
+                "Client Delivery Projects → Communication, Adaptability"
+            ],
+            "Required Programming Languages": [
+                "Java",
+                "Python",
+                "C#",
+                "SQL",
+                "JavaScript"
+            ],
+            "Required Technical Skills": [
+                "Programming Fundamentals",
+                "Object-Oriented Programming (OOPS)",
+                "SQL & Database Management",
+                "Software Development Lifecycle (SDLC)",
+                "Basic Cloud Knowledge (AWS/Azure)",
+                "API Integration",
+                "Debugging & Testing",
+                "Version Control (Git)",
+                "Basic Data Structures",
+                "Application Support Skills"
+            ],
+            "Required Soft Skills": [
+                "Strong Communication",
+                "Client Interaction Skills",
+                "Team Collaboration",
+                "Adaptability",
+                "Time Management",
+                "Trainability",
+                "Problem Solving"
+            ],
+            "AI Extracted Hiring DNA": [
+                "Strong Programming Fundamentals",
+                "Client-Focused Delivery",
+                "Adaptability & Trainability",
+                "Enterprise Application Development",
+                "Team-Based Project Execution"
+            ],
+            "Most Repeated Requirements (Top 5)": [
+                "Programming Basics",
+                "OOPS",
+                "SQL",
+                "Communication Skills",
+                "Problem Solving"
+            ],
+            "Hiring Base Logic": "TCS fundamentally hires candidates with strong programming fundamentals and high trainability. The focus is on delivering enterprise client projects efficiently, adapting to multiple technology stacks, and maintaining long-term client relationships.",
+            "Hiring Weightage Model": {
+                "Programming": 30,
+                "DSA": 10,
+                "OOPS": 20,
+                "SQL": 15,
+                "Cloud": 5,
+                "Communication": 10,
+                "Problem Solving": 10
+            },
+            "Demand Level": "High",
+            "Core Required Skills (80%+)": [
+                "Programming Fundamentals",
+                "OOPS",
+                "Communication"
+            ],
+            "High Demand Skills (50-80%)": [
+                "SQL",
+                "Problem Solving",
+                "Team Collaboration"
+            ],
+            "Emerging Skills (<50%)": [
+                "Cloud Engineering",
+                "Automation Tools",
+                "DevOps"
+            ]
+        },
+        {
+            "versions": [],
+            "Company Name": "Infosys",
+            "Company Type": "Service-Based",
+            "Core Technology Base": "Infosys delivers global digital transformation solutions including enterprise modernization projects, cloud migration services, AI-driven automation platforms, banking and financial systems integration, ERP implementations, and large-scale IT consulting services for multinational clients.",
+            "Technology Domains Used": [
+                "Enterprise Software Development",
+                "Cloud Migration (AWS, Azure)",
+                "Digital Transformation Platforms",
+                "Banking & Financial Technology",
+                "ERP Systems (SAP, Oracle)",
+                "Automation & AI Integration",
+                "IT Consulting & Support Services",
+                "Application Development & Maintenance",
+                "DevOps for Enterprise Projects",
+                "Business Intelligence Solutions"
+            ],
+            "Technology-Based Requirements Mapping": [
+                "Digital Transformation Platforms → Programming + SDLC Knowledge",
+                "Enterprise Modernization → OOPS, System Integration",
+                "Cloud Migration → Cloud Fundamentals (AWS/Azure)",
+                "Automation & AI Integration → Basic AI/Automation Understanding",
+                "Banking Systems → SQL, Secure Coding Practices"
+            ],
+            "Required Programming Languages": [
+                "Java",
+                "Python",
+                "C#",
+                "SQL",
+                "JavaScript"
+            ],
+            "Required Technical Skills": [
+                "Programming Fundamentals",
+                "Object-Oriented Programming (OOPS)",
+                "Database Management (SQL/DBMS)",
+                "Software Development Lifecycle (SDLC)",
+                "Basic Data Structures",
+                "Cloud Fundamentals",
+                "API Development & Integration",
+                "Testing & Debugging",
+                "Version Control (Git)",
+                "Application Support Knowledge"
+            ],
+            "Required Soft Skills": [
+                "Communication Skills",
+                "Client Interaction Ability",
+                "Team Collaboration",
+                "Adaptability",
+                "Time Management",
+                "Problem Solving",
+                "Learning Agility"
+            ],
+            "AI Extracted Hiring DNA": [
+                "Strong Programming Fundamentals",
+                "Client-Focused Delivery Approach",
+                "Adaptability to Multiple Tech Stacks",
+                "Enterprise Application Handling",
+                "Team-Based Project Execution"
+            ],
+            "Most Repeated Requirements (Top 5)": [
+                "Programming Basics",
+                "OOPS",
+                "SQL/DBMS",
+                "Communication Skills",
+                "Problem Solving"
+            ],
+            "Hiring Base Logic": "Infosys fundamentally hires candidates with strong programming fundamentals and high adaptability. The focus is on executing enterprise client projects efficiently while ensuring strong collaboration and long-term project sustainability.",
+            "Hiring Weightage Model": {
+                "Programming": 30,
+                "DSA": 10,
+                "OOPS": 15,
+                "SQL": 15,
+                "Cloud": 5,
+                "Communication": 15,
+                "Problem Solving": 10
+            },
+            "Demand Level": "High",
+            "Core Required Skills (80%+)": [
+                "Programming Fundamentals",
+                "OOPS",
+                "Communication"
+            ],
+            "High Demand Skills (50-80%)": [
+                "SQL/DBMS",
+                "Problem Solving",
+                "Team Collaboration"
+            ],
+            "Emerging Skills (<50%)": [
+                "Cloud Engineering",
+                "Automation Tools",
+                "DevOps"
+            ]
+        },
+        {
+            "versions": [],
+            "Company Name": "Wipro",
+            "Company Type": "Service-Based",
+            "Core Technology Base": "Wipro delivers global IT consulting and enterprise technology services including cloud transformation, infrastructure management, cybersecurity services, application development, digital engineering solutions, AI-driven business automation, and long-term enterprise support projects across multiple industries.",
+            "Technology Domains Used": [
+                "IT Consulting Services",
+                "Cloud Transformation (AWS, Azure, GCP)",
+                "Infrastructure Management",
+                "Enterprise Application Development",
+                "Cybersecurity Solutions",
+                "AI & Automation Platforms",
+                "Digital Engineering",
+                "DevOps & CI/CD",
+                "Enterprise Data Platforms",
+                "Managed IT Services"
+            ],
+            "Technology-Based Requirements Mapping": [
+                "IT Consulting Projects → Programming Fundamentals + Communication",
+                "Cloud Transformation → Cloud Basics (AWS/Azure/GCP)",
+                "Cybersecurity Services → Security Awareness, Secure Coding",
+                "Infrastructure Management → Networking & System Basics",
+                "Enterprise Support Systems → Debugging & Troubleshooting Skills"
+            ],
+            "Required Programming Languages": [
+                "Java",
+                "Python",
+                "C#",
+                "SQL",
+                "JavaScript"
+            ],
+            "Required Technical Skills": [
+                "Programming Fundamentals",
+                "Object-Oriented Programming (OOPS)",
+                "SQL & Database Management",
+                "Basic Data Structures",
+                "Cloud Fundamentals",
+                "Application Development",
+                "Debugging & Testing",
+                "Version Control (Git)",
+                "Basic DevOps Concepts",
+                "System Integration"
+            ],
+            "Required Soft Skills": [
+                "Strong Communication",
+                "Team Collaboration",
+                "Client Interaction",
+                "Adaptability",
+                "Problem Solving",
+                "Time Management",
+                "Continuous Learning Mindset"
+            ],
+            "AI Extracted Hiring DNA": [
+                "Strong Programming Foundation",
+                "Client-Focused Delivery Model",
+                "Adaptability to Enterprise Environments",
+                "Team-Based Execution",
+                "Cloud & Digital Transformation Readiness"
+            ],
+            "Most Repeated Requirements (Top 5)": [
+                "Programming Fundamentals",
+                "OOPS",
+                "SQL",
+                "Communication",
+                "Problem Solving"
+            ],
+            "Hiring Base Logic": "Wipro fundamentally hires candidates who are adaptable, trainable, and capable of working in enterprise-level client environments. The focus is on programming fundamentals combined with strong communication and collaboration skills for long-term project execution.",
+            "Hiring Weightage Model": {
+                "Programming": 30,
+                "DSA": 10,
+                "OOPS": 15,
+                "SQL": 15,
+                "Cloud": 10,
+                "Communication": 10,
+                "Problem Solving": 10
+            },
+            "Demand Level": "High",
+            "Core Required Skills (80%+)": [
+                "Programming Fundamentals",
+                "Communication",
+                "OOPS"
+            ],
+            "High Demand Skills (50-80%)": [
+                "SQL",
+                "Cloud Fundamentals",
+                "Problem Solving"
+            ],
+            "Emerging Skills (<50%)": [
+                "DevOps",
+                "Automation Engineering",
+                "Cybersecurity Basics"
+            ]
+        },
+        {
+            "versions": [],
+            "Company Name": "Accenture",
+            "Company Type": "Service-Based",
+            "Core Technology Base": "Accenture delivers global consulting and enterprise technology solutions including large-scale digital transformation programs, SAP and Oracle ERP implementations, cloud-native enterprise modernization, AI-driven automation systems, cybersecurity platforms, and global IT outsourcing projects for Fortune 500 clients.",
+            "Technology Domains Used": [
+                "Enterprise Consulting",
+                "Cloud Migration & Transformation",
+                "SAP & Oracle ERP Systems",
+                "Digital Transformation Platforms",
+                "AI & Intelligent Automation",
+                "Cybersecurity Engineering",
+                "Enterprise Data Platforms",
+                "DevOps & Deployment Pipelines",
+                "Application Development & Maintenance",
+                "Business Process Optimization"
+            ],
+            "Technology-Based Requirements Mapping": [
+                "Enterprise Consulting → Communication + Programming Basics",
+                "SAP/Oracle ERP Systems → SQL, Database Management",
+                "Cloud-Native Transformation → Cloud Fundamentals",
+                "AI Automation Platforms → Basic AI/Automation Awareness",
+                "Global Client Projects → Team Collaboration + Adaptability"
+            ],
+            "Required Programming Languages": [
+                "Java",
+                "Python",
+                "SQL",
+                "JavaScript",
+                "C#"
+            ],
+            "Required Technical Skills": [
+                "Programming Fundamentals",
+                "Object-Oriented Programming (OOPS)",
+                "Database Management (SQL)",
+                "Software Development Lifecycle (SDLC)",
+                "Cloud Fundamentals",
+                "Enterprise Application Integration",
+                "Testing & Debugging",
+                "API Development",
+                "System Configuration",
+                "Basic Data Structures"
+            ],
+            "Required Soft Skills": [
+                "Excellent Communication",
+                "Client Interaction Skills",
+                "Team Collaboration",
+                "Presentation Skills",
+                "Adaptability",
+                "Problem Solving",
+                "Leadership Potential"
+            ],
+            "AI Extracted Hiring DNA": [
+                "Client-Centric Delivery Model",
+                "Strong Communication Skills",
+                "Enterprise Application Handling",
+                "Cloud Transformation Readiness",
+                "Team-Based Project Execution"
+            ],
+            "Most Repeated Requirements (Top 5)": [
+                "Programming Fundamentals",
+                "Communication Skills",
+                "SQL",
+                "OOPS",
+                "Problem Solving"
+            ],
+            "Hiring Base Logic": "Accenture fundamentally hires candidates who are adaptable, client-ready, and capable of working in large-scale enterprise consulting environments. The focus is on strong communication combined with technical fundamentals to execute global digital transformation projects.",
+            "Hiring Weightage Model": {
+                "Programming": 25,
+                "DSA": 10,
+                "OOPS": 15,
+                "SQL": 15,
+                "Cloud": 10,
+                "Communication": 15,
+                "Problem Solving": 10
+            },
+            "Demand Level": "High",
+            "Core Required Skills (80%+)": [
+                "Communication",
+                "Programming Fundamentals",
+                "OOPS"
+            ],
+            "High Demand Skills (50-80%)": [
+                "SQL",
+                "Cloud Fundamentals",
+                "Problem Solving"
+            ],
+            "Emerging Skills (<50%)": [
+                "AI Integration",
+                "Automation Engineering",
+                "DevOps"
+            ]
+        },
+        {
+            "versions": [
+                {
+                    "Company Name": "IBM",
+                    "Company Type": "Service-Based",
+                    "Core Technology Base": "IBM builds and delivers enterprise infrastructure systems, hybrid cloud platforms, AI-driven enterprise automation solutions (Watson), mainframe computing systems, cybersecurity platforms, blockchain enterprise solutions, and large-scale consulting services for global corporations and government organizations.",
+                    "Technology Domains Used": [
+                        "Hybrid Cloud Computing",
+                        "Enterprise Infrastructure Systems",
+                        "AI & Cognitive Computing (Watson)",
+                        "Cybersecurity Engineering",
+                        "Blockchain Enterprise Solutions",
+                        "Mainframe Systems",
+                        "DevOps & Automation",
+                        "Enterprise Data Platforms",
+                        "IT Consulting & Managed Services",
+                        "Digital Transformation Platforms"
+                    ],
+                    "Technology-Based Requirements Mapping": [
+                        "Hybrid Cloud Systems → Cloud Fundamentals + Infrastructure Knowledge",
+                        "AI (Watson) → Basic AI & Data Handling Skills",
+                        "Enterprise Infrastructure → OOPS + System Integration",
+                        "Blockchain Solutions → Distributed Systems Concepts",
+                        "Cybersecurity Platforms → Secure Coding + Security Awareness"
+                    ],
+                    "Required Programming Languages": [
+                        "Java",
+                        "Python",
+                        "C++",
+                        "SQL",
+                        "Go"
+                    ],
+                    "Required Technical Skills": [
+                        "Programming Fundamentals",
+                        "Object-Oriented Programming (OOPS)",
+                        "Database Systems (SQL/DBMS)",
+                        "Cloud Fundamentals (Hybrid Cloud)",
+                        "Basic Data Structures",
+                        "API Development",
+                        "System Integration",
+                        "Debugging & Troubleshooting",
+                        "DevOps Concepts",
+                        "Cybersecurity Basics"
+                    ],
+                    "Required Soft Skills": [
+                        "Strong Communication",
+                        "Enterprise Client Interaction",
+                        "Problem Solving",
+                        "Team Collaboration",
+                        "Analytical Thinking",
+                        "Adaptability",
+                        "Professionalism"
+                    ],
+                    "AI Extracted Hiring DNA": [
+                        "Enterprise System Thinking",
+                        "Hybrid Cloud Expertise",
+                        "Strong Programming Foundation",
+                        "Client-Oriented Delivery Model",
+                        "Security & Reliability Focus"
+                    ],
+                    "Most Repeated Requirements (Top 5)": [
+                        "Programming Fundamentals",
+                        "OOPS",
+                        "SQL/Database Knowledge",
+                        "Cloud Fundamentals",
+                        "Communication Skills"
+                    ],
+                    "Hiring Base Logic": "IBM fundamentally hires candidates who can work in enterprise-level environments involving hybrid cloud systems, infrastructure platforms, and large-scale digital transformation projects. The focus is on strong technical fundamentals combined with enterprise professionalism and client collaboration skills.",
+                    "Hiring Weightage Model": {
+                        "Programming": 25,
+                        "DSA": 10,
+                        "OOPS": 15,
+                        "SQL": 15,
+                        "Cloud": 15,
+                        "Communication": 10,
+                        "Problem Solving": 10
+                    },
+                    "Demand Level": "High",
+                    "Core Required Skills (80%+)": [
+                        "Programming Fundamentals",
+                        "OOPS",
+                        "Cloud Fundamentals"
+                    ],
+                    "High Demand Skills (50-80%)": [
+                        "SQL",
+                        "Communication",
+                        "Problem Solving"
+                    ],
+                    "Emerging Skills (<50%)": [
+                        "AI Integration",
+                        "Blockchain",
+                        "Cybersecurity Engineering"
+                    ]
+                },
+                {
+                    "Company Name": "IBM",
+                    "Company Type": "Service-Based",
+                    "Core Technology Base": "IBM builds and delivers enterprise infrastructure systems, hybrid cloud platforms, AI-driven enterprise automation solutions (Watson), mainframe computing systems, cybersecurity platforms, blockchain enterprise solutions, and large-scale consulting services for global corporations and government organizations.",
+                    "Technology Domains Used": [
+                        "Hybrid Cloud Computing",
+                        "Enterprise Infrastructure Systems",
+                        "AI & Cognitive Computing (Watson)",
+                        "Cybersecurity Engineering",
+                        "Blockchain Enterprise Solutions",
+                        "Mainframe Systems",
+                        "DevOps & Automation",
+                        "Enterprise Data Platforms",
+                        "IT Consulting & Managed Services",
+                        "Digital Transformation Platforms"
+                    ],
+                    "Technology-Based Requirements Mapping": [
+                        "Hybrid Cloud Systems → Cloud Fundamentals + Infrastructure Knowledge",
+                        "AI (Watson) → Basic AI & Data Handling Skills",
+                        "Enterprise Infrastructure → OOPS + System Integration",
+                        "Blockchain Solutions → Distributed Systems Concepts",
+                        "Cybersecurity Platforms → Secure Coding + Security Awareness"
+                    ],
+                    "Required Programming Languages": [
+                        "Java",
+                        "Python",
+                        "C++",
+                        "SQL",
+                        "Go",
+                        "Rust"
+                    ],
+                    "Required Technical Skills": [
+                        "Programming Fundamentals",
+                        "Object-Oriented Programming (OOPS)",
+                        "Database Systems (SQL/DBMS)",
+                        "Cloud Fundamentals (Hybrid Cloud)",
+                        "Basic Data Structures",
+                        "API Development",
+                        "System Integration",
+                        "Debugging & Troubleshooting",
+                        "DevOps Concepts",
+                        "Cybersecurity Basics"
+                    ],
+                    "Required Soft Skills": [
+                        "Strong Communication",
+                        "Enterprise Client Interaction",
+                        "Problem Solving",
+                        "Team Collaboration",
+                        "Analytical Thinking",
+                        "Adaptability",
+                        "Professionalism"
+                    ],
+                    "AI Extracted Hiring DNA": [
+                        "Enterprise System Thinking",
+                        "Hybrid Cloud Expertise",
+                        "Strong Programming Foundation",
+                        "Client-Oriented Delivery Model",
+                        "Security & Reliability Focus"
+                    ],
+                    "Most Repeated Requirements (Top 5)": [
+                        "Programming Fundamentals",
+                        "OOPS",
+                        "SQL/Database Knowledge",
+                        "Cloud Fundamentals",
+                        "Communication Skills"
+                    ],
+                    "Hiring Base Logic": "IBM fundamentally hires candidates who can work in enterprise-level environments involving hybrid cloud systems, infrastructure platforms, and large-scale digital transformation projects. The focus is on strong technical fundamentals combined with enterprise professionalism and client collaboration skills.",
+                    "Hiring Weightage Model": {
+                        "Programming": 25,
+                        "DSA": 10,
+                        "OOPS": 15,
+                        "SQL": 15,
+                        "Cloud": 15,
+                        "Communication": 10,
+                        "Problem Solving": 10
+                    },
+                    "Demand Level": "LOW",
+                    "Core Required Skills (80%+)": [
+                        "Programming Fundamentals",
+                        "OOPS",
+                        "Cloud Fundamentals"
+                    ],
+                    "High Demand Skills (50-80%)": [
+                        "SQL",
+                        "Communication",
+                        "Problem Solving"
+                    ],
+                    "Emerging Skills (<50%)": [
+                        "AI Integration",
+                        "Blockchain",
+                        "Cybersecurity Engineering"
+                    ]
+                },
+                {
+                    "Company Name": "IBM",
+                    "Company Type": "Service-Based",
+                    "Core Technology Base": "IBM builds and delivers enterprise infrastructure systems, hybrid cloud platforms, AI-driven enterprise automation solutions (Watson), mainframe computing systems, cybersecurity platforms, blockchain enterprise solutions, and large-scale consulting services for global corporations and government organizations.",
+                    "Technology Domains Used": [
+                        "Hybrid Cloud Computing",
+                        "Enterprise Infrastructure Systems",
+                        "AI & Cognitive Computing (Watson)",
+                        "Cybersecurity Engineering",
+                        "Blockchain Enterprise Solutions",
+                        "Mainframe Systems",
+                        "DevOps & Automation",
+                        "Enterprise Data Platforms",
+                        "IT Consulting & Managed Services",
+                        "Digital Transformation Platforms"
+                    ],
+                    "Technology-Based Requirements Mapping": [
+                        "Hybrid Cloud Systems → Cloud Fundamentals + Infrastructure Knowledge",
+                        "AI (Watson) → Basic AI & Data Handling Skills",
+                        "Enterprise Infrastructure → OOPS + System Integration",
+                        "Blockchain Solutions → Distributed Systems Concepts",
+                        "Cybersecurity Platforms → Secure Coding + Security Awareness"
+                    ],
+                    "Required Programming Languages": [
+                        "Java",
+                        "Python",
+                        "C++",
+                        "SQL",
+                        "Go",
+                        "Rust"
+                    ],
+                    "Required Technical Skills": [
+                        "Programming Fundamentals",
+                        "Object-Oriented Programming (OOPS)",
+                        "Database Systems (SQL/DBMS)",
+                        "Cloud Fundamentals (Hybrid Cloud)",
+                        "Basic Data Structures",
+                        "API Development",
+                        "System Integration",
+                        "Debugging & Troubleshooting",
+                        "DevOps Concepts",
+                        "Cybersecurity Basics"
+                    ],
+                    "Required Soft Skills": [
+                        "Strong Communication",
+                        "Enterprise Client Interaction",
+                        "Problem Solving",
+                        "Team Collaboration",
+                        "Analytical Thinking",
+                        "Adaptability",
+                        "Professionalism"
+                    ],
+                    "AI Extracted Hiring DNA": [
+                        "Enterprise System Thinking",
+                        "Hybrid Cloud Expertise",
+                        "Strong Programming Foundation",
+                        "Client-Oriented Delivery Model",
+                        "Security & Reliability Focus"
+                    ],
+                    "Most Repeated Requirements (Top 5)": [
+                        "Programming Fundamentals",
+                        "OOPS",
+                        "SQL/Database Knowledge",
+                        "Cloud Fundamentals",
+                        "Communication Skills"
+                    ],
+                    "Hiring Base Logic": "IBM fundamentally hires candidates who can work in enterprise-level environments involving hybrid cloud systems, infrastructure platforms, and large-scale digital transformation projects. The focus is on strong technical fundamentals combined with enterprise professionalism and client collaboration skills.",
+                    "Hiring Weightage Model": {
+                        "Programming": 25,
+                        "DSA": 10,
+                        "OOPS": 15,
+                        "SQL": 15,
+                        "Cloud": 15,
+                        "Communication": 10,
+                        "Problem Solving": 10
+                    },
+                    "Demand Level": "MEDIUM",
+                    "Core Required Skills (80%+)": [
+                        "Programming Fundamentals",
+                        "OOPS",
+                        "Cloud Fundamentals"
+                    ],
+                    "High Demand Skills (50-80%)": [
+                        "SQL",
+                        "Communication",
+                        "Problem Solving"
+                    ],
+                    "Emerging Skills (<50%)": [
+                        "AI Integration",
+                        "Blockchain",
+                        "Cybersecurity Engineering"
+                    ]
+                }
+            ],
+            "Company Name": "IBM",
+            "Company Type": "Service-Based",
+            "Core Technology Base": "IBM builds and delivers enterprise infrastructure systems, hybrid cloud platforms, AI-driven enterprise automation solutions (Watson), mainframe computing systems, cybersecurity platforms, blockchain enterprise solutions, and large-scale consulting services for global corporations and government organizations.",
+            "Technology Domains Used": [
+                "Hybrid Cloud Computing",
+                "Enterprise Infrastructure Systems",
+                "AI & Cognitive Computing (Watson)",
+                "Cybersecurity Engineering",
+                "Blockchain Enterprise Solutions",
+                "Mainframe Systems",
+                "DevOps & Automation",
+                "Enterprise Data Platforms",
+                "IT Consulting & Managed Services",
+                "Digital Transformation Platforms"
+            ],
+            "Technology-Based Requirements Mapping": [
+                "Hybrid Cloud Systems → Cloud Fundamentals + Infrastructure Knowledge",
+                "AI (Watson) → Basic AI & Data Handling Skills",
+                "Enterprise Infrastructure → OOPS + System Integration",
+                "Blockchain Solutions → Distributed Systems Concepts",
+                "Cybersecurity Platforms → Secure Coding + Security Awareness"
+            ],
+            "Required Programming Languages": [
+                "Java",
+                "Python",
+                "C++",
+                "SQL",
+                "Go",
+                "Rust"
+            ],
+            "Required Technical Skills": [
+                "Programming Fundamentals",
+                "Object-Oriented Programming (OOPS)",
+                "Database Systems (SQL/DBMS)",
+                "Cloud Fundamentals (Hybrid Cloud)",
+                "Basic Data Structures",
+                "API Development",
+                "System Integration",
+                "Debugging & Troubleshooting",
+                "DevOps Concepts",
+                "Cybersecurity Basics"
+            ],
+            "Required Soft Skills": [
+                "Strong Communication",
+                "Enterprise Client Interaction",
+                "Problem Solving",
+                "Team Collaboration",
+                "Analytical Thinking",
+                "Adaptability",
+                "Professionalism"
+            ],
+            "AI Extracted Hiring DNA": [
+                "Enterprise System Thinking",
+                "Hybrid Cloud Expertise",
+                "Strong Programming Foundation",
+                "Client-Oriented Delivery Model",
+                "Security & Reliability Focus"
+            ],
+            "Most Repeated Requirements (Top 5)": [
+                "Programming Fundamentals",
+                "OOPS",
+                "SQL/Database Knowledge",
+                "Cloud Fundamentals",
+                "Communication Skills"
+            ],
+            "Hiring Base Logic": "IBM fundamentally hires candidates who can work in enterprise-level environments involving hybrid cloud systems, infrastructure platforms, and large-scale digital transformation projects. The focus is on strong technical fundamentals combined with enterprise professionalism and client collaboration skills.",
+            "Hiring Weightage Model": {
+                "Programming": 25,
+                "DSA": 10,
+                "OOPS": 15,
+                "SQL": 15,
+                "Cloud": 15,
+                "Communication": 10,
+                "Problem Solving": 10
+            },
+            "Demand Level": "LOW",
+            "Core Required Skills (80%+)": [
+                "Programming Fundamentals",
+                "OOPS",
+                "Cloud Fundamentals"
+            ],
+            "High Demand Skills (50-80%)": [
+                "SQL",
+                "Communication",
+                "Problem Solving"
+            ],
+            "Emerging Skills (<50%)": [
+                "AI Integration",
+                "Blockchain",
+                "Cybersecurity Engineering"
+            ]
+        }
+    ]
+}

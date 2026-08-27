@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Job Intelligence</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 🌌 PARTICLES -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<style>
+
+/* 🌌 BACKGROUND */
+body{
+background: radial-gradient(circle at top, #020617, #020617);
+color:white;
+overflow-x:hidden;
+}
+
+/* PARTICLES */
+#tsparticles{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* ✨ INPUT FIX */
+input{
+background: rgba(2,6,23,0.9) !important;
+border:1px solid rgba(0,242,254,0.4) !important;
+color:#ffffff !important;
+backdrop-filter: blur(10px);
+font-weight:500;
+letter-spacing:0.5px;
+transition: all 0.3s ease;
+}
+
+input::placeholder{
+color:#94a3b8 !important;
+opacity:1;
+}
+
+input:focus{
+outline:none;
+border:1px solid #00f2fe !important;
+box-shadow:0 0 10px #00f2fe, 0 0 25px rgba(0,242,254,0.3);
+}
+
+input:hover{
+border-color:#00f2fe !important;
+}
+
+/* 🚀 BUTTONS */
+.btn{
+border:none !important;
+border-radius:12px !important;
+font-weight:bold;
+transition: all 0.3s ease;
+position:relative;
+overflow:hidden;
+}
+
+.btn::after{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.3),transparent);
+transition:0.5s;
+}
+
+.btn:hover::after{
+left:100%;
+}
+
+.btn-primary{
+background: linear-gradient(45deg,#2563eb,#00f2fe);
+}
+
+.btn-warning{
+background: linear-gradient(45deg,#f59e0b,#f97316);
+}
+
+.btn-success{
+background: linear-gradient(45deg,#22c55e,#4ade80);
+}
+
+.btn:hover{
+transform: translateY(-3px) scale(1.05);
+box-shadow:0 10px 25px rgba(0,242,254,0.4);
+}
+
+/* 🔥 CARD */
+.card{
+background: linear-gradient(145deg, rgba(10,20,40,0.95), rgba(2,6,23,0.98)) !important;
+color:white !important;
+border-radius:18px !important;
+border:1px solid rgba(37,99,235,0.3) !important;
+
+box-shadow:
+0 0 20px rgba(37,99,235,0.2),
+inset 0 0 20px rgba(37,99,235,0.1);
+
+transition: all 0.4s ease;
+position:relative;
+overflow:hidden;
+}
+
+/* 🌈 GLOW BORDER */
+.card::before{
+content:"";
+position:absolute;
+inset:0;
+border-radius:18px;
+padding:1px;
+
+background: linear-gradient(45deg,#2563eb,#00f2fe,#7c3aed);
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+
+opacity:0.6;
+animation: borderGlow 4s linear infinite;
+}
+
+/* 🚀 HOVER */
+.card:hover{
+transform: translateY(-10px) scale(1.03);
+box-shadow:
+0 0 40px rgba(0,242,254,0.6),
+0 0 80px rgba(37,99,235,0.3);
+}
+
+/* TEXT FIX */
+.card.text-dark{
+color:white !important;
+}
+
+/* TITLE */
+.card h5{
+color:#00f2fe;
+font-weight:bold;
+}
+
+/* PARAGRAPH */
+.card p{
+color:#cbd5e1;
+}
+
+/* 🔥 TITLE */
+h2{
+text-shadow:0 0 20px #2563eb;
+}
+
+/* ENTRY ANIMATION */
+.card{
+animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* BORDER ANIMATION */
+@keyframes borderGlow{
+0%{filter:hue-rotate(0deg);}
+100%{filter:hue-rotate(360deg);}
+}
+
+</style>
+
+</head>
+
+<body class="p-4">
+
+<!-- 🌌 PARTICLES -->
+<div id="tsparticles"></div>
+
+<h2 class="text-center mb-4">🔥 AI Job Intelligence</h2>
+
+<div class="container">
+
+<input type="text" id="role" class="form-control mb-2" placeholder="Enter role (e.g. developer)">
+<input type="text" id="skills" class="form-control mb-2" placeholder="Enter skills (python, flask)">
+
+<button class="btn btn-primary w-100" onclick="getJobs()">Get Jobs</button>
+
+<button class="btn btn-warning w-100 mt-2" onclick="loadFeed()">
+🔥 Latest Job Updates
+</button>
+
+<div id="jobs" class="mt-4"></div>
+<div id="feed" class="mt-4"></div>
+
+</div>
+
+<script>
+
+/* 🌌 PARTICLES */
+tsParticles.load("tsparticles", {
+particles: {
+number: { value: 90 },
+color: { value: "#00f2fe" },
+links: {
+enable: true,
+color: "#2563eb",
+distance: 130
+},
+move: { enable: true, speed: 2 },
+size: { value: 2 }
+},
+background: { color: "transparent" }
+});
+
+
+// 🔵 SEARCH
+function getJobs(){
+
+let role = document.getElementById("role").value;
+let skills = document.getElementById("skills").value.split(",");
+
+fetch('/advanced_jobs',{
+method:'POST',
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({role:role, skills:skills})
+})
+.then(res=>res.json())
+.then(data=>{
+
+let html="";
+
+if(!data || data.length===0){
+html = "<p class='text-warning'>No jobs found</p>";
+}
+
+data.forEach(job=>{
+
+html+=`
+<div class="card mb-3 text-dark shadow">
+<div class="card-body">
+<h5>${job.title || "No Title"}</h5>
+<p>${job.company || "No Company"}</p>
+<p>Match: ${job.match || 0}%</p>
+
+${job.apply && job.apply !== "null"
+? `<a href="${job.apply}" target="_blank" class="btn btn-success">Apply</a>`
+: `<button class="btn btn-secondary disabled">No Link</button>`}
+
+</div>
+</div>
+`;
+
+});
+
+document.getElementById("jobs").innerHTML=html;
+document.getElementById("feed").innerHTML="";
+
+})
+.catch(err=>{
+alert("Search error ❌");
+});
+}
+
+
+// 🟡 FEED
+function loadFeed(){
+
+fetch('/job-feed-data')
+.then(res => res.json())
+.then(data => {
+
+let html="";
+
+if(!data || data.length === 0){
+html = "<p class='text-warning'>No latest jobs found</p>";
+}
+
+data.forEach(job=>{
+
+html+=`
+<div class="card mb-3 text-dark shadow">
+<div class="card-body">
+<h5>🚀 ${job.title || "No Title"}</h5>
+<p>🏢 ${job.company || "No Company"}</p>
+
+${job.apply && job.apply !== "null"
+? `<a href="${job.apply}" target="_blank" class="btn btn-success">Apply</a>`
+: `<button class="btn btn-secondary disabled">No Link</button>`}
+
+</div>
+</div>
+`;
+
+});
+
+document.getElementById("feed").innerHTML = html;
+document.getElementById("jobs").innerHTML = "";
+
+})
+.catch(err=>{
+alert("Feed error ❌");
+});
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>GenAI Universal Resume Optimizer</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<style>
+
+/* ================================
+   BASIC RESET
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* ================================
+   MAIN WEBSITE
+================================ */
+
+body{
+    font-family:Arial, sans-serif;
+    background:#020617;
+    padding:20px;
+    overflow-x:hidden;
+}
+
+
+/* PAGE TITLE */
+
+h2{
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+
+/* ================================
+   MAIN LAYOUT
+================================ */
+
+.container{
+    display:flex;
+    gap:30px;
+    align-items:flex-start;
+}
+
+.left{
+    flex:2;
+    min-width:0;
+}
+
+.right{
+    flex:1;
+    min-width:280px;
+}
+
+
+/* ================================
+   INPUT BOXES
+================================ */
+
+textarea{
+    width:100%;
+    padding:12px;
+    border-radius:6px;
+    border:1px solid #cbd5e1;
+    background:white;
+    color:#111827;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    resize:vertical;
+    outline:none;
+}
+
+textarea:focus{
+    border-color:#2563eb;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+button{
+    padding:10px 20px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:6px;
+    margin-top:10px;
+    margin-right:6px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+
+/* ================================
+   RESUME A4 PAGE
+================================ */
+
+#resumePaper{
+
+    width:210mm;
+    min-height:297mm;
+
+    background:#ffffff;
+
+    margin-top:20px;
+
+    padding:12mm 14mm;
+
+    color:#000000;
+
+    font-family:Arial, sans-serif;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.35);
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+
+/* ================================
+   RESUME CONTENT
+================================ */
+
+#resumeOutput{
+
+    width:100%;
+
+    color:#000000;
+
+    font-family:Arial, sans-serif;
+
+    font-size:11px;
+
+    line-height:1.35;
+}
+
+
+/* ================================
+   NAME
+================================ */
+
+#resumeOutput h1{
+
+    text-align:center;
+
+    font-family:Arial, sans-serif;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:#000000;
+
+    margin-bottom:5px;
+
+    line-height:1.2;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+#resumeOutput .contact{
+
+    text-align:center;
+
+    font-family:Arial, sans-serif;
+
+    font-size:10.5px;
+
+    color:#000000;
+
+    margin-bottom:10px;
+
+    line-height:1.35;
+
+    word-wrap:break-word;
+}
+
+
+/* ================================
+   SECTION HEADINGS
+================================ */
+
+#resumeOutput h3{
+
+    font-family:Arial, sans-serif;
+
+    font-size:12.5px;
+
+    font-weight:bold;
+
+    color:#000000;
+
+    text-transform:uppercase;
+
+    border-bottom:1px solid #000000;
+
+    padding-bottom:2px;
+
+    margin-top:9px;
+
+    margin-bottom:5px;
+
+    line-height:1.2;
+}
+
+
+/* ================================
+   LIST
+================================ */
+
+#resumeOutput ul{
+
+    margin-left:18px;
+
+    padding-left:0;
+
+    margin-bottom:3px;
+}
+
+#resumeOutput li{
+
+    color:#000000;
+
+    font-family:Arial, sans-serif;
+
+    font-size:11px;
+
+    margin-bottom:2px;
+
+    line-height:1.35;
+}
+
+
+/* ================================
+   NORMAL TEXT
+================================ */
+
+#resumeOutput p{
+
+    margin-bottom:3px;
+
+    font-size:11px;
+
+    line-height:1.35;
+}
+
+
+/* ================================
+   SUBHEADINGS
+================================ */
+
+#resumeOutput .subheading{
+
+    color:#000000;
+
+    font-family:Arial, sans-serif;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    margin-top:4px;
+
+    margin-bottom:2px;
+
+    line-height:1.3;
+}
+
+
+/* ================================
+   PROJECT TITLE
+================================ */
+
+#resumeOutput .project-title{
+
+    color:#000000;
+
+    font-family:Arial, sans-serif;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    margin-top:5px;
+
+    margin-bottom:2px;
+
+    line-height:1.3;
+}
+
+
+/* ================================
+   RIGHT PANEL
+================================ */
+
+.right h3{
+
+    color:white;
+
+    border-bottom:1px solid white;
+
+    padding-bottom:5px;
+
+    margin-bottom:8px;
+}
+
+
+/* ================================
+   SCORE BOX
+================================ */
+
+.score-box{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+
+/* SCORE CIRCLE */
+
+.circle{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+.circle small{
+
+    font-size:11px;
+
+    font-weight:normal;
+
+    margin-top:3px;
+}
+
+.ats{
+
+    background:#22c55e;
+}
+
+.job{
+
+    background:#f97316;
+}
+
+
+/* ================================
+   WEBSITE BACKGROUND
+================================ */
+
+.bg-anim{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:-3;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #020617,
+            #000
+        );
+}
+
+
+.bg-anim::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:200%;
+
+    height:200%;
+
+    background:
+        linear-gradient(
+            60deg,
+            #00f0ff,
+            #6366f1,
+            #ff00cc,
+            #00f0ff
+        );
+
+    animation:move 15s linear infinite;
+
+    opacity:0.15;
+}
+
+
+@keyframes move{
+
+    0%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(-25%,-25%);
+    }
+
+    100%{
+        transform:translate(0,0);
+    }
+
+}
+
+
+/* ================================
+   GLOW
+================================ */
+
+.glow{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:-2;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(0,255,255,0.2),
+            transparent
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255,0,255,0.2),
+            transparent
+        );
+
+    filter:blur(120px);
+}
+
+
+/* ================================
+   PARTICLES
+================================ */
+
+.particle{
+
+    position:absolute;
+
+    width:4px;
+
+    height:4px;
+
+    background:#00f0ff;
+
+    border-radius:50%;
+
+    box-shadow:0 0 10px #00f0ff;
+
+    animation:float linear infinite;
+
+}
+
+
+@keyframes float{
+
+    from{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-10vh);
+        opacity:0;
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:1000px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .left,
+    .right{
+        width:100%;
+    }
+
+    #resumePaper{
+        transform-origin:top left;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- BACKGROUND -->
+
+<div class="bg-anim"></div>
+
+<div class="glow"></div>
+
+
+<!-- PARTICLES -->
+
+<script>
+
+for(let i=0;i<80;i++){
+
+    let p=document.createElement("div");
+
+    p.className="particle";
+
+    p.style.left=Math.random()*100+"vw";
+
+    p.style.animationDuration=
+        (5+Math.random()*10)+"s";
+
+    document.body.appendChild(p);
+
+}
+
+</script>
+
+
+<!-- PAGE TITLE -->
+
+<h2>
+🚀 GenAI Universal Resume Optimizer
+</h2>
+
+
+<div class="container">
+
+
+<!-- =================================
+     LEFT SIDE
+================================= -->
+
+<div class="left">
+
+
+<textarea
+id="resumeText"
+rows="12"
+placeholder="Paste your resume here..."
+></textarea>
+
+
+<br>
+
+
+<button onclick="optimizeResume()">
+Optimize Resume
+</button>
+
+
+<button onclick="downloadResume()">
+Download PDF
+</button>
+
+
+<!-- ================================
+     RESUME
+================================ -->
+
+<div id="resumePaper">
+
+<div id="resumeOutput"></div>
+
+</div>
+
+
+</div>
+
+
+<!-- =================================
+     RIGHT SIDE
+================================= -->
+
+<div class="right">
+
+
+<h3>
+📄 Job Description
+</h3>
+
+
+<textarea
+id="jobDesc"
+rows="12"
+placeholder="Paste Job Description here..."
+></textarea>
+
+
+<!-- SCORE -->
+
+<div class="score-box">
+
+
+<div class="circle ats">
+
+<div id="atsScore">
+0%
+</div>
+
+<small>
+ATS Score
+</small>
+
+</div>
+
+
+<div class="circle job">
+
+<div id="jobScore">
+0%
+</div>
+
+<small>
+Job Match
+</small>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+/* =========================================
+   HTML ESCAPE
+========================================= */
+
+function escapeHTML(text){
+
+    return text
+        .replace(/&/g,"&amp;")
+        .replace(/</g,"&lt;")
+        .replace(/>/g,"&gt;")
+        .replace(/"/g,"&quot;")
+        .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================================
+   OPTIMIZE RESUME
+========================================= */
+
+function optimizeResume(){
+
+    let text =
+        document.getElementById("resumeText").value;
+
+    if(!text.trim()){
+
+        alert("Please paste your resume first.");
+
+        return;
+    }
+
+
+    let lines =
+        text
+        .split(/\r?\n/)
+        .map(l => l.trim())
+        .filter(l => l);
+
+
+    /* ================================
+       NAME
+    ================================= */
+
+    let name = lines[0] || "";
+
+
+    /* ================================
+       CONTACT
+    ================================= */
+
+    let contact = "";
+
+    if(lines.length > 1){
+
+        contact = lines[1];
+
+    }
+
+
+    let html = "";
+
+
+
+    /* NAME */
+
+    html +=
+        `<h1>${escapeHTML(name)}</h1>`;
+
+
+    /* CONTACT */
+
+    html +=
+        `<div class="contact">
+            ${escapeHTML(contact)}
+        </div>`;
+
+
+    let current = "";
+
+    let insideList = false;
+
+    let used = {};
+
+
+    /* =================================
+       CLOSE LIST
+    ================================= */
+
+    function closeList(){
+
+        if(insideList){
+
+            html += "</ul>";
+
+            insideList = false;
+
+        }
+
+    }
+
+
+    /* =================================
+       HEADINGS CHECK
+    ================================= */
+
+    function isHeading(value){
+
+        let clean =
+            value
+            .toLowerCase()
+            .replace(/[:\-]+$/,"")
+            .trim();
+
+
+        return [
+
+            "career objective",
+
+            "objective",
+
+            "professional summary",
+
+            "summary",
+
+            "education",
+
+            "technical skills",
+
+            "skills",
+
+            "internship",
+
+            "internships",
+
+            "internship experience",
+
+            "experience",
+
+            "work experience",
+
+            "projects",
+
+            "project",
+
+            "certifications",
+
+            "certification",
+
+            "achievements",
+
+            "achievement",
+
+            "research paper",
+
+            "research paper / conference presentation",
+
+            "conference presentation",
+
+            "declaration",
+
+            "languages",
+
+            "strengths",
+
+            "additional information"
+
+        ].includes(clean);
+
+    }
+
+
+    /* =================================
+       SECTION NAME
+    ================================= */
+
+    function getSectionName(value){
+
+        let clean =
+            value
+            .toLowerCase()
+            .replace(/[:\-]+$/,"")
+            .trim();
+
+
+        if(
+            clean === "career objective" ||
+            clean === "objective"
+        ){
+
+            return "Career Objective";
+
+        }
+
+
+        if(
+            clean === "professional summary" ||
+            clean === "summary"
+        ){
+
+            return "Professional Summary";
+
+        }
+
+
+        if(
+            clean === "education"
+        ){
+
+            return "Education";
+
+        }
+
+
+        if(
+            clean === "technical skills" ||
+            clean === "skills"
+        ){
+
+            return "Technical Skills";
+
+        }
+
+
+        if(
+            clean.includes("internship")
+        ){
+
+            return "Internships Experience";
+
+        }
+
+
+        if(
+            clean === "experience" ||
+            clean === "work experience"
+        ){
+
+            return "Experience";
+
+        }
+
+
+        if(
+            clean === "projects" ||
+            clean === "project"
+        ){
+
+            return "Projects";
+
+        }
+
+
+        if(
+            clean === "certifications" ||
+            clean === "certification"
+        ){
+
+            return "Certifications";
+
+        }
+
+
+        if(
+            clean === "achievements" ||
+            clean === "achievement"
+        ){
+
+            return "Achievements";
+
+        }
+
+
+        if(
+            clean.includes("research paper") ||
+            clean.includes("conference presentation")
+        ){
+
+            return "Research Paper / Conference Presentation";
+
+        }
+
+
+        if(
+            clean === "declaration"
+        ){
+
+            return "Declaration";
+
+        }
+
+
+        if(
+            clean === "languages"
+        ){
+
+            return "Languages";
+
+        }
+
+
+        if(
+            clean === "strengths"
+        ){
+
+            return "Strengths";
+
+        }
+
+
+        if(
+            clean === "additional information"
+        ){
+
+            return "Additional Information";
+
+        }
+
+
+        return value;
+
+    }
+
+
+    /* =================================
+       MAIN LOOP
+    ================================= */
+
+    for(
+        let i=2;
+        i<lines.length;
+        i++
+    ){
+
+        let line = lines[i];
+
+        let lower =
+            line
+            .toLowerCase()
+            .replace(/[:\-]+$/,"")
+            .trim();
+
+
+        /* ==============================
+           SECTION
+        ============================== */
+
+        if(isHeading(line)){
+
+            closeList();
+
+
+            let section =
+                getSectionName(line);
+
+
+            html +=
+                `<h3>
+                    ${escapeHTML(section)}
+                </h3>`;
+
+
+            current = lower;
+
+            used[lower] = true;
+
+
+            /* Declaration does not need bullets */
+
+            if(lower === "declaration"){
+
+                continue;
+
+            }
+
+
+            html += "<ul>";
+
+            insideList = true;
+
+            continue;
+
+        }
+
+
+        /* ==============================
+           PROJECTS
+        ============================== */
+
+        if(
+            current === "projects" ||
+            current === "project"
+        ){
+
+            if(
+                !line.startsWith("-") &&
+                !line.startsWith("•") &&
+                !line.startsWith("*")
+            ){
+
+                closeList();
+
+
+                html +=
+                    `<div class="project-title">
+                        ${escapeHTML(line)}
+                    </div>`;
+
+
+                html += "<ul>";
+
+                insideList = true;
+
+            }
+            else{
+
+                if(!insideList){
+
+                    html += "<ul>";
+
+                    insideList = true;
+
+                }
+
+
+                html +=
+                    `<li>
+                        ${escapeHTML(
+                            line.replace(
+                                /^[-•*]\s*/,
+                                ""
+                            )
+                        )}
+                    </li>`;
+
+            }
+
+
+            continue;
+
+        }
+
+
+        /* ==============================
+           INTERNSHIP / EXPERIENCE
+        ============================== */
+
+        if(
+            current.includes("internship") ||
+            current === "experience" ||
+            current === "work experience"
+        ){
+
+            if(
+                !line.startsWith("-") &&
+                !line.startsWith("•") &&
+                !line.startsWith("*")
+            ){
+
+                closeList();
+
+
+                html +=
+                    `<div class="subheading">
+                        ${escapeHTML(line)}
+                    </div>`;
+
+            }
+            else{
+
+                if(!insideList){
+
+                    html += "<ul>";
+
+                    insideList = true;
+
+                }
+
+
+                html +=
+                    `<li>
+                        ${escapeHTML(
+                            line.replace(
+                                /^[-•*]\s*/,
+                                ""
+                            )
+                        )}
+                    </li>`;
+
+            }
+
+
+            continue;
+
+        }
+
+
+        /* ==============================
+           DECLARATION
+        ============================== */
+
+        if(lower === "declaration"){
+
+            html +=
+                `<p>
+                    ${escapeHTML(line)}
+                </p>`;
+
+            continue;
+
+        }
+
+
+        /* ==============================
+           NORMAL CONTENT
+        ============================== */
+
+        if(!insideList){
+
+            html += "<ul>";
+
+            insideList = true;
+
+        }
+
+
+        let cleanLine =
+            line.replace(
+                /^[-•*]\s*/,
+                ""
+            );
+
+
+        html +=
+            `<li>
+                ${escapeHTML(cleanLine)}
+            </li>`;
+
+    }
+
+
+    closeList();
+
+
+    /* =================================
+       DISPLAY
+    ================================= */
+
+    document.getElementById(
+        "resumeOutput"
+    ).innerHTML = html;
+
+
+    /* =================================
+       ATS SCORE
+    ================================= */
+
+    calculateScores();
+
+}
+
+
+/* =========================================
+   ATS + JOB MATCH SCORE
+========================================= */
+
+function calculateScores(){
+
+    let resume =
+        document.getElementById(
+            "resumeText"
+        ).value
+        .toLowerCase();
+
+
+    let job =
+        document.getElementById(
+            "jobDesc"
+        ).value
+        .toLowerCase();
+
+
+    if(!job.trim()){
+
+        document.getElementById(
+            "atsScore"
+        ).innerText = "0%";
+
+
+        document.getElementById(
+            "jobScore"
+        ).innerText = "0%";
+
+        return;
+
+    }
+
+
+    let words =
+        job
+        .replace(/[^a-z0-9+#.\- ]/g," ")
+        .split(/\s+/)
+        .filter(w => w.length > 2);
+
+
+    let uniqueWords =
+        [...new Set(words)];
+
+
+    let matched = 0;
+
+
+    uniqueWords.forEach(word => {
+
+        if(resume.includes(word)){
+
+            matched++;
+
+        }
+
+    });
+
+
+    let score =
+        uniqueWords.length
+        ? Math.round(
+            (matched /
+            uniqueWords.length) * 100
+        )
+        : 0;
+
+
+    /* Limit score */
+
+    score =
+        Math.min(
+            Math.max(score,0),
+            100
+        );
+
+
+    document.getElementById(
+        "atsScore"
+    ).innerText = score + "%";
+
+
+    document.getElementById(
+        "jobScore"
+    ).innerText = score + "%";
+
+}
+
+
+/* =========================================
+   DOWNLOAD PDF
+========================================= */
+
+async function downloadResume(){
+
+    let element =
+        document.getElementById(
+            "resumePaper"
+        );
+
+
+    if(
+        !element.innerText.trim()
+    ){
+
+        alert(
+            "Please optimize the resume first."
+        );
+
+        return;
+
+    }
+
+
+    const { jsPDF } =
+        window.jspdf;
+
+
+    /* Render resume */
+
+    let canvas =
+        await html2canvas(
+            element,
+            {
+                scale:2,
+
+                useCORS:true,
+
+                backgroundColor:"#ffffff"
+            }
+        );
+
+
+    let imgData =
+        canvas.toDataURL(
+            "image/jpeg",
+            1.0
+        );
+
+
+    let pdf =
+        new jsPDF(
+            "p",
+            "mm",
+            "a4"
+        );
+
+
+    let pageWidth = 210;
+
+    let pageHeight = 297;
+
+
+    let imgWidth =
+        pageWidth;
+
+
+    let imgHeight =
+        (
+            canvas.height *
+            imgWidth
+        ) /
+        canvas.width;
+
+
+    /* Single page */
+
+    if(
+        imgHeight >
+        pageHeight
+    ){
+
+        imgHeight =
+            pageHeight;
+
+    }
+
+
+    pdf.addImage(
+        imgData,
+        "JPEG",
+        0,
+        0,
+        imgWidth,
+        imgHeight
+    );
+
+
+    pdf.save(
+        "ATS_Optimized_Resume.pdf"
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>

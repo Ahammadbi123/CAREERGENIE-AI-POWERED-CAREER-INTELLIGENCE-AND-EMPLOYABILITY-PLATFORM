@@ -1,0 +1,92 @@
+/* 🔥 STARFIELD BACKGROUND (NEW STYLE) */
+
+body{
+background:#020617;
+overflow:hidden;
+position:relative;
+}
+
+/* stars layer */
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-3;
+background:transparent;
+}
+
+/* small stars */
+.stars::before{
+content:"";
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+box-shadow:
+50vw 20vh white,
+10vw 80vh white,
+80vw 40vh white,
+30vw 60vh white,
+70vw 10vh white,
+20vw 30vh white,
+90vw 70vh white,
+60vw 50vh white;
+animation:moveStars 20s linear infinite;
+opacity:0.6;
+}
+
+/* big glowing stars */
+.stars::after{
+content:"";
+position:absolute;
+width:4px;
+height:4px;
+background:#38bdf8;
+box-shadow:
+40vw 10vh #38bdf8,
+70vw 80vh #38bdf8,
+20vw 50vh #38bdf8,
+85vw 30vh #38bdf8;
+animation:moveStars 30s linear infinite;
+}
+
+/* movement */
+@keyframes moveStars{
+from{transform:translateY(0);}
+to{transform:translateY(-100vh);}
+}
+
+/* glow nebula */
+.nebula{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-2;
+background:
+radial-gradient(circle at 20% 30%, rgba(56,189,248,0.2), transparent),
+radial-gradient(circle at 80% 70%, rgba(139,92,246,0.2), transparent);
+filter:blur(100px);
+}
+
+/* floating particles */
+.particle{
+position:absolute;
+width:3px;
+height:3px;
+background:#60a5fa;
+border-radius:50%;
+box-shadow:0 0 8px #60a5fa;
+animation:float linear infinite;
+}
+
+@keyframes float{
+from{
+transform:translateY(100vh);
+opacity:0;
+}
+10%{opacity:1;}
+to{
+transform:translateY(-10vh);
+opacity:0;
+}
+}

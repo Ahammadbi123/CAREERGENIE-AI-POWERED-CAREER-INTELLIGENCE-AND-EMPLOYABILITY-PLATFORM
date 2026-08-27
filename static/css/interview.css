@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f7fb;
+}
+
+/* ==========================
+   MAIN LAYOUT
+========================== */
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* ==========================
+   LEFT SIDE (CAMERA)
+========================== */
+.camera-section {
+    width: 45%;
+    background: white;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 4px 0 15px rgba(0,0,0,0.05);
+}
+
+.camera-section h2 {
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+video {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #3b82f6;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.live-text {
+    margin-top: 15px;
+    color: #16a34a;
+    font-weight: 600;
+}
+
+/* ==========================
+   RIGHT SIDE
+========================== */
+.interview-section {
+    width: 55%;
+    padding: 60px;
+    background: #dbeafe;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.interview-section h1 {
+    margin-top: 0;
+    color: #1e3a8a;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* ==========================
+   DROPDOWNS
+========================== */
+.company-section {
+    margin-bottom: 15px;
+}
+
+.company-section label {
+    display: block;
+    margin-bottom: 5px;
+    color: #1e3a8a;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #94a3b8;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* ==========================
+   QUESTION COUNTER
+========================== */
+.question-count {
+    font-weight: 600;
+    margin: 15px 0 5px 0;
+    color: #1e3a8a;
+}
+
+/* ==========================
+   PROGRESS BAR
+========================== */
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    margin: 10px 0 25px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #2563eb, #1d4ed8);
+    border-radius: 10px;
+    transition: width 0.6s ease;
+}
+
+/* ==========================
+   QUESTION BOX
+========================== */
+.question-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* ==========================
+   TIMER
+========================== */
+.timer-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 10px solid #16a34a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    background: white;
+    transition: border-color 0.5s ease;
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+.button-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.start-btn,
+.answer-btn,
+.submit-btn,
+.next-btn,
+.history-btn {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.start-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.answer-btn {
+    background: #1e293b;
+    color: white;
+}
+
+.submit-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.next-btn {
+    background: #f59e0b;
+    color: white;
+}
+
+/* 🔥 History Button Gradient */
+.history-btn {
+    background: linear-gradient(135deg, #7c3aed, #2563eb);
+    color: white;
+    font-weight: bold;
+}
+
+.start-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.answer-btn:hover {
+    background: #0f172a;
+    transform: translateY(-2px);
+}
+
+.submit-btn:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+.next-btn:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+}
+
+.history-btn:hover {
+    background: linear-gradient(135deg, #6d28d9, #1d4ed8);
+    transform: scale(1.05);
+}
+
+/* ==========================
+   ANSWER BOX
+========================== */
+.answer-section h3 {
+    margin-bottom: 8px;
+    color: #1e3a8a;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #94a3b8;
+    resize: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* ==========================
+   FEEDBACK
+========================== */
+.feedback-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    min-height: 200px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow-y: auto;
+}
+
+/* ==========================
+   HISTORY SECTION
+========================== */
+.history-section {
+    margin-top: 35px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.history-section h3 {
+    margin-top: 0;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.history-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.history-section li {
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-section li.gold {
+    background: #fef9c3;
+    color: #b45309;
+}
+
+.history-section li.silver {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.history-section li.bronze {
+    background: #fcd9c8;
+    color: #7c2d12;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 900px) {
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .camera-section,
+    .interview-section {
+        width: 100%;
+        height: auto;
+    }
+
+    .interview-section {
+        padding: 30px;
+    }
+}

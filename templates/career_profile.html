@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Career Profile</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI';
+    background:#020617;
+    color:white;
+
+    /* ✅ SCROLL WORKING */
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+/* 🌙 MOON */
+.moon{
+    position:fixed;
+    top:80px;
+    right:100px;
+    width:120px;
+    height:120px;
+    background:#e2e8f0;
+    border-radius:50%;
+    box-shadow:0 0 60px #e2e8f0;
+    z-index:-2;
+}
+
+/* ⭐ STARS */
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    opacity:0.7;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    0%{opacity:0.2;}
+    100%{opacity:1;}
+}
+
+/* CENTER */
+.wrapper{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:40px 0;
+}
+
+/* CARD */
+.container{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    padding:30px;
+    border-radius:20px;
+    width:420px;
+
+    /* 🔵 BLUE GLOW */
+    box-shadow:0 0 25px rgba(37,99,235,0.5);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* INPUTS */
+label{
+    display:block;
+    margin-top:10px;
+    font-size:14px;
+    color:#cbd5f5;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:8px;
+    border:none;
+    background:#1e293b;
+    color:white;
+}
+
+/* BUTTONS */
+button, a{
+    padding:10px;
+    border-radius:8px;
+    text-decoration:none;
+    color:white;
+    display:inline-block;
+    margin-top:10px;
+}
+
+.save{background:#22c55e;}
+.edit{background:#f59e0b;}
+.delete{background:#ef4444;}
+.personalize{background:#8b5cf6;}
+
+.actions{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+}
+
+/* RESUME */
+.upload-btn{
+    background:#6366f1;
+    padding:10px;
+    border-radius:8px;
+    text-align:center;
+    cursor:pointer;
+    display:block;
+    margin-top:10px;
+}
+
+/* EDIT FORM */
+.edit-form{display:none;}
+</style>
+</head>
+
+<body>
+
+<!-- 🌙 MOON -->
+<div class="moon"></div>
+
+<!-- ⭐ STARS -->
+<div id="stars"></div>
+
+<div class="wrapper">
+
+<div class="container">
+
+<h1>🚀 Career Profile</h1>
+
+{% if profile %}
+
+<!-- 👁️ VIEW MODE -->
+<div id="viewMode">
+    <p><b>👤 {{profile.name}}</b></p>
+    <p>📧 {{profile.email}}</p>
+    <p>🎓 {{profile.qualification}}</p>
+    <p>💻 {{profile.skills}}</p>
+    <p>🎯 {{profile.interests}}</p>
+    <p>🏁 {{profile.goal}}</p>
+
+    {% if profile.resume %}
+    <p style="color:#22c55e;">✅ Resume Uploaded</p>
+    {% endif %}
+
+    <div class="actions">
+        <button class="edit" onclick="showEdit()">✏️ Edit</button>
+        <a href="/delete" class="delete">🗑️ Delete</a>
+    </div>
+
+    <a href="/personalize" class="personalize">🚀 Personalize</a>
+</div>
+
+<!-- ✏️ EDIT MODE -->
+<form method="POST" enctype="multipart/form-data" id="editForm" class="edit-form">
+
+<label>Name</label>
+<input name="name" value="{{profile.name}}">
+
+<label>Email</label>
+<input name="email" value="{{profile.email}}">
+
+<label>Password</label>
+<input type="password" name="password" value="{{profile.password}}">
+
+<label>Qualification</label>
+<input name="qualification" value="{{profile.qualification}}">
+
+<label>Skills</label>
+<input name="skills" value="{{profile.skills}}">
+
+<label>Interests</label>
+<input name="interests" value="{{profile.interests}}">
+
+<label>Goal</label>
+<select name="goal">
+<option {{'selected' if profile.goal=='Job'}}>Job</option>
+<option {{'selected' if profile.goal=='Internship'}}>Internship</option>
+</select>
+
+<label>Strengths</label>
+<textarea name="strengths">{{profile.strengths}}</textarea>
+
+<label>Weaknesses</label>
+<textarea name="weaknesses">{{profile.weaknesses}}</textarea>
+
+<input type="file" id="resume" name="resume" hidden>
+<label for="resume" class="upload-btn">📂 Change Resume</label>
+
+<button class="save">💾 Save Changes</button>
+
+</form>
+
+{% else %}
+
+<!-- 🆕 CREATE -->
+<form method="POST" enctype="multipart/form-data">
+
+<label>Full Name</label>
+<input name="name">
+
+<label>Email</label>
+<input name="email">
+
+<label>Password</label>
+<input type="password" name="password">
+
+<label>Qualification</label>
+<input name="qualification">
+
+<label>Skills</label>
+<input name="skills">
+
+<label>Interests</label>
+<input name="interests">
+
+<label>Goal</label>
+<select name="goal">
+<option>Job</option>
+<option>Internship</option>
+</select>
+
+<label>Strengths</label>
+<textarea name="strengths"></textarea>
+
+<label>Weaknesses</label>
+<textarea name="weaknesses"></textarea>
+
+<input type="file" id="resume" name="resume" hidden>
+<label for="resume" class="upload-btn">📂 Upload Resume</label>
+
+<button class="save">💾 Save Profile</button>
+
+</form>
+
+{% endif %}
+
+</div>
+</div>
+
+<script>
+// ✏️ EDIT TOGGLE
+function showEdit(){
+    document.getElementById("viewMode").style.display="none";
+    document.getElementById("editForm").style.display="block";
+}
+
+// ⭐ FLOATING MOVING STARS
+const starsContainer = document.getElementById("stars");
+
+let stars = [];
+
+for(let i=0;i<120;i++){
+    let star = document.createElement("div");
+    star.className = "star";
+
+    let x = Math.random()*window.innerWidth;
+    let y = Math.random()*window.innerHeight;
+
+    star.style.left = x+"px";
+    star.style.top = y+"px";
+
+    starsContainer.appendChild(star);
+
+    stars.push({
+        el: star,
+        x: x,
+        y: y,
+        dx: (Math.random()-0.5)*0.6,
+        dy: (Math.random()-0.5)*0.6
+    });
+}
+
+function animateStars(){
+    stars.forEach(s=>{
+        s.x += s.dx;
+        s.y += s.dy;
+
+        if(s.x <= 0 || s.x >= window.innerWidth) s.dx *= -1;
+        if(s.y <= 0 || s.y >= window.innerHeight) s.dy *= -1;
+
+        s.el.style.left = s.x+"px";
+        s.el.style.top = s.y+"px";
+    });
+
+    requestAnimationFrame(animateStars);
+}
+
+animateStars();
+</script>
+
+</body>
+</html>

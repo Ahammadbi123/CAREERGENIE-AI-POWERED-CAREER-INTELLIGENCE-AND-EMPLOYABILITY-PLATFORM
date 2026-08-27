@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ company["Company Name"] }} Analysis</title>
+
+    <!-- 🌌 PARTICLES -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: radial-gradient(circle at top, #020617, #020617);
+            margin: 0;
+            padding: 40px;
+            font-size: 16px;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* PARTICLES */
+        #tsparticles{
+            position:fixed;
+            width:100%;
+            height:100%;
+            z-index:-1;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(10,20,40,0.95);
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow:
+                0 0 25px rgba(56,189,248,0.2),
+                inset 0 0 20px rgba(56,189,248,0.1);
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 25px;
+            text-shadow:0 0 20px #38bdf8;
+        }
+
+        h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid rgba(56,189,248,0.5);
+            color: #38bdf8;
+        }
+
+        .section-box {
+            background: rgba(255,255,255,0.05);
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border:1px solid rgba(255,255,255,0.1);
+        }
+
+        ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-weight: 600;
+            line-height: 1.6;
+            color:#e2e8f0;
+        }
+
+        .core-tech li {
+            font-weight: 500;
+        }
+
+        .progress-label {
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        .progress-bar {
+            background: rgba(255,255,255,0.1);
+            border-radius: 30px;
+            overflow: hidden;
+            height: 24px;
+            margin-top: 6px;
+        }
+
+        .progress-fill {
+            height: 24px;
+            background: linear-gradient(90deg,#00f2fe,#2563eb);
+            text-align: right;
+            padding-right: 10px;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        .divider {
+            height: 2px;
+            background: rgba(255,255,255,0.1);
+            margin: 45px 0;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(45deg,#2563eb,#00f2fe);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            background: linear-gradient(90deg,#2563eb,#1e40af);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            border:none;
+            cursor:pointer;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- PARTICLES -->
+<div id="tsparticles"></div>
+
+<div class="container">
+<div class="card">
+
+    <h2>{{ company["Company Name"] }} Technology Based Requirements</h2>
+
+    <!-- 1 -->
+    <h3>1. Company Type</h3>
+    <div class="section-box">
+        <ol><li>{{ company["Company Type"] }}</li></ol>
+    </div>
+
+    <!-- 2 -->
+    <h3>2. Core Technology Base</h3>
+    <div class="section-box">
+        <ol class="core-tech">
+            {% for line in company["Core Technology Base"].split(",") %}
+                <li>{{ line.strip() }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <!-- 3 -->
+    <h3>3. Technology Domains Used</h3>
+    <div class="section-box">
+        <ol>
+            {% for skill in company["Technology Domains Used"] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+    
+    <!-- 4 -->
+    <h3>4. Technology-Based Requirements Mapping</h3>
+    <div class="section-box">   
+        <ol>
+            {% for skill in company["Technology-Based Requirements Mapping"] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+ 
+    <!-- 5 -->
+    <h3>5. Required Programming Languages</h3>
+    <div class="section-box">
+        <ol>
+            {% for skill in company["Required Programming Languages"] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <!-- 6 -->
+    <h3>6. Required Technical Skills</h3>
+    <div class="section-box">
+        <ol>
+            {% for skill in company["Required Technical Skills"] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <!-- 7 -->
+    <h3>7. Required Soft Skills</h3>
+    <div class="section-box">
+        <ol>
+            {% for skill in company["Required Soft Skills"] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <!-- 8 -->
+    <h3>8. AI Extracted Hiring DNA</h3>
+    <div class="section-box">
+        <ol>
+            {% for skill in company["AI Extracted Hiring DNA"] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <!-- 9 -->
+    <h3>9. Most Repeated Requirements (Top 5)</h3>
+    <div class="section-box">
+        <ol>
+            {% for skill in company["Most Repeated Requirements (Top 5)"] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <!-- 10 -->
+    <h3>10. Hiring Base Logic</h3>
+    <div class="section-box">
+        <ol><li>{{ company["Hiring Base Logic"] }}</li></ol>
+    </div>
+
+    <!-- 11 -->
+    <h3>11. Hiring Weightage Model</h3>
+    <div class="section-box">
+        {% for key, value in company["Hiring Weightage Model"].items() %}
+            <div class="progress-label">{{ key }} ({{ value }}%)</div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: {{ value }}%;">
+                    {{ value }}%
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- 12 -->
+    <h3>12. Demand Level</h3>
+    <div class="section-box">
+        <span class="badge">{{ company["Demand Level"] }}</span>
+    </div>
+
+    <!-- 13 -->
+    <h3>13. Core Required Skills (80%+) -->
+    <div class="section-box">
+        <ol>
+            {% for skill in company["Core Required Skills (80%+)"] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <!-- 14 -->
+    <h3>14. High Demand Skills (50-80%)</h3>
+    <div class="section-box">
+        <ol>
+            {% for skill in company["High Demand Skills (50-80%)"] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <!-- 15 -->
+    <h3>15. Emerging Skills (&lt;50%)</h3>
+    <div class="section-box">
+        <ol>
+            {% for skill in company["Emerging Skills (<50%)"] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="bottom-buttons">
+        <a href="/company-analysis" class="back-btn">← Back to Companies</a>
+        <button class="back-btn" onclick="previousVersion()">Previous</button>
+        <button class="back-btn" onclick="updateCompany()">Update</button>
+    </div>
+
+<input type="hidden" id="company-name" value="{{ company_name }}">
+
+</div>
+</div>
+
+<script src="{{ url_for('static', filename='js/company_version.js') }}"></script>
+
+<script>
+tsParticles.load("tsparticles", {
+particles:{
+number:{value:80},
+color:{value:"#38bdf8"},
+links:{enable:true,color:"#38bdf8",distance:120},
+move:{enable:true,speed:1.5},
+size:{value:2}
+}
+});
+</script>
+
+</body>
+</html>

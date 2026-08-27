@@ -1,0 +1,86 @@
+{
+  "what is c": {
+    "en": "C is a general-purpose, procedural programming language developed by Dennis Ritchie.",
+    "te": "C anedi Dennis Ritchie develop chesina general-purpose programming language."
+  },
+
+  "features of c": {
+    "en": "C is fast, portable, structured and close to hardware.",
+    "te": "C fast, portable, structured mariyu hardware ki close ga untundi."
+  },
+
+  "structure of c program": {
+    "en": "A C program consists of headers, main function, variables and statements.",
+    "te": "C program lo headers, main function, variables mariyu statements untayi."
+  },
+
+  "data types in c": {
+    "en": "C supports int, float, char, double and void data types.",
+    "te": "C lo int, float, char, double mariyu void data types untayi."
+  },
+
+  "variables in c": {
+    "en": "Variables are used to store data values in memory.",
+    "te": "Variables memory lo data ni store cheyyadaniki use chestaru."
+  },
+
+  "operators in c": {
+    "en": "C supports arithmetic, relational, logical, assignment and bitwise operators.",
+    "te": "C lo arithmetic, relational, logical, assignment mariyu bitwise operators untayi."
+  },
+
+  "if else in c": {
+    "en": "if-else statements are used for decision making.",
+    "te": "if-else statements decisions teesukovadaniki use chestaru."
+  },
+
+  "loops in c": {
+    "en": "C supports for loop, while loop and do-while loop.",
+    "te": "C lo for, while mariyu do-while loops untayi."
+  },
+
+  "functions in c": {
+    "en": "Functions are blocks of code that perform a specific task.",
+    "te": "Functions oka specific task ni perform chese code blocks."
+  },
+
+  "recursion in c": {
+    "en": "Recursion is a function calling itself.",
+    "te": "Recursion ante function thane thanu call cheskovadam."
+  },
+
+  "arrays in c": {
+    "en": "Arrays are used to store multiple values of same data type.",
+    "te": "Arrays same data type values ni store cheyyadaniki use chestaru."
+  },
+
+  "strings in c": {
+    "en": "Strings are arrays of characters ending with null character.",
+    "te": "Strings ante characters array, last lo null character untundi."
+  },
+
+  "pointers in c": {
+    "en": "Pointers store the address of another variable.",
+    "te": "Pointers inkoka variable address ni store chestayi."
+  },
+
+  "structures in c": {
+    "en": "Structures are used to group different data types.",
+    "te": "Structures different data types ni group cheyyadaniki use chestaru."
+  },
+
+  "unions in c": {
+    "en": "Unions allow storing different data types in same memory location.",
+    "te": "Unions same memory lo different data types ni store cheyyadaniki allow chestayi."
+  },
+
+  "file handling in c": {
+    "en": "File handling is used to store data permanently using files.",
+    "te": "File handling files lo data permanently store cheyyadaniki use chestaru."
+  },
+
+  "dynamic memory allocation": {
+    "en": "Dynamic memory allocation uses malloc, calloc, realloc and free.",
+    "te": "Dynamic memory allocation malloc, calloc, realloc mariyu free use chestundi."
+  }
+}

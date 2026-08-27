@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Career Result</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI';
+    background:radial-gradient(circle,#020617,#020617,#0f172a);
+    color:white;
+    text-align:center;
+    overflow:hidden;
+}
+
+/* CANVAS */
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+/* CARD */
+.card{
+    margin:80px auto;
+    width:420px;
+    padding:30px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(30px);
+
+    box-shadow:
+        0 0 40px #38bdf8,
+        0 0 80px rgba(56,189,248,0.8);
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* BORDER ANIMATION */
+.card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    border-radius:20px;
+    padding:2px;
+    background:linear-gradient(90deg,#38bdf8,transparent,#38bdf8);
+    background-size:300%;
+    animation:borderMove 4s linear infinite;
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+}
+
+@keyframes borderMove{
+    0%{background-position:0%;}
+    100%{background-position:300%;}
+}
+
+/* TITLE */
+h2{
+    background:linear-gradient(90deg,#38bdf8,#fff,#38bdf8);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:shine 3s linear infinite;
+}
+
+@keyframes shine{
+    0%{background-position:-200%;}
+    100%{background-position:200%;}
+}
+
+/* SCORE */
+.score{
+    font-size:50px;
+    color:#38bdf8;
+    text-shadow:
+        0 0 10px #38bdf8,
+        0 0 20px #38bdf8,
+        0 0 40px #0ea5e9;
+    animation:pulse 2s infinite alternate;
+}
+
+@keyframes pulse{
+    from{transform:scale(1);}
+    to{transform:scale(1.1);}
+}
+
+/* PROGRESS BAR */
+.bar{
+    position:relative;
+    height:12px;
+    background:#1e293b;
+    border-radius:10px;
+    overflow:hidden;
+    margin:10px 0;
+}
+
+/* 🌈 RAINBOW FILL */
+.fill{
+    position:absolute;
+    height:100%;
+    width:0%;
+    border-radius:10px;
+
+    background:linear-gradient(
+        270deg,
+        red,
+        orange,
+        yellow,
+        green,
+        cyan,
+        blue,
+        violet,
+        red
+    );
+
+    background-size:600% 600%;
+    animation:rainbowMove 4s linear infinite;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 20px cyan,
+        0 0 40px #38bdf8;
+}
+
+/* BLUR GLOW */
+.fill::after{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:inherit;
+    filter:blur(15px);
+    opacity:0.7;
+}
+
+@keyframes rainbowMove{
+    0%{background-position:0% 50%;}
+    100%{background-position:100% 50%;}
+}
+
+/* LIST */
+li{
+    margin:8px 0;
+    opacity:0;
+    transform:translateY(10px);
+    animation:fadeUp 0.8s forwards;
+}
+
+li:nth-child(1){animation-delay:0.5s;}
+li:nth-child(2){animation-delay:0.8s;}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="snow"></canvas>
+
+<div class="card">
+
+<h2>❄️ Career Score Result</h2>
+
+<p>Reputation Score</p>
+<div id="rep" class="score">0</div>
+<div class="bar">
+<div id="repBar" class="fill"></div>
+</div>
+
+<p>Visibility Score</p>
+<div id="vis" class="score">0</div>
+<div class="bar">
+<div id="visBar" class="fill"></div>
+</div>
+
+<h3>Level: {{result.level}}</h3>
+
+<h4>Suggestions:</h4>
+<ul>
+{% for s in result.suggestions %}
+<li>{{s}}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+<!-- COUNT -->
+<script>
+function animateValue(id, start, end, duration) {
+    let obj = document.getElementById(id);
+    let range = end - start;
+    let startTime = null;
+
+    function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        let progress = Math.min((timestamp - startTime) / duration, 1);
+        obj.innerHTML = Math.floor(progress * range + start);
+
+        if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+}
+
+animateValue("rep", 0, {{result.reputation}}, 1500);
+animateValue("vis", 0, {{result.visibility}}, 1500);
+</script>
+
+<!-- PROGRESS -->
+<script>
+setTimeout(()=>{
+    document.getElementById("repBar").style.width = "{{result.reputation}}%";
+    document.getElementById("visBar").style.width = "{{result.visibility}}%";
+},300);
+</script>
+
+<!-- ❄️ SNOW -->
+<script>
+const canvas = document.getElementById("snow");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let snow=[];
+
+for(let i=0;i<150;i++){
+    snow.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        r:Math.random()*3+1,
+        speed:Math.random()*1+0.5
+    });
+}
+
+function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    snow.forEach(s=>{
+        ctx.beginPath();
+        ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+        ctx.fillStyle="white";
+        ctx.fill();
+
+        s.y+=s.speed;
+        if(s.y>canvas.height){
+            s.y=0;
+            s.x=Math.random()*canvas.width;
+        }
+    });
+
+    requestAnimationFrame(draw);
+}
+draw();
+</script>
+
+</body>
+</html>

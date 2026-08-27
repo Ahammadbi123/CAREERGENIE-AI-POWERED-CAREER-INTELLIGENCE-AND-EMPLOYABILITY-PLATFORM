@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Company Prep</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+    <style>
+        body{
+            margin:0;
+            font-family:'Segoe UI', sans-serif;
+            background:#020617;
+            color:white;
+            overflow-x:hidden;
+        }
+
+        #particles-js{
+            position:fixed;
+            width:100%;
+            height:100%;
+            z-index:-1;
+        }
+
+        body::after{
+            content:"";
+            position:fixed;
+            inset:0;
+            background:
+              linear-gradient(rgba(56,189,248,0.05) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(56,189,248,0.05) 1px, transparent 1px);
+            background-size:60px 60px;
+            z-index:-1;
+        }
+
+        h1{
+            text-align:center;
+            padding:40px;
+            letter-spacing:4px;  /* gap between letters */
+            font-size:42px;
+            position:relative;
+        }
+
+        h1::after{
+            content:"";
+            position:absolute;
+            left:0;
+            width:100%;
+            height:2px;
+            background:linear-gradient(90deg, transparent, #38bdf8, transparent);
+            animation:scan 3s linear infinite;
+        }
+
+        @keyframes scan{
+            0%{transform:translateX(-100%);}
+            100%{transform:translateX(100%);}
+        }
+
+        .letter{
+            opacity:0;
+            display:inline-block;
+            transform:translateY(20px);
+            animation:letterAnim 0.5s forwards;
+            margin-right:4px;
+        }
+                
+        @keyframes letterAnim{
+    to{
+        opacity:1;
+        transform:translateY(0);
+        color:white;   /* ✅ WHITE */
+        text-shadow:0 0 10px #38bdf8, 0 0 25px #38bdf8;
+    }
+}
+        
+        
+        .container{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+            gap:25px;
+            padding:30px;
+        }
+
+        .card{
+            background:rgba(255,255,255,0.05);
+            border:1px solid rgba(255,255,255,0.1);
+            backdrop-filter:blur(12px);
+            padding:25px;
+            border-radius:18px;
+            text-align:center;
+            box-shadow:0 10px 30px rgba(0,0,0,0.6);
+            transform-style:preserve-3d;
+            transition:0.2s ease;
+            position:relative;
+            overflow:hidden;
+            cursor:pointer;
+        }
+
+        /* CLICK PRESS EFFECT */
+        .card:active{
+            transform:scale(0.96);
+        }
+
+        /* GLOW FOLLOW */
+        .card::before{
+            content:"";
+            position:absolute;
+            width:200px;
+            height:200px;
+            background: radial-gradient(circle, rgba(56,189,248,0.4), transparent);
+            top:var(--y);
+            left:var(--x);
+            transform:translate(-50%,-50%);
+            opacity:0;
+            transition:0.3s;
+        }
+
+        .card:hover::before{
+            opacity:1;
+        }
+
+        /* SHINE */
+        .card::after{
+            content:"";
+            position:absolute;
+            top:0;
+            left:-100%;
+            width:100%;
+            height:100%;
+            background:linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition:0.6s;
+        }
+
+        .card:hover::after{
+            left:100%;
+        }
+
+        .card:hover{
+            box-shadow:0 0 30px #38bdf8;
+        }
+
+        .logo{
+            width:50px;
+            margin-bottom:10px;
+            transition:0.3s;
+        }
+
+        .card:hover .logo{
+            transform:scale(1.2);
+        }
+
+        h2{
+            color:#38bdf8;
+        }
+
+        .badge{
+            position:absolute;
+            top:10px;
+            right:10px;
+            font-size:10px;
+            padding:4px 8px;
+            border-radius:20px;
+            background:rgba(56,189,248,0.15);
+            border:1px solid #38bdf8;
+            color:#38bdf8;
+        }
+
+        .btn{
+            margin-top:10px;
+            padding:10px 18px;
+            background:#38bdf8;
+            color:black;
+            border:none;
+            border-radius:8px;
+            font-weight:bold;
+            cursor:pointer;
+            transition:0.3s;
+            box-shadow:0 0 10px rgba(56,189,248,0.4);
+        }
+
+        .btn:hover{
+            background:#0ea5e9;
+            transform:scale(1.1);
+            box-shadow:0 0 20px #38bdf8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<h1 id="title"></h1>
+
+<div class="container">
+
+    <!-- CARD -->
+    <div class="card" onclick="goTo('Amazon')">
+        <div class="badge">Top</div>
+        <img src="https://img.icons8.com/color/48/amazon.png" class="logo">
+        <h2>Amazon</h2>
+        <button class="btn" onclick="event.stopPropagation(); goTo('Amazon')">Explore</button>
+    </div>
+
+    <div class="card" onclick="goTo('Google')">
+        <div class="badge">Top</div>
+        <img src="https://img.icons8.com/color/48/google-logo.png" class="logo">
+        <h2>Google</h2>
+        <button class="btn" onclick="event.stopPropagation(); goTo('Google')">Explore</button>
+    </div>
+
+    <div class="card" onclick="goTo('Microsoft')">
+        <div class="badge">Core</div>
+        <img src="https://img.icons8.com/color/48/microsoft.png" class="logo">
+        <h2>Microsoft</h2>
+        <button class="btn" onclick="event.stopPropagation(); goTo('Microsoft')">Explore</button>
+    </div>
+
+    <div class="card" onclick="goTo('Adobe')">
+    <div class="badge">Design</div>
+    <img src="https://img.icons8.com/color/48/adobe-creative-cloud.png" class="logo">
+    <h2>Adobe</h2>
+    <button class="btn" onclick="event.stopPropagation(); goTo('Adobe')">Explore</button>
+    </div>
+
+    <div class="card" onclick="goTo('Flipkart')">
+        <div class="badge">E-Com</div>
+        <img src="https://img.icons8.com/color/48/shopping-cart.png" class="logo">
+        <h2>Flipkart</h2>
+        <button class="btn" onclick="event.stopPropagation(); goTo('Flipkart')">Explore</button>
+    </div>
+
+    <div class="card" onclick="goTo('TCS')">
+        <div class="badge">Mass</div>
+        <img src="https://img.icons8.com/color/48/briefcase.png" class="logo">
+        <h2>TCS</h2>
+        <button class="btn" onclick="event.stopPropagation(); goTo('TCS')">Explore</button>
+    </div>
+
+    <div class="card" onclick="goTo('Infosys')">
+        <div class="badge">Service</div>
+        <img src="https://img.icons8.com/color/48/business.png" class="logo">
+        <h2>Infosys</h2>
+        <button class="btn" onclick="event.stopPropagation(); goTo('Infosys')">Explore</button>
+    </div>
+
+    <div class="card" onclick="goTo('Wipro')">
+        <div class="badge">Service</div>
+        <img src="https://img.icons8.com/color/48/organization.png" class="logo">
+        <h2>Wipro</h2>
+        <button class="btn" onclick="event.stopPropagation(); goTo('Wipro')">Explore</button>
+    </div>
+
+    <div class="card" onclick="goTo('Accenture')">
+        <div class="badge">Global</div>
+        <img src="https://img.icons8.com/color/48/company.png" class="logo">
+        <h2>Accenture</h2>
+        <button class="btn" onclick="event.stopPropagation(); goTo('Accenture')">Explore</button>
+    </div>
+
+    <div class="card" onclick="goTo('Capgemini')">
+        <div class="badge">Global</div>
+        <img src="https://img.icons8.com/color/48/domain.png" class="logo">
+        <h2>Capgemini</h2>
+        <button class="btn" onclick="event.stopPropagation(); goTo('Capgemini')">Explore</button>
+    </div>
+
+</div>
+
+<script>
+    // TITLE ANIMATION
+    const text = "Select Company";
+    const title = document.getElementById("title");
+
+    text.split("").forEach((char, i) => {
+        const span = document.createElement("span");
+        span.innerHTML = char === " " ? "&nbsp;" : char;
+        span.className = "letter";
+        span.style.animationDelay = i * 0.08 + "s";
+        title.appendChild(span);
+    });
+
+    // PARTICLES
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 60 },
+            size: { value: 3 },
+            move: { speed: 1 },
+            line_linked: { enable: true }
+        }
+    });
+
+    // 3D EFFECT
+    document.querySelectorAll(".card").forEach(card => {
+        card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = -(y - centerY) / 12;
+            const rotateY = (x - centerX) / 12;
+
+            card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+
+            card.style.setProperty('--x', x + "px");
+            card.style.setProperty('--y', y + "px");
+        });
+
+        card.addEventListener("mouseleave", () => {
+            card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+        });
+    });
+
+    // NAVIGATION
+    function goTo(name){
+        window.location.href = "/prep/" + name;
+    }
+</script>
+
+</body>
+</html>

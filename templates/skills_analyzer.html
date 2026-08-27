@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programming Skills Demand Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skills_analyzer.css') }}">
+</head>
+<body>
+
+    <h1>Programming Skills Demand Analyzer 🚀</h1>
+
+    <div>
+        <label>Select Role:</label>
+        <select id="role">
+            <option value="AI Engineer">AI Engineer</option>
+            <option value="Full Stack Developer">Full Stack Developer</option>
+            <option value="Data Analyst">Data Analyst</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Select Market:</label>
+        <select id="market">
+            <option value="India">India</option>
+            <option value="US">US</option>
+            <option value="Global">Global</option>
+        </select>
+    </div>
+
+    <br>
+    <button onclick="analyzeSkills()">Analyze</button>
+
+    <div id="result" style="margin-top:20px;"></div>
+
+    <script src="{{ url_for('static', filename='js/skills_analyzer.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Interview Room</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/interview.css') }}">
+</head>
+
+<body>
+
+<div class="main-container">
+
+    <!-- LEFT CAMERA -->
+    <div class="camera-section">
+        <h2>🎥 Live Camera</h2>
+        <video id="webcam" autoplay playsinline></video>
+        <p class="live-text">● Live</p>
+    </div>
+
+    <!-- RIGHT INTERVIEW -->
+    <div class="interview-section">
+
+        <h1>AI Interview Room</h1>
+
+        <!-- INTERVIEW TYPE -->
+        <div class="company-section">
+            <label><b>Select Interview Type:</b></label>
+            <select id="interviewType">
+                <option value="hr">HR Interview</option>
+                <option value="technical">Technical Interview</option>
+            </select>
+        </div>
+
+        <!-- COMPANY SELECT -->
+        <div class="company-section">
+            <label><b>Select Company:</b></label>
+            <select id="companySelect">
+                <option value="General">General</option>
+                <option value="TCS">TCS</option>
+                <option value="Infosys">Infosys</option>
+                <option value="Amazon">Amazon</option>
+                <option value="Google">Google</option>
+            </select>
+        </div>
+
+        <!-- QUESTION COUNTER -->
+        <!-- 🔥 Start from 0 -->
+        <div class="question-count">
+            Question <span id="questionNumber">0</span> / 5
+        </div>
+
+        <!-- PROGRESS BAR -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- QUESTION -->
+        <div class="question-box" id="question">
+            Click Start Interview
+        </div>
+
+        <!-- TIMER -->
+        <div class="timer-wrapper">
+            <div class="circle">
+                <span id="timer">05:00</span>
+            </div>
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="button-group">
+
+            <button class="start-btn" onclick="startInterview()">
+                🚀 Start
+            </button>
+
+            <button class="answer-btn" onclick="startAnswer()">
+                🎤 Voice
+            </button>
+
+            <button class="submit-btn" onclick="submitAnswer()">
+                ✅ Submit
+            </button>
+
+            <button class="next-btn" onclick="startInterview()">
+                ➡ Next
+            </button>
+
+            <button class="history-btn"
+                onclick="window.location.href='/history'">
+                📜 History
+            </button>
+
+        </div>
+
+        <!-- ANSWER BOX -->
+        <div class="answer-section">
+            <h3>Your Answer:</h3>
+            <textarea id="answerBox" rows="4"
+                placeholder="Type your answer here..."></textarea>
+        </div>
+
+        <!-- FEEDBACK -->
+        <div class="feedback-box" id="feedback">
+            Your feedback will appear here...
+        </div>
+
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/interview.js') }}"></script>
+
+</body>
+</html>

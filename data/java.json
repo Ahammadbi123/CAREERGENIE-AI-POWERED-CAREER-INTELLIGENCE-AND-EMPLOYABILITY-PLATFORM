@@ -1,0 +1,197 @@
+{
+  "what is java": {
+    "en": "Java is a high-level, object-oriented, platform-independent programming language.",
+    "te": "Java anedi high-level, object-oriented, platform-independent programming language."
+  },
+
+  "features of java": {
+    "en": "Java is simple, secure, portable, robust and multithreaded.",
+    "te": "Java simple, secure, portable, robust mariyu multithreaded language."
+  },
+
+  "applications of java": {
+    "en": "Java is used in web applications, mobile apps, enterprise systems and backend services.",
+    "te": "Java web applications, mobile apps, enterprise systems lo use chestaru."
+  },
+
+  "variables in java": {
+    "en": "Variables are used to store data values with specific data types.",
+    "te": "Variables ante data values ni specific data types tho store cheyyadam."
+  },
+
+  "data types in java": {
+    "en": "Java supports primitive and non-primitive data types.",
+    "te": "Java lo primitive mariyu non-primitive data types untayi."
+  },
+
+  "operators in java": {
+    "en": "Java supports arithmetic, relational, logical and assignment operators.",
+    "te": "Java lo arithmetic, relational, logical operators untayi."
+  },
+
+  "if else in java": {
+    "en": "if-else is used for decision making based on conditions.",
+    "te": "if-else conditions base chesi decision tiskovadaniki."
+  },
+
+  "loops in java": {
+    "en": "Loops are used to execute a block of code repeatedly.",
+    "te": "Loops code ni repeat cheyyadaniki use chestaru."
+  },
+
+  "for loop in java": {
+    "en": "for loop is used when the number of iterations is known.",
+    "te": "for loop iterations count telisinappudu use chestaru."
+  },
+
+  "while loop in java": {
+    "en": "while loop executes as long as the condition is true.",
+    "te": "while loop condition true unna varaku run avutundi."
+  },
+
+  "oops in java": {
+    "en": "OOPS in Java includes class, object, inheritance, polymorphism, encapsulation and abstraction.",
+    "te": "Java OOPS lo class, object, inheritance, polymorphism, encapsulation, abstraction untayi."
+  },
+
+  "class and object in java": {
+    "en": "Class is a blueprint and object is an instance of a class.",
+    "te": "Class blueprint, object class yokka instance."
+  },
+
+  "constructor in java": {
+    "en": "Constructor is a special method used to initialize objects.",
+    "te": "Constructor object ni initialize cheyyadaniki use chestaru."
+  },
+
+  "inheritance in java": {
+    "en": "Inheritance allows one class to acquire properties of another class.",
+    "te": "Inheritance ante oka class inkoka class properties tiskovadam."
+  },
+
+  "polymorphism in java": {
+    "en": "Polymorphism allows methods to have same name with different behavior.",
+    "te": "Polymorphism ante same method name, different behavior."
+  },
+
+  "encapsulation in java": {
+    "en": "Encapsulation binds data and methods into a single unit.",
+    "te": "Encapsulation data mariyu methods ni okate unit lo bind chestundi."
+  },
+
+  "abstraction in java": {
+    "en": "Abstraction hides implementation details and shows only essential features.",
+    "te": "Abstraction internal details hide chesi essential features chupistundi."
+  },
+
+  "exception handling in java": {
+    "en": "Exception handling manages runtime errors using try, catch and finally.",
+    "te": "Exception handling runtime errors ni handle cheyyadaniki."
+  },
+
+  "multithreading in java": {
+    "en": "Multithreading allows multiple threads to run concurrently.",
+    "te": "Multithreading ante multiple threads okesari run avvadam."
+  },
+
+  "java advantages": {
+    "en": "Java is secure, platform-independent and widely used in enterprise applications.",
+    "te": "Java secure, platform-independent mariyu enterprise applications lo popular."
+  },
+
+  "java vs python": {
+    "en": "Java is statically typed while Python is dynamically typed.",
+    "te": "Java static typing, Python dynamic typing."
+  },
+  
+"jvm jre jdk": {
+  "en": "JVM executes Java bytecode, JRE provides runtime environment, and JDK includes development tools.",
+  "te": "JVM bytecode execute chestundi, JRE runtime environment istundi, JDK development tools include chestundi."
+},
+
+"java memory management": {
+  "en": "Java manages memory using heap, stack and garbage collection.",
+  "te": "Java heap, stack mariyu garbage collection dwara memory manage chestundi."
+},
+
+"garbage collection in java": {
+  "en": "Garbage collection automatically removes unused objects from memory.",
+  "te": "Garbage collection unused objects ni automatic ga memory nundi remove chestundi."
+},
+
+"interfaces in java": {
+  "en": "Interface contains abstract methods and supports multiple inheritance.",
+  "te": "Interface abstract methods untayi mariyu multiple inheritance support chestundi."
+},
+
+"abstract class in java": {
+  "en": "Abstract class can have abstract and non-abstract methods.",
+  "te": "Abstract class lo abstract mariyu normal methods untayi."
+},
+
+"interface vs abstract class": {
+  "en": "Interface supports multiple inheritance, abstract class does not.",
+  "te": "Interface multiple inheritance support chestundi, abstract class cheyyadu."
+},
+
+"collections framework in java": {
+  "en": "Collections framework provides classes like List, Set and Map to store data.",
+  "te": "Collections framework List, Set, Map lanti classes provide chestundi."
+},
+
+"list set map in java": {
+  "en": "List allows duplicates, Set does not allow duplicates, Map stores key-value pairs.",
+  "te": "List duplicates allow chestundi, Set allow cheyyadu, Map key-value pairs store chestundi."
+},
+
+"arraylist vs linkedlist": {
+  "en": "ArrayList uses dynamic array, LinkedList uses doubly linked list.",
+  "te": "ArrayList dynamic array use chestundi, LinkedList doubly linked list use chestundi."
+},
+
+"hashmap vs hashtable": {
+  "en": "HashMap is not synchronized, Hashtable is synchronized.",
+  "te": "HashMap synchronized kaadu, Hashtable synchronized."
+},
+
+"exception hierarchy in java": {
+  "en": "Exception hierarchy includes Throwable, Exception and Error classes.",
+  "te": "Exception hierarchy lo Throwable, Exception, Error classes untayi."
+},
+
+"checked vs unchecked exception": {
+  "en": "Checked exceptions are checked at compile time, unchecked at runtime.",
+  "te": "Checked exceptions compile time lo check chestaru, unchecked runtime lo."
+},
+
+"multithreading lifecycle": {
+  "en": "Thread lifecycle includes new, runnable, running, waiting and terminated states.",
+  "te": "Thread lifecycle lo new, runnable, running, waiting, terminated states untayi."
+},
+
+"synchronization in java": {
+  "en": "Synchronization controls access to shared resources in multithreading.",
+  "te": "Synchronization multithreading lo shared resources ni control chestundi."
+},
+
+"deadlock in java": {
+  "en": "Deadlock occurs when two threads wait indefinitely for each other.",
+  "te": "Deadlock ante two threads okari kosam okaru forever wait cheyyadam."
+},
+
+"java 8 features": {
+  "en": "Java 8 introduced lambda expressions, streams, functional interfaces and default methods.",
+  "te": "Java 8 lo lambda expressions, streams, functional interfaces introduce chesaru."
+},
+
+"lambda expressions in java": {
+  "en": "Lambda expressions provide a concise way to write anonymous functions.",
+  "te": "Lambda expressions anonymous functions ni short ga rayadaniki use chestaru."
+},
+
+"streams api in java": {
+  "en": "Streams API is used to process collections in a functional style.",
+  "te": "Streams API collections ni functional style lo process cheyyadaniki."
+}
+
+}

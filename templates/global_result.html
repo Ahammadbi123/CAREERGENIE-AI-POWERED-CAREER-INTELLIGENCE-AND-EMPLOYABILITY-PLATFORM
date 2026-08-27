@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Global Result</title>
+
+<style>
+
+/* 🔥 SCROLL FIX */
+html, body{
+    margin:0;
+    padding:0;
+    height:100%;
+    overflow-y:scroll;
+}
+
+/* BODY */
+body{
+    font-family:'Segoe UI';
+    background:#020617;
+    color:white;
+}
+
+/* ❄️ SNOW */
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    pointer-events:none;
+}
+
+/* CONTAINER */
+.container{
+    max-width:900px;
+    margin:0 auto;
+    padding:60px 20px;
+}
+
+/* 🔵 CARD WITH BLUE SHINE */
+.card{
+    position:relative;
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    margin-bottom:25px;
+    overflow:hidden;
+
+    /* 🔥 BLUE GLOW */
+    box-shadow:
+        0 0 20px rgba(56,189,248,0.3),
+        0 0 60px rgba(56,189,248,0.4),
+        inset 0 0 20px rgba(56,189,248,0.1);
+}
+
+/* 🔵 MOVING SHINE */
+.card::before{
+    content:'';
+    position:absolute;
+    width:200%;
+    height:200%;
+    background:radial-gradient(circle, rgba(56,189,248,0.15), transparent);
+    top:-50%;
+    left:-50%;
+    animation:moveGlow 6s infinite linear;
+}
+
+@keyframes moveGlow{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(30%,30%);}
+}
+
+/* TITLE */
+h2{
+    text-align:center;
+    color:#38bdf8;
+    text-shadow:0 0 15px #38bdf8;
+}
+
+/* 🌈 SCORE */
+.score{
+    font-size:70px;
+    text-align:center;
+    background:linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+    background-size:300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation:rainbowMove 5s linear infinite;
+}
+
+@keyframes rainbowMove{
+    0%{background-position:0%;}
+    100%{background-position:300%;}
+}
+
+/* BAR */
+.bar{
+    height:12px;
+    background:#1e293b;
+    border-radius:10px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+/* 🌈 BAR FILL */
+.fill{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+    background-size:300%;
+    animation:rainbowMove 5s linear infinite;
+    transition:2s ease;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+
+ul{
+    padding-left:20px;
+}
+
+/* 🔥 SUGGESTIONS SPECIAL GLOW */
+.suggestions{
+    box-shadow:
+        0 0 25px rgba(56,189,248,0.5),
+        0 0 80px rgba(56,189,248,0.3),
+        inset 0 0 30px rgba(56,189,248,0.15);
+}
+
+/* BUTTON */
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    box-shadow:0 0 20px #38bdf8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ❄️ SNOW -->
+<canvas id="snow"></canvas>
+
+<div class="container">
+
+<h2>🌍 Global Employability Dashboard</h2>
+
+<!-- SCORE -->
+<div class="card">
+<div id="score" class="score">0</div>
+
+<div class="bar">
+<div id="barFill" class="fill"></div>
+</div>
+
+<h3 style="text-align:center;">{{result.level}} | {{result.badge}}</h3>
+</div>
+
+<!-- GRID -->
+<div class="grid">
+
+<div class="card">
+<h3>🎯 Role</h3>
+<p>{{result.role}}</p>
+</div>
+
+<div class="card">
+<h3>🧠 AI Feedback</h3>
+<p>{{result.feedback}}</p>
+</div>
+
+<div class="card">
+<h3>📉 Skill Gaps</h3>
+<ul>
+{% for g in result.gaps %}
+<li>{{g}}</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="card">
+<h3>🏢 Companies</h3>
+<ul>
+{% for c in result.companies %}
+<li>{{c}}</li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="card">
+<h3>🗺️ Roadmap</h3>
+<ul>
+{% for r in result.roadmap %}
+<li>{{r}}</li>
+{% endfor %}
+</ul>
+</div>
+
+<!-- 🔥 SUGGESTIONS -->
+<div class="card suggestions">
+<h3>💡 Suggestions</h3>
+<ul>
+{% for s in result.suggestions %}
+<li>{{s}}</li>
+{% endfor %}
+</ul>
+</div>
+
+</div>
+
+<br>
+
+<a href="/global-employability">
+<button>🔙 Back</button>
+</a>
+
+<!-- scroll space -->
+<div style="height:300px"></div>
+
+</div>
+
+<!-- SCORE ANIMATION -->
+<script>
+let finalScore = {{result.score}};
+let i = 0;
+
+let interval = setInterval(()=>{
+    document.getElementById("score").innerText = i;
+    i++;
+    if(i > finalScore){
+        clearInterval(interval);
+    }
+}, 20);
+
+setTimeout(()=>{
+    document.getElementById("barFill").style.width = finalScore + "%";
+}, 300);
+</script>
+
+<!-- ❄️ SNOW -->
+<script>
+const canvas = document.getElementById("snow");
+const ctx = canvas.getContext("2d");
+
+function resize(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener("resize", resize);
+
+let snow = [];
+
+for(let i=0;i<150;i++){
+    snow.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        r:Math.random()*3+1,
+        speed:Math.random()*1.5+0.5,
+        drift:Math.random()*1
+    });
+}
+
+function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    ctx.fillStyle="white";
+
+    snow.forEach(s=>{
+        ctx.beginPath();
+        ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
+        ctx.fill();
+
+        s.y += s.speed;
+        s.x += Math.sin(s.y*0.01)*s.drift;
+
+        if(s.y > canvas.height){
+            s.y = 0;
+            s.x = Math.random()*canvas.width;
+        }
+    });
+
+    requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+
+</body>
+</html>

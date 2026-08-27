@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI-Powered Career Intelligence Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: #f4f6f9;
+        }
+
+        .layout {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: #010610;
+            color: #fff;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 18px;
+            color: #38bdf8;
+        }
+
+        .section-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #94a3b8;
+            margin: 20px 0 8px;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 14px;
+            margin-bottom: 6px;
+            border-radius: 8px;
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .sidebar a:hover {
+            background: #1e293b;
+            color: #38bdf8;
+        }
+
+        .content {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+
+        .content h1 {
+            margin-top: 0;
+            color: #0f172a;
+        }
+
+        .welcome {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>AI Career Platform</h2>
+
+        <!-- CORE CAREER INTELLIGENCE -->
+        <div class="section-title">Core Career Intelligence</div>
+        <a href="/resume-builder">AI Resume Builder</a>
+        <a href="/genai-universal-resume">GenAI  Universal Resume Optimizer</a>
+        <a href="/private-software-jobs">AI-Powered Real-Time Private Software Job Intelligence</a>
+        <a href="/skill-trend-analyzer">Programming Skill Demand Analyzer</a>
+        <a href="/company-analysis">Company  Technology Based Requirement Analysis</a>
+        <a href="/company-prep">Company-Wise Interview Preparation</a>
+
+        <!-- ADVANCED INTELLIGENCE -->
+        <div class="section-title">Advanced Intelligence</div>
+        <a href="/career-visibility-score">AI Career Reputation & Visibility Score</a>
+        <a href="/global-employability">Global Employability Scoring Engine</a>
+
+        <!-- PRACTICE & ASSESSMENT -->
+        <div class="section-title">Practice & Assessment</div>
+        <a href="/ai-exams">AI Exams & Skill Assessment</a>
+        <a href="/mock-interview">AI Mock Interview</a>
+        <a href="/career-chatbot">AI Career Chatbot</a>
+
+        <!-- MANAGEMENT -->
+        <div class="section-title">Management</div>
+        <a href="/profile">Career Profile & Personalization</a>
+
+        <!-- SYSTEM -->
+        <div class="section-title">System</div>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <h1>Dashboard</h1>
+
+        <div class="welcome">
+            <h2>Welcome 👋</h2>
+            <p>
+                This AI-Powered Career Intelligence Platform helps you analyze,
+                prepare, and succeed in private software job interviews using
+                advanced AI modules and real-time intelligence.
+            </p>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>🚀 Real-Time Job Intelligence</h3>
+                <p>Track private software job openings with skills, salary, and direct apply links.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>🎯 Smart Interview Preparation</h3>
+                <p>Company-wise preparation, AI mock interviews, and structured feedback reports.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>📊 Career Intelligence & Scoring</h3>
+                <p>Resume optimization, global employability score, and AI reputation analysis.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>🤖 AI Practice & Assessment</h3>
+                <p>Skill tests, and chatbot guidance.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+{
+  "what is python": {
+    "en": "Python is a high-level, interpreted programming language used for general-purpose programming.",
+    "te": "Python anedi high-level programming language, easy ga nerchukovachu."
+  },
+
+  "features of python": {
+    "en": "Python is simple, readable, open-source and platform independent.",
+    "te": "Python simple, readable, open-source mariyu platform independent."
+  },
+
+  "applications of python": {
+    "en": "Python is used in web development, data science, AI, machine learning, automation and scripting.",
+    "te": "Python web development, data science, AI, machine learning, automation lo use chestaru."
+  },
+
+  "variables in python": {
+    "en": "Variables are used to store data values in memory.",
+    "te": "Variables ante data values ni memory lo store cheyyadam."
+  },
+
+  "rules for variables in python": {
+    "en": "Variable names must start with a letter or underscore and cannot start with a number.",
+    "te": "Variable peru letter or underscore tho start avvali, number tho kaadu."
+  },
+
+  "data types in python": {
+    "en": "Python supports int, float, complex, string, list, tuple, set and dictionary.",
+    "te": "Python lo int, float, complex, string, list, tuple, set, dictionary untayi."
+  },
+
+  "type casting in python": {
+    "en": "Type casting converts one data type into another using int(), float(), str().",
+    "te": "Type casting ante oka data type ni inkoka data type lo marchadam."
+  },
+
+  "input output in python": {
+    "en": "Input is taken using input() and output is displayed using print().",
+    "te": "Input input() dwara tiskuntam, output print() dwara chupistam."
+  },
+
+  "operators in python": {
+    "en": "Python supports arithmetic, relational, logical, assignment and membership operators.",
+    "te": "Python lo arithmetic, relational, logical, assignment operators untayi."
+  },
+
+  "if else in python": {
+    "en": "if-else statements are used for decision making based on conditions.",
+    "te": "if-else conditions base chesi decision tiskovadaniki use chestaru."
+  },
+
+  "loops in python": {
+    "en": "Loops are used to execute a block of code repeatedly.",
+    "te": "Loops code ni repeat cheyyadaniki use chestaru."
+  },
+
+  "for loop in python": {
+    "en": "for loop is used to iterate over a sequence like list, tuple or string.",
+    "te": "for loop list, tuple, string meeda iterate cheyyadaniki."
+  },
+
+  "while loop in python": {
+    "en": "while loop executes as long as the condition is true.",
+    "te": "while loop condition true unna varaku run avutundi."
+  },
+
+  "break continue pass": {
+    "en": "break exits the loop, continue skips current iteration and pass does nothing.",
+    "te": "break loop nundi bayataki vastundi, continue skip chestundi, pass emi cheyyadu."
+  },
+
+  "functions in python": {
+    "en": "Functions are reusable blocks of code defined using def keyword.",
+    "te": "Functions reusable code blocks, def keyword tho define chestaru."
+  },
+
+  "types of functions in python": {
+    "en": "Python supports built-in functions, user-defined functions and lambda functions.",
+    "te": "Python lo built-in, user-defined, lambda functions untayi."
+  },
+
+  "lambda function in python": {
+    "en": "Lambda is an anonymous one-line function.",
+    "te": "Lambda anedi one-line anonymous function."
+  },
+
+  "recursion in python": {
+    "en": "Recursion is a function calling itself to solve a problem.",
+    "te": "Recursion ante function thane thanu call cheskovadam."
+  },
+
+  "oops in python": {
+    "en": "OOPS includes class, object, inheritance, polymorphism, encapsulation and abstraction.",
+    "te": "OOPS lo class, object, inheritance, polymorphism, encapsulation, abstraction untayi."
+  },
+
+  "class and object": {
+    "en": "A class is a blueprint and an object is an instance of a class.",
+    "te": "Class blueprint, object class yokka instance."
+  },
+
+  "constructor in python": {
+    "en": "Constructor is a special method __init__() used to initialize objects.",
+    "te": "Constructor __init__() object ni initialize cheyyadaniki."
+  },
+
+  "inheritance in python": {
+    "en": "Inheritance allows a class to acquire properties of another class.",
+    "te": "Inheritance ante oka class inkoka class properties tiskovadam."
+  },
+
+  "polymorphism in python": {
+    "en": "Polymorphism allows methods to have same name with different behavior.",
+    "te": "Polymorphism ante same method name, different behavior."
+  },
+
+  "encapsulation in python": {
+    "en": "Encapsulation restricts access to variables and methods.",
+    "te": "Encapsulation data ni protect cheyyadaniki access restrict chestundi."
+  },
+
+  "abstraction in python": {
+    "en": "Abstraction hides implementation details and shows only functionality.",
+    "te": "Abstraction internal details hide chesi functionality matrame chupistundi."
+  },
+
+  "exception handling in python": {
+    "en": "Exception handling manages runtime errors using try, except, else and finally.",
+    "te": "Exception handling runtime errors ni handle cheyyadaniki use chestaru."
+  },
+
+  "file handling in python": {
+    "en": "File handling is used to read and write files using open().",
+    "te": "File handling files read/write cheyyadaniki use chestaru."
+  },
+
+  "modules in python": {
+    "en": "Modules are Python files that contain reusable code.",
+    "te": "Modules ante reusable code unna Python files."
+  },
+
+  "packages in python": {
+    "en": "Packages are collections of modules organized in folders.",
+    "te": "Packages ante modules ni folders lo organize cheyyadam."
+  },
+
+  "memory management in python": {
+    "en": "Python manages memory automatically using garbage collection.",
+    "te": "Python garbage collection dwara memory ni automatic ga manage chestundi."
+  },
+
+  "python advantages": {
+    "en": "Python is easy to learn, versatile and widely used.",
+    "te": "Python easy to learn, versatile mariyu widely used."
+  },
+
+  "python disadvantages": {
+    "en": "Python is slower compared to compiled languages.",
+    "te": "Python compiled languages kanna slow."
+  },
+
+  "python vs java": {
+    "en": "Python is dynamically typed while Java is statically typed.",
+    "te": "Python dynamic typing, Java static typing."
+  }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register | AI Interview Platform</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+
+/* 🔥 FULL DARK */
+html, body{
+    margin:0;
+    height:100%;
+    background:#020617 !important;
+    font-family:'Segoe UI';
+    overflow:hidden;
+    color:white;
+}
+
+/* 🔥 REMOVE WHITE STRIP ROOT */
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* 🔥 CANVAS */
+#network{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+}
+
+/* 🔥 WRAPPER FIX */
+.register-wrapper{
+    position:relative;
+    z-index:2;
+    background:transparent !important;
+}
+
+/* 🔥 CARD */
+.register-card{
+    width:350px;
+    padding:30px;
+    border-radius:20px;
+
+    background:rgba(15,23,42,0.95);
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 0 40px rgba(59,130,246,0.25),
+        0 0 80px rgba(59,130,246,0.1);
+}
+
+/* 🔥 TITLE */
+.register-title{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:26px;
+    font-weight:bold;
+    color:white;
+
+    text-shadow:
+        0 0 8px #60a5fa,
+        0 0 16px #3b82f6;
+}
+
+/* 🔥 INPUT */
+.input-group input{
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border-radius:10px;
+    border:none;
+    outline:none;
+
+    background:rgba(255,255,255,0.08);
+    color:white;
+}
+
+/* 🔥 BUTTON */
+.register-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    font-weight:bold;
+
+    box-shadow:0 0 20px rgba(59,130,246,0.6);
+}
+
+.register-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 35px rgba(59,130,246,1);
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="network"></canvas>
+
+<div class="register-wrapper">
+
+    <div class="register-card">
+
+        <h2 class="register-title">Register</h2>
+
+        <form method="post">
+
+            <div class="input-group">
+                <input type="text" name="first_name" placeholder="First Name" required>
+            </div>
+
+            <div class="input-group">
+                <input type="text" name="last_name" placeholder="Last Name" required>
+            </div>
+
+            <div class="input-group">
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            </div>
+
+            <div class="remember-box">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+
+            <button type="submit" class="register-btn">
+                Register
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+const canvas = document.getElementById("network");
+const ctx = canvas.getContext("2d");
+
+function resize(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resize();
+
+/* 🔥 DOT PARTICLES */
+let particles = [];
+
+for(let i=0;i<80;i++){
+    particles.push({
+        x:Math.random()*canvas.width,
+        y:Math.random()*canvas.height,
+        dx:(Math.random()-0.5)*0.3,
+        dy:(Math.random()-0.5)*0.3
+    });
+}
+
+function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach(p=>{
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,2,0,Math.PI*2);
+        ctx.fillStyle="white";
+        ctx.fill();
+
+        p.x+=p.dx;
+        p.y+=p.dy;
+
+        if(p.x<0||p.x>canvas.width) p.dx*=-1;
+        if(p.y<0||p.y>canvas.height) p.dy*=-1;
+    });
+
+    requestAnimationFrame(draw);
+}
+
+draw();
+window.addEventListener("resize",resize);
+</script>
+
+</body>
+</html>

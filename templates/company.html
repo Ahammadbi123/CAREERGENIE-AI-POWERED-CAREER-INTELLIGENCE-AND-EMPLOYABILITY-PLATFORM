@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{name}}</title>
+
+<style>
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background:linear-gradient(-45deg,#020617,#0f172a,#020617,#1e293b);
+    background-size:400% 400%;
+    animation:bgMove 12s ease infinite;
+    color:white;
+    display:flex;
+}
+
+/* BACKGROUND */
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* INTRO */
+#intro{
+    position:fixed;
+    inset:0;
+    background:#020617;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.intro-text{
+    font-size:42px;
+    color:#38bdf8;
+    animation:zoomIn 1s ease;
+}
+
+.intro-sub{
+    margin-top:10px;
+    opacity:0.7;
+    animation:fade 2s infinite;
+}
+
+@keyframes zoomIn{
+    from{transform:scale(0.5); opacity:0;}
+    to{transform:scale(1); opacity:1;}
+}
+
+@keyframes fade{
+    0%,100%{opacity:0.3;}
+    50%{opacity:1;}
+}
+
+#intro.hide{
+    animation:fadeOut 1s forwards;
+}
+
+@keyframes fadeOut{
+    to{opacity:0; visibility:hidden;}
+}
+
+/* CURSOR GLOW */
+.cursor-glow{
+    position:fixed;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(56,189,248,0.3), transparent 70%);
+    pointer-events:none;
+    transform:translate(-50%, -50%);
+}
+
+/* SIDEBAR */
+.sidebar{
+    width:220px;
+    height:100vh;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+    padding:20px;
+    border-right:1px solid rgba(255,255,255,0.1);
+    animation:slideLeft 0.6s ease;
+}
+
+@keyframes slideLeft{
+    from{transform:translateX(-100%);}
+    to{transform:translateX(0);}
+}
+
+.sidebar h2{
+    color:#38bdf8;
+    text-align:center;
+}
+
+/* NAV */
+.nav-btn{
+    display:block;
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    background:#1e293b;
+    border:none;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.nav-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px #38bdf8;
+}
+
+.nav-btn.active{
+    background:#38bdf8;
+    color:black;
+}
+
+/* MAIN */
+.main{
+    flex:1;
+    padding:30px;
+}
+
+/* ===== AMAZON TITLE ===== */
+.title span{
+    display:inline-block;
+    opacity:0;
+    transform:translateY(80px) scale(0.3) rotateX(90deg);
+    animation:letterDrop 0.6s forwards;
+    color:#38bdf8;
+    font-size:44px;
+    font-weight:bold;
+}
+
+@keyframes letterDrop{
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1) rotateX(0);
+        text-shadow:0 0 25px #38bdf8, 0 0 50px #38bdf8;
+    }
+}
+
+/* hover effect */
+.title span:hover{
+    animation:wave 0.5s;
+}
+
+@keyframes wave{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.3); color:#f59e0b;}
+    100%{transform:scale(1);}
+}
+
+/* TYPING */
+#typing::after{
+    content:"|";
+    animation:blink 1s infinite;
+}
+
+@keyframes blink{
+    50%{opacity:0;}
+}
+
+/* CARD */
+.card{
+    background:rgba(255,255,255,0.05);
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:20px;
+}
+
+/* SECTION */
+.section{
+    display:none;
+}
+.section.active{
+    display:block;
+}
+
+/* BUTTON */
+.start-btn{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#38bdf8;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+    <h1 class="intro-text">{{name}}</h1>
+    <p class="intro-sub">Initializing AI Interview System...</p>
+</div>
+
+<div class="cursor-glow" id="glow"></div>
+
+<div class="sidebar">
+    <h2>{{name}}</h2>
+
+    <button class="nav-btn active" onclick="show('overview', this)">📌 Overview</button>
+    <button class="nav-btn" onclick="show('rounds', this)">⚙ Rounds</button>
+    <button class="nav-btn" onclick="show('questions', this)">💻 Questions</button>
+    <button class="nav-btn" onclick="show('tips', this)">🔥 Tips</button>
+
+    <a href="/company-prep" style="color:#38bdf8;">⬅ Back</a>
+</div>
+
+<div class="main">
+
+    <div class="header">
+        <h1 class="title" id="title"></h1>
+
+        <p style="text-align:center; opacity:0.7;">
+            Crack Amazon Interview with AI 🚀
+        </p>
+    </div>
+
+    <div id="overview" class="section active">
+        <div class="card">
+            <h3>📌 Overview</h3>
+            <p id="typing"></p>
+        </div>
+    </div>
+
+    <div id="rounds" class="section">
+        <div class="card">
+            <h3>⚙ Interview Rounds</h3>
+            <ul>
+                {% for r in data.rounds %}
+                <li>{{r}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div id="questions" class="section">
+        <div class="card">
+            <h3>💻 Technical Questions</h3>
+            <ul>
+                {% for q in data.technical %}
+                <li>{{q}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div id="tips" class="section">
+        <div class="card">
+            <h3>🔥 Preparation Tips</h3>
+            <ul>
+                {% for t in data.tips %}
+                <li>{{t}}</li>
+                {% endfor %}
+            </ul>
+
+            <button class="start-btn">Start Mock Interview 🚀</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// INTRO REMOVE
+window.onload = ()=>{
+    setTimeout(()=>{
+        document.getElementById("intro").classList.add("hide");
+        typeEffect();
+    },2000);
+};
+
+// SECTION SWITCH
+function show(id, btn){
+    document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+    document.querySelectorAll(".nav-btn").forEach(b=>b.classList.remove("active"));
+
+    document.getElementById(id).classList.add("active");
+    btn.classList.add("active");
+}
+
+// CURSOR GLOW
+document.addEventListener("mousemove", e=>{
+    glow.style.left=e.clientX+"px";
+    glow.style.top=e.clientY+"px";
+});
+
+// AMAZON TITLE
+const textTitle = "Amazon Interview Preparation";
+const title = document.getElementById("title");
+
+textTitle.split("").forEach((char, i)=>{
+    const span = document.createElement("span");
+    span.innerText = char === " " ? "\u00A0" : char;
+    span.style.animationDelay = (i * 0.08) + "s";
+    title.appendChild(span);
+});
+
+// TYPING EFFECT
+const text = `{{data.overview}}`;
+let i = 0;
+
+function typeEffect(){
+    if(i < text.length){
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 20);
+    }
+}
+</script>
+
+</body>
+</html>

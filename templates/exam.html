@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{ subject|upper }} Level {{ level }} Exam</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    overflow-x: hidden;
+}
+
+/* 🌈 BACKGROUND */
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* CONTENT ABOVE */
+.header, .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* HEADER */
+.header {
+    background: rgba(10,88,202,0.9);
+    backdrop-filter: blur(6px);
+    color: white;
+    padding: 22px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* 🔥 CLEAN GLASS CARD */
+.question-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    transition: 0.3s;
+}
+
+/* SUBTLE HOVER */
+.question-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* TEXT */
+.question-title {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.option {
+    margin: 8px 0;
+    color: #e5e7eb;
+}
+
+/* BUTTON */
+.submit-box {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.submit-box button {
+    background: linear-gradient(135deg,#3b82f6,#6366f1);
+    color: white;
+    border: none;
+    padding: 14px 34px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.submit-box button:hover {
+    box-shadow: 0 0 12px rgba(99,102,241,0.8);
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<div class="header">
+    {{ subject|upper }} – Level {{ level }} Exam
+</div>
+
+<div class="container">
+
+<form method="POST" action="/submit/{{ subject }}/{{ level }}">
+
+{% for q in questions %}
+{% set q_index = loop.index0 %}
+
+<div class="question-card">
+    <div class="question-title">
+        {{ loop.index }}. {{ q.q }}
+    </div>
+
+    {% for opt in q.options %}
+    <div class="option">
+        <label>
+            <input type="radio"
+                   name="{{ q_index }}"
+                   value="{{ loop.index0 }}"
+                   required>
+            {{ opt }}
+        </label>
+    </div>
+    {% endfor %}
+</div>
+
+{% endfor %}
+
+<div class="submit-box">
+    <button type="submit">Submit Exam</button>
+</div>
+
+</form>
+
+</div>
+
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+let hue = 0;
+
+/* PARTICLES */
+for (let i = 0; i < 80; i++) {
+    particles.push({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        vx: (Math.random()-0.5)*1,
+        vy: (Math.random()-0.5)*1
+    });
+}
+
+/* ANIMATION */
+function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    hue += 1;
+
+    for(let i=0;i<particles.length;i++){
+        let p = particles[i];
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if(p.x<0||p.x>canvas.width) p.vx*=-1;
+        if(p.y<0||p.y>canvas.height) p.vy*=-1;
+
+        for(let j=i+1;j<particles.length;j++){
+            let p2 = particles[j];
+
+            let dx = p.x - p2.x;
+            let dy = p.y - p2.y;
+            let dist = dx*dx + dy*dy;
+
+            if(dist < 12000){
+                let color = `hsl(${(hue + i*3)%360},100%,60%)`;
+
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 1.2;
+
+                ctx.beginPath();
+                ctx.moveTo(p.x,p.y);
+                ctx.lineTo(p2.x,p2.y);
+                ctx.stroke();
+            }
+        }
+    }
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
+</html>

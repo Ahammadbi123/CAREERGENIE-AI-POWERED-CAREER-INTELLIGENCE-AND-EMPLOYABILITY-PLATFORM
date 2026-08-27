@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resume</title>
+
+<style>
+
+/* ===== PAGE ===== */
+@page {
+    size: A4;
+    margin: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    background: black;
+}
+
+/* ===== 🔥 GRID BACKGROUND ===== */
+.grid-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background:
+        linear-gradient(rgba(0,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,255,0.08) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    animation: moveGrid 10s linear infinite;
+}
+
+@keyframes moveGrid {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 40px 40px;
+    }
+}
+
+/* ===== 🔥 SCAN LINE ===== */
+.scan {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(0,255,255,0.08),
+        transparent
+    );
+    animation: scanMove 6s linear infinite;
+}
+
+@keyframes scanMove {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    position: relative;
+    padding: 20px 40px;
+    color: #00ffff;
+}
+
+.top-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.download-btn {
+    position: absolute;
+    right: 40px;
+    top: 15px;
+}
+
+.download-btn button {
+    padding: 8px 18px;
+    background: black;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.download-btn button:hover {
+    background: #00ffff;
+    color: black;
+}
+
+/* ===== RESUME ===== */
+.resume-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.a4 {
+    width: 210mm;
+    min-height: 297mm;
+    background: white;
+    padding: 12mm;
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    animation: pop 0.6s ease;
+}
+
+/* ===== TEXT FIX ===== */
+#resume * {
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 11px !important;
+    color: black !important;
+}
+
+#resume h1 {
+    font-size: 18px !important;
+    text-align: center;
+}
+
+#resume h3 {
+    font-size: 13px !important;
+    text-transform: uppercase;
+}
+
+#resume ul {
+    margin-left: 20px;
+}
+
+/* ===== ENTRY ANIMATION ===== */
+@keyframes pop {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ===== PRINT ===== */
+@media print {
+    body { background: white; }
+
+    .grid-bg, .scan, .top-bar {
+        display: none;
+    }
+
+    .a4 {
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- 🔥 BACKGROUND -->
+<div class="grid-bg"></div>
+<div class="scan"></div>
+
+<!-- HEADER -->
+<div class="top-bar">
+    <div class="top-title">RESUME</div>
+
+    <div class="download-btn">
+        <button onclick="window.print()">Download PDF</button>
+    </div>
+</div>
+
+<!-- RESUME -->
+<div class="resume-wrapper">
+    <div class="a4">
+        <div id="resume">
+            {{ resume | safe }}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

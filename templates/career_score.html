@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Career Score</title>
+
+<style>
+
+/* BODY */
+body{
+    margin:0;
+    font-family:'Segoe UI';
+    background:radial-gradient(circle at center,#020617,#020617,#000);
+    color:white;
+    overflow:hidden;
+}
+
+/* CANVAS */
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+/* FLOAT GLOW */
+body::before{
+    content:'';
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:radial-gradient(circle,#38bdf8,transparent);
+    filter:blur(120px);
+    top:-100px;
+    left:-100px;
+    animation:floatGlow 8s infinite alternate;
+}
+@keyframes floatGlow{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(200px,200px);}
+}
+
+/* CONTAINER */
+.container{
+    width:420px;
+    margin:80px auto;
+    padding:35px;
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(30px);
+
+    box-shadow:
+        0 0 20px rgba(56,189,248,0.3),
+        inset 0 0 20px rgba(255,255,255,0.05);
+
+    animation:fadeIn 1s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(30px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* TITLE */
+h2{
+    text-align:center;
+    color:#38bdf8;
+    text-shadow:0 0 20px #38bdf8;
+}
+
+/* INPUT */
+input, select{
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    border:none;
+    border-radius:12px;
+    background:#020617;
+    color:white;
+}
+
+input:focus, select:focus{
+    box-shadow:0 0 15px #38bdf8;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:16px;
+    background:linear-gradient(90deg,#38bdf8,#0ea5e9,#6366f1);
+    background-size:300%;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+    color:white;
+    animation:gradientMove 4s infinite linear;
+}
+@keyframes gradientMove{
+    0%{background-position:0%;}
+    100%{background-position:300%;}
+}
+
+/* RESULT CARD */
+.result-box{
+    margin-top:30px;
+    padding:25px;
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 0 40px rgba(56,189,248,0.4);
+
+    animation:fadeIn 1s ease;
+}
+
+/* SCORE */
+.score{
+    font-size:40px;
+    color:#38bdf8;
+    text-shadow:0 0 20px #38bdf8;
+}
+
+/* BAR */
+.bar{
+    height:10px;
+    background:#1e293b;
+    border-radius:10px;
+    overflow:hidden;
+    margin:10px 0;
+}
+.fill{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+    background-size:400%;
+    animation:rainbow 5s linear infinite;
+    transition:2s;
+}
+@keyframes rainbow{
+    0%{background-position:0%;}
+    100%{background-position:400%;}
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="container">
+
+<h2>🚀 AI Career Score</h2>
+
+<form method="POST">
+
+<input name="skills" placeholder="Python, Java">
+<input name="projects" type="number" placeholder="Projects">
+<input name="coding" type="number" placeholder="Coding count">
+
+<select name="resume">
+<option value="good">Good Resume</option>
+<option value="average">Average</option>
+<option value="poor">Poor</option>
+</select>
+
+<select name="communication">
+<option value="good">Good Communication</option>
+<option value="average">Average</option>
+<option value="poor">Poor</option>
+</select>
+
+<button type="submit">Check Score 🚀</button>
+
+</form>
+
+<!-- ✅ RESULT -->
+{% if result %}
+
+<div class="result-box">
+
+<h3>🎯 Career Result</h3>
+
+<p>Reputation</p>
+<div class="score" id="rep">0</div>
+<div class="bar"><div id="repBar" class="fill"></div></div>
+
+<p>Visibility</p>
+<div class="score" id="vis">0</div>
+<div class="bar"><div id="visBar" class="fill"></div></div>
+
+<p><b>Level:</b> {{result.level}}</p>
+
+<ul>
+{% for s in result.suggestions %}
+<li>{{s}}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+{% endif %}
+
+</div>
+
+<!-- COUNT ANIMATION -->
+<script>
+{% if result %}
+function animate(id,end){
+    let i=0;
+    let obj=document.getElementById(id);
+    let interval=setInterval(()=>{
+        obj.innerText=i;
+        i++;
+        if(i>end) clearInterval(interval);
+    },20);
+}
+
+animate("rep", {{result.reputation}});
+animate("vis", {{result.visibility}});
+
+setTimeout(()=>{
+    document.getElementById("repBar").style.width="{{result.reputation}}%";
+    document.getElementById("visBar").style.width="{{result.visibility}}%";
+},300);
+{% endif %}
+</script>
+
+<!-- SNOW PARTICLES -->
+<script>
+const canvas=document.getElementById("bg");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+for(let i=0;i<120;i++){
+particles.push({
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+r:Math.random()*3,
+dy:Math.random()*1+0.5
+});
+}
+
+function draw(){
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(p=>{
+ctx.beginPath();
+ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+ctx.fillStyle="white";
+ctx.fill();
+
+p.y+=p.dy;
+
+if(p.y>canvas.height){
+p.y=0;
+p.x=Math.random()*canvas.width;
+}
+});
+
+requestAnimationFrame(draw);
+}
+draw();
+</script>
+
+</body>
+</html>

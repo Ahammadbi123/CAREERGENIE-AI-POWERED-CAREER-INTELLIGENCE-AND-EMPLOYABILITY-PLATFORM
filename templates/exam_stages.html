@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ subject|upper }} Levels</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: black;
+    overflow: hidden;
+}
+
+/* 🔥 PARTICLES */
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+/* HEADING */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    font-size: 42px;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 15px cyan;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* GRID */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(5, 160px);
+    gap: 20px;
+    perspective: 1000px;
+}
+
+/* 🔥 CARD */
+.card {
+    position: relative;
+    padding: 25px 10px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+
+    transition: 0.4s;
+    transform-style: preserve-3d;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* 🌈 GLOW BORDER */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 12px;
+    background: linear-gradient(45deg,
+        red, orange, yellow, green, cyan, blue, violet);
+    z-index: -1;
+    filter: blur(8px);
+    animation: glow 6s linear infinite;
+}
+
+@keyframes glow {
+    0% {filter: hue-rotate(0deg);}
+    100% {filter: hue-rotate(360deg);}
+}
+
+/* 🔥 HOVER 3D */
+.card:hover {
+    transform: rotateY(10deg) rotateX(10deg) scale(1.08);
+}
+
+/* TEXT */
+.card h3 {
+    margin-bottom: 15px;
+}
+
+/* BUTTON */
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+
+    background: linear-gradient(45deg,
+        red, orange, yellow, green, cyan, blue, violet);
+
+    background-size: 300%;
+    animation: btnMove 5s linear infinite;
+}
+
+@keyframes btnMove {
+    0% {background-position:0%}
+    100% {background-position:100%}
+}
+
+.card a:hover {
+    transform: scale(1.1);
+}
+
+/* 🔒 LOCKED */
+.locked {
+    background: rgba(255,255,255,0.08);
+    filter: grayscale(1);
+    opacity: 0.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(3, 160px);
+    }
+}
+
+@media (max-width: 500px) {
+    .cards {
+        grid-template-columns: repeat(2, 150px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles"></canvas>
+
+<h1>{{ subject|upper }} – Levels</h1>
+
+<div class="container">
+    <div class="cards">
+
+        {% for i in range(1, 16) %}
+
+            {% if i <= unlocked_level %}
+                <div class="card">
+                    <h3>Level {{ i }}</h3>
+                    <a href="/exam/{{ subject }}/{{ i }}">Start</a>
+                </div>
+            {% else %}
+                <div class="card locked">
+                    <h3>Level {{ i }}</h3>
+                    <span>🔒</span>
+                </div>
+            {% endif %}
+
+        {% endfor %}
+
+    </div>
+</div>
+
+<script>
+const canvas = document.getElementById("particles");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+let hue = 0;
+
+/* CREATE */
+for (let i = 0; i < 100; i++) {
+    particles.push({
+        x: Math.random()*canvas.width,
+        y: Math.random()*canvas.height,
+        vx: (Math.random()-0.5)*1.5,
+        vy: (Math.random()-0.5)*1.5,
+        size: Math.random()*2+1
+    });
+}
+
+/* ANIMATE */
+function animate() {
+    ctx.fillStyle = "rgba(0,0,0,0.1)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    hue += 1;
+
+    particles.forEach((p,i)=>{
+        let color = `hsl(${hue+i*5},100%,60%)`;
+
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+        ctx.fillStyle=color;
+        ctx.fill();
+
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if(p.x<0||p.x>canvas.width) p.vx*=-1;
+        if(p.y<0||p.y>canvas.height) p.vy*=-1;
+
+        for(let j=i;j<particles.length;j++){
+            let dx=p.x-particles[j].x;
+            let dy=p.y-particles[j].y;
+            let dist=dx*dx+dy*dy;
+
+            if(dist<10000){
+                ctx.beginPath();
+                ctx.strokeStyle=color;
+                ctx.lineWidth=0.5;
+                ctx.moveTo(p.x,p.y);
+                ctx.lineTo(particles[j].x,particles[j].y);
+                ctx.stroke();
+            }
+        }
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+
+</body>
+</html>

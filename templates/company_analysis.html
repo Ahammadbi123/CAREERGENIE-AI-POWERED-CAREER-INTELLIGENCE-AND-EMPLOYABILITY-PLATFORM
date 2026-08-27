@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Career Intelligence</title>
+
+    <!-- 🌌 PARTICLES -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle at top, #020617, #020617);
+            margin: 0;
+            padding: 20px;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* 🌌 PARTICLES */
+        #tsparticles{
+            position:fixed;
+            width:100%;
+            height:100%;
+            z-index:-1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+            text-shadow:0 0 20px #38bdf8;
+        }
+
+        .company-card {
+            background: rgba(10,20,40,0.95);
+            padding: 25px;
+            margin-bottom: 35px;
+            border-radius: 12px;
+
+            border:1px solid rgba(255,255,255,0.1);
+
+            box-shadow:
+                0 0 20px rgba(56,189,248,0.2),
+                inset 0 0 15px rgba(56,189,248,0.1);
+
+            transition:0.4s;
+
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .company-card:hover{
+            transform: scale(1.02);
+            box-shadow:
+                0 0 40px rgba(56,189,248,0.6),
+                0 0 80px rgba(37,99,235,0.3);
+        }
+
+        .section-title {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            margin: 5px 5px 5px 0;
+            background: linear-gradient(45deg,#2563eb,#00f2fe);
+            color: white;
+            border-radius: 20px;
+            font-size: 12px;
+            transition:0.3s;
+        }
+
+        .badge:hover{
+            transform: scale(1.1);
+        }
+
+        .skill-green { background: linear-gradient(45deg,#22c55e,#4ade80); }
+        .skill-orange { background: linear-gradient(45deg,#f59e0b,#f97316); }
+        .skill-red { background: linear-gradient(45deg,#ef4444,#dc2626); }
+
+        .progress-bar {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 8px;
+        }
+
+        .progress-fill {
+            height: 18px;
+            background: linear-gradient(90deg,#00f2fe,#2563eb,#00f2fe);
+            background-size:200% 100%;
+            animation: moveBar 3s linear infinite;
+
+            text-align: right;
+            padding-right: 5px;
+            color: white;
+            font-size: 12px;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin: 15px 0;
+        }
+
+        /* ✨ ENTRY ANIMATION */
+        @keyframes fadeUp{
+            from{
+                opacity:0;
+                transform:translateY(20px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        /* 🔥 BAR ANIMATION */
+        @keyframes moveBar{
+            0%{background-position:0%}
+            100%{background-position:200%}
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- 🌌 PARTICLES -->
+<div id="tsparticles"></div>
+
+<h1>AI Career Intelligence Dashboard</h1>
+
+{% for company in report["Company Hiring Intelligence Reports"] %}
+
+<div class="company-card">
+
+    <h2>{{ company["Company Name"] }} ({{ company["Company Type"] }})</h2>
+
+    <p><strong>Core Technology Base:</strong> {{ company["Core Technology Base"] }}</p>
+    <p><strong>Hiring Base Logic:</strong> {{ company["Hiring Base Logic"] }}</p>
+
+    <p><strong>Demand Level:</strong>
+        {% if company["Demand Level"] == "Very High" %}
+            <span class="badge skill-red">{{ company["Demand Level"] }}</span>
+        {% else %}
+            <span class="badge skill-orange">{{ company["Demand Level"] }}</span>
+        {% endif %}
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="section-title">Hiring DNA</div>
+    {% for skill in company["AI Extracted Hiring DNA"] %}
+        <span class="badge">{{ skill }}</span>
+    {% endfor %}
+
+    <div class="divider"></div>
+
+    <div class="section-title">Required Programming Languages</div>
+    {% for skill in company["Required Programming Languages"] %}
+        <span class="badge">{{ skill }}</span>
+    {% endfor %}
+
+    <div class="section-title">Required Technical Skills</div>
+    {% for skill in company["Required Technical Skills"] %}
+        <span class="badge skill-green">{{ skill }}</span>
+    {% endfor %}
+
+    <div class="section-title">Required Soft Skills</div>
+    {% for skill in company["Required Soft Skills"] %}
+        <span class="badge skill-orange">{{ skill }}</span>
+    {% endfor %}
+
+    <div class="divider"></div>
+
+    <div class="section-title">Core Required Skills (High Impact)</div>
+    {% for skill in company["Core Required Skills (80%+)"] %}
+        <span class="badge skill-red">{{ skill }}</span>
+    {% endfor %}
+
+    <div class="section-title">High Demand Skills</div>
+    {% for skill in company["High Demand Skills (50–80%)"] %}
+        <span class="badge skill-orange">{{ skill }}</span>
+    {% endfor %}
+
+    <div class="section-title">Emerging Skills</div>
+    {% for skill in company["Emerging Skills (<50%)"] %}
+        <span class="badge skill-green">{{ skill }}</span>
+    {% endfor %}
+
+    <div class="divider"></div>
+
+    <div class="section-title">Hiring Weightage Model</div>
+    {% for key, value in company["Hiring Weightage Model"].items() %}
+        <div>{{ key }} ({{ value }}%)</div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: {{ value }}%;">
+                {{ value }}%
+            </div>
+        </div>
+    {% endfor %}
+
+</div>
+
+{% endfor %}
+
+<script>
+tsParticles.load("tsparticles", {
+particles:{
+number:{value:100},
+color:{value:"#38bdf8"},
+links:{enable:true,color:"#38bdf8",distance:130},
+move:{enable:true,speed:2},
+size:{value:2}
+}
+});
+</script>
+
+</body>
+</html>

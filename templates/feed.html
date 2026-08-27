@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Feed</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- 🌌 PARTICLES -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<style>
+
+/* 🌌 BACKGROUND */
+body{
+background: radial-gradient(circle at top, #020617, #020617);
+color:white;
+overflow-x:hidden;
+}
+
+/* PARTICLES */
+#tsparticles{
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* 🔥 TITLE */
+h3{
+text-shadow:0 0 20px #2563eb;
+}
+
+/* 🚀 CARD */
+.card{
+background: linear-gradient(145deg, rgba(10,20,40,0.95), rgba(2,6,23,0.98)) !important;
+border-radius:18px !important;
+border:1px solid rgba(37,99,235,0.3) !important;
+color:white !important;
+
+box-shadow:
+0 0 20px rgba(37,99,235,0.2),
+inset 0 0 20px rgba(37,99,235,0.1);
+
+transition: all 0.4s ease;
+position:relative;
+overflow:hidden;
+
+animation: fadeUp 0.6s ease forwards;
+}
+
+/* 🌈 GLOW BORDER */
+.card::before{
+content:"";
+position:absolute;
+inset:0;
+border-radius:18px;
+padding:1px;
+
+background: linear-gradient(45deg,#2563eb,#00f2fe,#7c3aed);
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+-webkit-mask-composite: xor;
+mask-composite: exclude;
+
+opacity:0.6;
+animation: borderGlow 4s linear infinite;
+}
+
+/* 🚀 HOVER */
+.card:hover{
+transform: translateY(-10px) scale(1.03);
+box-shadow:
+0 0 40px rgba(0,242,254,0.6),
+0 0 80px rgba(37,99,235,0.3);
+}
+
+/* TEXT FIX */
+.card-body{
+color:white !important;
+}
+
+.card h5{
+color:#00f2fe;
+font-weight:bold;
+}
+
+.card p{
+color:#cbd5e1;
+}
+
+/* APPLY BUTTON */
+.btn-success{
+background: linear-gradient(45deg,#22c55e,#4ade80);
+border:none;
+border-radius:10px;
+transition: all 0.3s ease;
+}
+
+.btn-success:hover{
+transform: scale(1.05);
+box-shadow:0 0 15px #22c55e;
+}
+
+/* ✨ ENTRY ANIMATION */
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* 🌈 BORDER ANIMATION */
+@keyframes borderGlow{
+0%{filter:hue-rotate(0deg);}
+100%{filter:hue-rotate(360deg);}
+}
+
+</style>
+
+</head>
+
+<body class="p-3">
+
+<!-- 🌌 PARTICLES -->
+<div id="tsparticles"></div>
+
+<h3 class="text-center mb-4">🔥 Live Job Updates</h3>
+
+<div class="container">
+
+{% for job in jobs %}
+<div class="card mb-3">
+    <div class="card-body">
+        <h5>🚀 {{ job.title }}</h5>
+        <p>🏢 {{ job.company }}</p>
+
+        <a href="{{ job.apply }}" target="_blank" class="btn btn-success">
+            Apply
+        </a>
+    </div>
+</div>
+{% endfor %}
+
+</div>
+
+<script>
+
+/* 🌌 PARTICLES CONFIG */
+tsParticles.load("tsparticles", {
+particles: {
+number: { value: 100 },
+color: { value: "#00f2fe" },
+links: {
+enable: true,
+color: "#2563eb",
+distance: 130
+},
+move: {
+enable: true,
+speed: 2
+},
+size: { value: 2 }
+},
+background: {
+color: "transparent"
+}
+});
+
+</script>
+
+</body>
+</html>
