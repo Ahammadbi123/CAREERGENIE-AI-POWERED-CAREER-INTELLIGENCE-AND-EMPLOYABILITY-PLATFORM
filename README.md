@@ -7,14 +7,11 @@ The platform brings Resume Building, Resume Analysis, Job Intelligence, Skill An
 
 -------------------------------
 
-🌐 Live Demo
-🚀 CAREERGENIE Live Application
+## 🚀 Live Demo
 
-Live Demo:
+🔗 **Live Application:** https://careergenie-ai-powered-career.onrender.com
 
-PASTE_YOUR_RENDER_LINK_HERE
-
-Replace PASTE_YOUR_RENDER_LINK_HERE with your actual Render deployment URL.
+> The application is deployed on Render and can be accessed using the link above.
 
 -----------------------------------------
 
