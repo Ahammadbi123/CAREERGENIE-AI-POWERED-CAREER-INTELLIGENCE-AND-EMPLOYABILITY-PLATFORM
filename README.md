@@ -1,81 +1,83 @@
 # 🚀 CAREERGENIE – AI-POWERED CAREER INTELLIGENCE AND EMPLOYABILITY PLATFORM
 
-CAREERGENIE is an AI-powered career intelligence and employability platform designed to help students and job seekers prepare for modern recruitment processes.
+CAREERGENIE is an AI-powered career intelligence and employability platform designed to help students, freshers, job seekers, and placement aspirants prepare for modern recruitment.
 
-The platform combines Resume Optimization, Job Analysis, Skill Demand Analysis, Company Requirement Analysis, AI Career Guidance, AI Exams, Mock Interviews, Interview Preparation, and Employability Assessment into a single integrated system.
-
----
-
-## 🌐 Live Demo
-
-🚀 **Live Application:**  
-PASTE_YOUR_RENDER_LINK_HERE
-
-> After deploying the project on Render, replace the above link with your actual Render URL.
+The platform brings Resume Building, Resume Analysis, Job Intelligence, Skill Analysis, Company Requirements, AI Exams, Interview Preparation, Mock Interviews, Career Guidance, and Employability Analysis into one integrated platform.
 
 ---
 
-## 📌 Project Overview
+## 🎯 Project Overview
 
-Finding the right job and preparing for recruitment is difficult for many students because job requirements continuously change and candidates often do not know:
+CAREERGENIE helps candidates understand their career requirements, improve their resumes, identify skill gaps, prepare for interviews, and evaluate their career readiness.
 
-- Which skills are currently in demand
-- Whether their resume is ATS-friendly
-- How well their resume matches a particular job
-- What skills a company expects
-- What interview questions they may face
-- Which areas they need to improve
-- Whether they are ready for an interview
+### Main Workflow
 
-CAREERGENIE addresses these problems by providing an integrated AI-based career intelligence platform.
-
-The system analyzes career-related information and provides personalized recommendations to improve a candidate's employability.
-
----
-
-# 🎯 Objectives
-
-The major objectives of CAREERGENIE are:
-
-1. Build an AI-powered career guidance platform.
-2. Analyze and optimize resumes for ATS compatibility.
-3. Analyze job descriptions and identify required skills.
-4. Analyze programming skill demand and trends.
-5. Provide company-specific preparation guidance.
-6. Generate AI-based interview questions and practice tests.
-7. Conduct AI-powered mock interviews.
-8. Identify candidate skill gaps.
-9. Provide personalized interview preparation roadmaps.
-10. Analyze interview performance and readiness.
-11. Provide employability insights and career recommendations.
+Resume
+→ Job Description
+→ Resume Analysis
+→ Skill Analysis
+→ Skill Gap
+→ Interview Preparation
+→ AI Practice
+→ Mock Interview
+→ Performance Analysis
+→ Employability Insights
 
 ---
 
-# ⭐ Key Features
+## ✨ Key Features
+
+- 🤖 AI Resume Builder
+- 📄 Resume Analyzer
+- 📊 ATS Score Analysis
+- 🎯 Job Match Analysis
+- 💼 Job Intelligence
+- 📈 Skill Demand Analyzer
+- 🔥 Trending Skills Analysis
+- 🏢 Company Requirement Analysis
+- 🎤 Company-Wise Interview Preparation
+- 📝 AI Exams and Practice Tests
+- 🤖 AI Mock Interview
+- 🗺️ Personalized Interview Roadmap
+- 🔎 Skill Gap Analysis
+- ❌ Company Rejection Pattern Analysis
+- 🛡️ Resume Skill Truth Checker
+- 💡 Doubt-to-Interview Question Converter
+- 💬 AI Career Chatbot
+- 📊 Interview Readiness Score
+- 🚀 Employability Analysis
+
+---
+
+# 🧩 Major Modules
 
 ## 1. 🤖 GenAI Universal Resume Builder
 
-The Resume Builder helps users create professional and ATS-friendly resumes.
+Creates professional and ATS-friendly resumes using structured resume information.
 
-### Features:
+### Features
 
 - Resume generation
-- AI-assisted content improvement
-- Professional resume formatting
-- A4 resume format
-- One-page resume support
-- ATS-friendly structure
+- Career objective
+- Education
+- Technical skills
+- Projects
+- Internships
+- Experience
+- Achievements
+- Strengths
+- Languages
 - Resume preview
 - PDF download
-- Job-specific resume optimization
+- Job-specific optimization
 
 ---
 
 ## 2. 📄 Resume Analyzer
 
-The Resume Analyzer evaluates a candidate's resume against a job description.
+Analyzes the candidate's resume according to the target job.
 
-### Features:
+### Features
 
 - Resume analysis
 - ATS score
@@ -84,317 +86,273 @@ The Resume Analyzer evaluates a candidate's resume against a job description.
 - Skill matching
 - Missing skill identification
 - Resume improvement suggestions
-- Job-specific optimization
-
-This helps candidates understand how suitable their resume is for a particular job.
 
 ---
 
 ## 3. 💼 Job Intelligence
 
-CAREERGENIE provides job-related intelligence to help candidates understand current opportunities.
+Provides job-related information to help candidates find suitable opportunities.
 
-### Features:
+### Features
 
-- Job search
-- Job vacancy information
-- Company information
+- Job opportunities
 - Job roles
 - Required qualifications
 - Required skills
-- Salary/package information
+- Experience requirements
+- Salary information
+- Company information
 - Application links
-- Job filtering
-
-The platform is designed to help users discover relevant career opportunities more efficiently.
 
 ---
 
 ## 4. 📊 Skill Demand Analyzer
 
-The Skill Demand Analyzer helps users understand which technical skills are required in the current job market.
+Analyzes skills required for a specific job role.
 
-### Features:
+Users can provide:
 
-- Skill demand analysis
-- Category-based skill analysis
-- AI-generated skills
-- Demand graph
-- Trending skills
-- Role-based skill recommendations
-- Location-based analysis
+- Job role
+- Location
+- Experience level
 
-Users can enter a job role, location, and experience level to understand the skills required for that career path.
+The system identifies relevant skills and provides skill-demand insights.
 
 ---
 
-## 5. 🏢 Company Requirement Analysis
+## 5. 🔥 Trending Skills Analyzer
 
-This module analyzes company-specific requirements.
+Helps candidates understand important and trending technical skills related to modern job roles.
 
-### It helps users understand:
+It can be used to identify technologies and skills that candidates should focus on.
 
-- Required technical skills
+---
+
+## 6. 🏢 Company Requirement Analysis
+
+Analyzes requirements associated with companies and job roles.
+
+### It focuses on:
+
+- Technical skills
 - Programming languages
+- Tools and technologies
+- Qualifications
+- Experience
 - Job roles
-- Qualification requirements
-- Interview expectations
-- Important preparation areas
-
-This allows students to prepare specifically for their target companies.
+- Interview requirements
 
 ---
 
-## 6. 🎯 Company-Wise Interview Preparation
+## 7. 🎤 Company-Wise Interview Preparation
 
-CAREERGENIE provides company-specific interview preparation.
+Provides company-oriented interview preparation.
 
-### Supported areas include:
+### Workflow
 
-- Company-specific questions
-- Technical interview preparation
-- HR interview preparation
-- Coding preparation
-- Frequently expected topics
-- Role-based preparation
-- Interview roadmap
-
-The goal is to help candidates prepare according to the requirements of their target company.
+Company
+↓
+Job Role
+↓
+Company Requirements
+↓
+Required Skills
+↓
+Interview Topics
+↓
+Preparation Plan
+↓
+Practice Questions
+↓
+Mock Interview
 
 ---
 
-## 7. 📝 AI Exams & Practice Tests
+## 8. 📝 AI Exams & Practice Tests
 
-The platform provides AI-assisted examination and practice features.
+Provides AI-assisted practice for technical and interview preparation.
 
-### Features:
+### Includes:
 
-- Practice questions
 - Technical questions
 - Programming questions
+- Role-based questions
 - Interview questions
+- Practice tests
 - AI-generated questions
-- Performance-based preparation
-
-This allows users to practice before attending real recruitment assessments.
 
 ---
 
-## 8. 🎤 AI Mock Interview
+## 9. 🤖 AI Mock Interview
 
-The AI Mock Interview module simulates a real interview environment.
+Provides an AI-assisted interview practice environment.
 
-### Interview stages can include:
+### Includes:
 
-### Basic Interview
-
-- General introduction
 - HR questions
-- Communication evaluation
-
-### Technical Interview
-
 - Technical questions
-- Programming concepts
-- Role-related questions
-- Technical response evaluation
-
-### Advanced Analysis
-
-The system can be extended to analyze:
-
-- Facial expressions
-- Eye movement
-- Posture
-- Confidence
-- Communication
-- Interview response quality
-
-The purpose is to provide a realistic interview practice environment.
+- Role-based questions
+- AI-generated questions
+- Interview responses
+- Performance analysis
+- Interview readiness
 
 ---
 
-## 9. 🧠 Personalized Interview Roadmap
+## 10. 🗺️ Personalized Interview Roadmap
 
-The platform generates a personalized preparation roadmap based on the candidate's career goal.
+Creates a structured preparation path for the candidate.
 
-### Roadmap includes:
+### Workflow
 
-- Skills to learn
-- Topics to revise
-- Interview questions
-- Technical preparation
-- Coding preparation
-- HR preparation
-- Practice recommendations
-
-This helps users follow a structured preparation path.
-
----
-
-## 10. 🔍 Skill Gap Analysis
-
-Skill Gap Analysis compares a candidate's current skills with the skills required for a target role.
-
-### It identifies:
-
-- Existing skills
-- Missing skills
-- Important skills
-- High-demand skills
-- Recommended learning areas
-
-This helps candidates focus on the skills that can improve their employability.
+Target Job
+↓
+Required Skills
+↓
+Current Skills
+↓
+Skill Gaps
+↓
+Preparation Topics
+↓
+Practice Tests
+↓
+Mock Interview
+↓
+Performance Analysis
 
 ---
 
-## 11. ❌ Company Rejection Pattern Analysis
+## 11. 🔎 Skill Gap Analysis
 
-This module is designed to help candidates understand possible reasons behind unsuccessful applications.
+Compares candidate skills with target job requirements.
 
-Potential analysis areas include:
+### Workflow
 
-- Missing skills
-- Resume problems
+Candidate Skills
++
+Job Requirements
+↓
+Skill Comparison
+↓
+Missing Skills
+↓
+Skill Gap
+↓
+Recommended Preparation
+
+---
+
+## 12. ❌ Company Rejection Pattern Analysis
+
+Helps candidates understand possible reasons for unsuccessful applications.
+
+### Analysis Areas
+
+- Skill mismatch
+- Resume issues
 - Qualification mismatch
-- Job requirement mismatch
+- Experience mismatch
 - Interview preparation gaps
-- Technical skill gaps
-
-The goal is to convert rejection into actionable improvement areas.
-
----
-
-## 12. 💡 AI Doubt-to-Interview Question Converter
-
-Users can enter a technical doubt or topic and convert it into potential interview questions.
-
-For example:
-
-Input:
-
-    What is Python inheritance?
-
-The system can generate interview-oriented questions such as:
-
-- What is inheritance in Python?
-- What are the types of inheritance?
-- Explain multiple inheritance.
-- Give a real-world example of inheritance.
-
-This helps students prepare from their own doubts and learning topics.
+- Job requirement mismatch
 
 ---
 
 ## 13. 🛡️ Resume Skill Truth Checker
 
-This feature focuses on checking whether the skills mentioned in a resume are actually supported by the candidate's knowledge or project experience.
+Helps candidates check whether the skills mentioned in their resume are supported by their projects, experience, or knowledge.
 
-It helps reduce the risk of mentioning skills that the candidate cannot confidently explain during an interview.
-
----
-
-## 14. 📈 Interview Readiness Score
-
-CAREERGENIE can evaluate different preparation factors and provide an overall interview readiness indication.
-
-Possible factors include:
-
-- Technical skills
-- Communication
-- Resume quality
-- Job match
-- Interview preparation
-- Skill gaps
-- Practice performance
-
-This gives candidates a quick understanding of their preparation level.
+This encourages candidates to maintain realistic and interview-ready resumes.
 
 ---
 
-## 15. 🤖 GenAI Career Chatbot
+## 14. 💡 AI Doubt-to-Interview Question Converter
 
-The Career Chatbot provides AI-based career assistance.
+Converts a technical doubt or learning topic into possible interview questions.
 
-Users can ask questions related to:
+### Example
+
+Input:
+
+"What is Python inheritance?"
+
+Possible questions:
+
+- What is inheritance in Python?
+- What are the types of inheritance?
+- What is multiple inheritance?
+- Give a real-world example of inheritance.
+
+---
+
+## 15. 💬 AI Career Chatbot
+
+Provides AI-assisted career and technical guidance.
+
+### Users can ask about:
 
 - Programming
 - Career preparation
 - Interview preparation
-- Resume improvement
+- Resume preparation
 - Job roles
 - Technical concepts
+- Skills
 - Learning paths
 
-The project also includes a knowledge-based response system for selected technical subjects.
+---
+
+## 16. 📊 Interview Readiness Score
+
+Evaluates preparation-related factors such as:
+
+- Resume quality
+- Job match
+- Technical skills
+- Skill gaps
+- Practice performance
+- Interview preparation
 
 ---
 
-# 🏗️ System Workflow
+## 17. 🚀 Employability Analysis
 
-                    ┌──────────────────────┐
-                    │        USER          │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                 ┌─────────────────────────┐
-                 │   CAREERGENIE PLATFORM  │
-                 └────────────┬────────────┘
-                              │
-          ┌───────────────────┼───────────────────┐
-          │                   │                   │
-          ▼                   ▼                   ▼
-   Resume Analysis       Job Analysis       Skill Analysis
-          │                   │                   │
-          └───────────────────┼───────────────────┘
-                              │
-                              ▼
-                    ┌──────────────────┐
-                    │   Skill Gaps     │
-                    └────────┬─────────┘
-                             │
-                             ▼
-                 ┌────────────────────────┐
-                 │ Personalized Career   │
-                 │      Preparation       │
-                 └───────────┬────────────┘
-                             │
-                             ▼
-                  ┌──────────────────────┐
-                  │ AI Exams & Mock      │
-                  │ Interviews           │
-                  └───────────┬──────────┘
-                              │
-                              ▼
-                  ┌──────────────────────┐
-                  │ Performance &        │
-                  │ Readiness Analysis   │
-                  └───────────┬──────────┘
-                              │
-                              ▼
-                    ┌──────────────────┐
-                    │ Employability    │
-                    │ Insights          │
-                    └──────────────────┘
+Provides career-readiness insights using multiple factors.
+
+### Factors include:
+
+- Resume quality
+- ATS compatibility
+- Job match
+- Technical skills
+- Skill demand
+- Skill gaps
+- Interview preparation
+- Practice performance
+- Interview readiness
+
 ---
 
+# 🛠️ Technology Stack
 
-## 🛠️ Technology Stack
+## Frontend
 
-### Frontend
 - HTML5
 - CSS3
 - JavaScript
-- Responsive UI
+- Responsive Web Design
+- Interactive UI
 - Charts and Data Visualization
 
-### Backend
+## Backend
+
 - Python
 - Flask
 - Flask Blueprints
 - REST APIs
 
-### Artificial Intelligence
+## Artificial Intelligence
+
 - Google Gemini API
 - Groq API
 - Generative AI
@@ -404,7 +362,8 @@ The project also includes a knowledge-based response system for selected technic
 - Career Assistance
 - Skill Analysis
 
-### Machine Learning
+## Machine Learning
+
 - Python
 - Scikit-learn
 - TF-IDF
@@ -412,24 +371,28 @@ The project also includes a knowledge-based response system for selected technic
 - Natural Language Processing
 - Text Classification
 
-### Database
+## Database
+
 - SQLite
 - SQLAlchemy
 
-### Authentication
+## Authentication
+
 - Google OAuth
 - Authlib
 - Session-based Authentication
 
-### External APIs
+## External APIs
+
 - Adzuna API
 - Job Search APIs
 - Career and Skill Datasets
 
+---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
-
+```text
 CAREERGENIE/
 │
 ├── career_intelligence/
@@ -449,3 +412,323 @@ CAREERGENIE/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+
+## ⚙️ Installation & Setup
+1. Clone the Repository
+- git clone https://github.com/Ahammadbi123/CAREERGENIE-AI-POWERED-CAREER-INTELLIGENCE-AND-EMPLOYABILITY-PLATFORM.git
+2. Open the Project Folder
+- cd CAREERGENIE-AI-POWERED-CAREER-INTELLIGENCE-AND-EMPLOYABILITY-PLATFORM
+3. Create Virtual Environment
+- python -m venv .venv
+4. Activate Virtual Environment
+- Windows
+- .venv\Scripts\activate
+- Linux / macOS
+- source .venv/bin/activate
+5. Install Dependencies
+- pip install -r requirements.txt
+--------------
+## 🔐 Environment Variables
+
+Create a .env file in the project root.
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+FLASK_SECRET_KEY=your_flask_secret_key
+
+GEMINI_API_KEY=your_gemini_api_key
+GROQ_API_KEY=your_groq_api_key
+
+ADZUNA_APP_ID=your_adzuna_app_id
+ADZUNA_APP_KEY=your_adzuna_app_key
+
+## ⚠️ Security
+
+Never upload actual API keys or passwords to GitHub.
+Add the following to .gitignore:
+.env
+.venv/
+__pycache__/
+*.pyc
+instance/
+
+--------------------------------
+
+## ▶️ Run the Application
+
+Activate the virtual environment:
+- .venv\Scripts\activate
+Run the Flask application:
+- python app.py
+Open the application:
+- http://127.0.0.1:5000
+
+-----------------
+
+## 🤖 AI Configuration
+Google Gemini API
+
+Used for selected AI features such as:
+
+Resume generation
+Resume optimization
+Career assistance
+Interview questions
+Skill generation
+Career recommendations
+AI analysis
+Groq API
+
+Used for selected fast AI operations such as:
+
+Skill generation
+Skill demand analysis
+Career analysis
+AI responses
+
+API keys are loaded through environment variables.
+-------------------------------------------
+                    USER
+                      │
+                      ▼
+             ┌─────────────────┐
+             │   CAREERGENIE   │
+             └────────┬────────┘
+                      │
+        ┌─────────────┼─────────────┐
+        ▼             ▼             ▼
+     Resume          Jobs         Skills
+     Analysis       Analysis      Analysis
+        │             │             │
+        └─────────────┼─────────────┘
+                      ▼
+                Skill Gap
+                      │
+                      ▼
+          Career Preparation
+                      │
+                      ▼
+             AI Practice
+                      │
+                      ▼
+             Mock Interview
+                      │
+                      ▼
+          Performance Analysis
+                      │
+                      ▼
+          Employability Insights
+
+---------------------
+
+## 📄 Resume Optimization Workflow
+
+Resume Input
+     ↓
+Job Description
+     ↓
+Resume Analysis
+     ↓
+Keyword Matching
+     ↓
+Skill Matching
+     ↓
+ATS Score
+     ↓
+Job Match Score
+     ↓
+Missing Skills
+     ↓
+Resume Optimization
+     ↓
+Optimized Resume
+     ↓
+PDF Download
+--------------
+
+
+## 🎤 Interview Preparation Workflow
+Target Company
+      ↓
+Target Job Role
+      ↓
+Company Requirements
+      ↓
+Required Skills
+      ↓
+Interview Topics
+      ↓
+AI Questions
+      ↓
+Practice Tests
+      ↓
+Mock Interview
+      ↓
+Performance Analysis
+      ↓
+Interview Readiness
+------------------------------------
+
+## 🎓 Target Users
+
+CAREERGENIE is designed for:
+
+B.Tech Students
+Engineering Students
+Freshers
+Job Seekers
+Internship Seekers
+Placement Aspirants
+Technical Interview Candidates
+Career Switchers
+-----------------------------
+
+##💡 Advantages
+For Students
+Career guidance
+Resume improvement
+Skill gap identification
+Job-specific preparation
+Interview practice
+Personalized preparation
+For Job Seekers
+Resume-job matching
+Job requirement analysis
+Skill demand analysis
+Company preparation
+Interview readiness
+Employability insights
+
+------------------------------------------
+
+##🧪 Testing
+
+Testing files include:
+test_genai.py
+test_models.py
+test_v1beta_models.py
+-Testing should be performed after configuring the required environment variables.
+-----------------------------------
+
+## 🚀 Deployment
+
+CAREERGENIE can be deployed using Render.
+
+Build Command
+pip install -r requirements.txt
+Start Command
+gunicorn app:app
+Deployment Steps
+GitHub Repository
+      ↓
+Connect Repository to Render
+      ↓
+Add Environment Variables
+      ↓
+Install Dependencies
+      ↓
+Configure Start Command
+      ↓
+Deploy
+      ↓
+Live Application
+
+-------------------------------
+
+🌐 Live Demo
+🚀 CAREERGENIE Live Application
+
+Live Demo:
+
+PASTE_YOUR_RENDER_LINK_HERE
+
+Replace PASTE_YOUR_RENDER_LINK_HERE with your actual Render deployment URL.
+
+-----------------------------------------
+## 📌 GitHub Repository
+
+https://github.com/Ahammadbi123/CAREERGENIE-AI-POWERED-CAREER-INTELLIGENCE-AND-EMPLOYABILITY-PLATFORM
+--------------------
+
+## 🔒 Security & Privacy
+
+CAREERGENIE follows basic security practices:
+
+API keys stored in environment variables
+.env excluded from Git
+Authentication protection
+Secure session handling
+Credentials separated from source code
+
+Never expose API keys in public repositories.
+-------------------------
+## 📌 Project Status
+
+🚧 Active Development
+
+Current platform features include:
+
+Resume Builder
+Resume Analyzer
+Job Intelligence
+Skill Analysis
+Company Analysis
+AI Interview Preparation
+AI Exams
+AI Mock Interview
+Career Chatbot
+Employability Analysis
+_____________________________________
+
+## 🔮 Future Enhancements
+Advanced AI Interview Evaluation
+Voice Interview Analysis
+Facial Emotion Analysis
+Eye Tracking
+Posture Analysis
+More Job APIs
+Career Prediction
+Advanced Recommendation System
+Mobile Application
+Multi-language Support
+Advanced Career Analytics
+--------------------------------
+
+## 🤝 Contribution
+
+Contributions and suggestions are welcome.
+Clone
+git clone <repository-url>
+Create Branch
+git checkout -b feature-name
+Commit Changes
+git add .
+git commit -m "Add new feature"
+git add .
+git commit -m "Add new feature"
+Push Branch
+git push origin feature-name
+Then create a Pull Request on GitHub.
+--------------------
+
+## 📜 License
+- This project is developed for educational, research, and career development purposes.
+--------------------
+
+## 👨‍💻 Author
+SHAIK AHAMMAD BI
+https://github.com/Ahammadbi123
+
+---------------------------
+
+## ⭐ Support
+
+If you find CAREERGENIE useful:
+
+⭐ Star the repository
+🍴 Fork the repository
+🐛 Report issues
+💡 Suggest improvements
+🤝 Contribute
+
+-------------------
