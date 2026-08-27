@@ -412,9 +412,12 @@ CAREERGENIE/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```text
 ---------------------------
+`````
 
 ## ⚙️ Installation & Setup
+
 1. Clone the Repository
 - git clone https://github.com/Ahammadbi123/CAREERGENIE-AI-POWERED-CAREER-INTELLIGENCE-AND-EMPLOYABILITY-PLATFORM.git
 2. Open the Project Folder
@@ -428,30 +431,34 @@ CAREERGENIE/
 - source .venv/bin/activate
 5. Install Dependencies
 - pip install -r requirements.txt
+  
 --------------
+
 ## 🔐 Environment Variables
 
-Create a .env file in the project root.
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
+- Create a .env file in the project root.
+1.GOOGLE_CLIENT_ID=your_google_client_id
+2.GOOGLE_CLIENT_SECRET=your_google_client_secret
 
-FLASK_SECRET_KEY=your_flask_secret_key
+3.FLASK_SECRET_KEY=your_flask_secret_key
 
-GEMINI_API_KEY=your_gemini_api_key
-GROQ_API_KEY=your_groq_api_key
+4.GEMINI_API_KEY=your_gemini_api_key
+5.GROQ_API_KEY=your_groq_api_key
 
-ADZUNA_APP_ID=your_adzuna_app_id
-ADZUNA_APP_KEY=your_adzuna_app_key
+6.ADZUNA_APP_ID=your_adzuna_app_id
+7.ADZUNA_APP_KEY=your_adzuna_app_key
+
+--------------------------------
 
 ## ⚠️ Security
 
-Never upload actual API keys or passwords to GitHub.
-Add the following to .gitignore:
-.env
-.venv/
-__pycache__/
-*.pyc
-instance/
+- Never upload actual API keys or passwords to GitHub.
+- Add the following to .gitignore:
+1..env
+2..venv/
+3.__pycache__/
+4.*.pyc
+5.instance/
 
 --------------------------------
 
@@ -471,24 +478,28 @@ Google Gemini API
 
 Used for selected AI features such as:
 
-Resume generation
-Resume optimization
-Career assistance
-Interview questions
-Skill generation
-Career recommendations
-AI analysis
-Groq API
+1.Resume generation
+2.Resume optimization
+3.Career assistance
+4.Interview questions
+5.Skill generation
+6.Career recommendations
+7.AI analysis
+8.Groq API
 
 Used for selected fast AI operations such as:
 
-Skill generation
-Skill demand analysis
-Career analysis
-AI responses
+9.Skill generation
+10.Skill demand analysis
+11.Career analysis
+12.AI responses
 
 API keys are loaded through environment variables.
+
+
 -------------------------------------------
+
+```text
                     USER
                       │
                       ▼
@@ -520,7 +531,10 @@ API keys are loaded through environment variables.
                       ▼
           Employability Insights
 
+
 ---------------------
+
+```
 
 ## 📄 Resume Optimization Workflow
 
@@ -545,10 +559,13 @@ Resume Optimization
 Optimized Resume
      ↓
 PDF Download
+
 --------------
 
 
 ## 🎤 Interview Preparation Workflow
+
+
 Target Company
       ↓
 Target Job Role
@@ -568,47 +585,54 @@ Mock Interview
 Performance Analysis
       ↓
 Interview Readiness
+
+
 ------------------------------------
 
 ## 🎓 Target Users
 
 CAREERGENIE is designed for:
 
-B.Tech Students
-Engineering Students
-Freshers
-Job Seekers
-Internship Seekers
-Placement Aspirants
-Technical Interview Candidates
-Career Switchers
+1.B.Tech Students
+2.Engineering Students
+3.Freshers
+4.Job Seekers
+5.Internship Seekers
+6.Placement Aspirants
+7.Technical Interview Candidates
+8.Career Switchers
+
+
 -----------------------------
 
 ##💡 Advantages
-For Students
-Career guidance
-Resume improvement
-Skill gap identification
-Job-specific preparation
-Interview practice
-Personalized preparation
-For Job Seekers
-Resume-job matching
-Job requirement analysis
-Skill demand analysis
-Company preparation
-Interview readiness
-Employability insights
+
+- For Students
+- Career guidance
+- Resume improvement
+- Skill gap identification
+- Job-specific preparation
+- Interview practice
+- Personalized preparation
+- For Job Seekers
+- Resume-job matching
+- Job requirement analysis
+- Skill demand analysis
+- Company preparation
+- Interview readiness
+- Employability insights
 
 ------------------------------------------
 
 ##🧪 Testing
 
 Testing files include:
-test_genai.py
-test_models.py
-test_v1beta_models.py
--Testing should be performed after configuring the required environment variables.
+
+- test_genai.py
+- test_models.py
+- test_v1beta_models.py
+- Testing should be performed after configuring the required environment variables.
+
 -----------------------------------
 
 ## 🚀 Deployment
@@ -634,6 +658,7 @@ Deploy
       ↓
 Live Application
 
+
 -------------------------------
 
 🌐 Live Demo
@@ -646,23 +671,26 @@ PASTE_YOUR_RENDER_LINK_HERE
 Replace PASTE_YOUR_RENDER_LINK_HERE with your actual Render deployment URL.
 
 -----------------------------------------
+
 ## 📌 GitHub Repository
 
 https://github.com/Ahammadbi123/CAREERGENIE-AI-POWERED-CAREER-INTELLIGENCE-AND-EMPLOYABILITY-PLATFORM
+
 --------------------
 
 ## 🔒 Security & Privacy
 
 CAREERGENIE follows basic security practices:
 
-API keys stored in environment variables
-.env excluded from Git
-Authentication protection
-Secure session handling
-Credentials separated from source code
+- API keys stored in environment variables
+- .env excluded from Git
+- Authentication protection
+- Secure session handling
+- Credentials separated from source code
+- Never expose API keys in public repositories.
 
-Never expose API keys in public repositories.
 -------------------------
+
 ## 📌 Project Status
 
 🚧 Active Development
@@ -679,9 +707,12 @@ AI Exams
 AI Mock Interview
 Career Chatbot
 Employability Analysis
+
 _____________________________________
 
 ## 🔮 Future Enhancements
+
+
 Advanced AI Interview Evaluation
 Voice Interview Analysis
 Facial Emotion Analysis
@@ -693,6 +724,8 @@ Advanced Recommendation System
 Mobile Application
 Multi-language Support
 Advanced Career Analytics
+
+
 --------------------------------
 
 ## 🤝 Contribution
@@ -710,10 +743,13 @@ git commit -m "Add new feature"
 Push Branch
 git push origin feature-name
 Then create a Pull Request on GitHub.
+
 --------------------
 
 ## 📜 License
+
 - This project is developed for educational, research, and career development purposes.
+  
 --------------------
 
 ## 👨‍💻 Author
