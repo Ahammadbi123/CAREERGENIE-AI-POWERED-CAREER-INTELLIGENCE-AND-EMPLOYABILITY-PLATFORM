@@ -437,16 +437,16 @@ CAREERGENIE/
 ## 🔐 Environment Variables
 
 - Create a .env file in the project root.
-1.GOOGLE_CLIENT_ID=your_google_client_id
-2.GOOGLE_CLIENT_SECRET=your_google_client_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
 
-3.FLASK_SECRET_KEY=your_flask_secret_key
+FLASK_SECRET_KEY=your_flask_secret_key
 
-4.GEMINI_API_KEY=your_gemini_api_key
-5.GROQ_API_KEY=your_groq_api_key
+GEMINI_API_KEY=your_gemini_api_key
+GROQ_API_KEY=your_groq_api_key
 
-6.ADZUNA_APP_ID=your_adzuna_app_id
-7.ADZUNA_APP_KEY=your_adzuna_app_key
+ADZUNA_APP_ID=your_adzuna_app_id
+ADZUNA_APP_KEY=your_adzuna_app_key
 
 --------------------------------
 
@@ -454,11 +454,11 @@ CAREERGENIE/
 
 - Never upload actual API keys or passwords to GitHub.
 - Add the following to .gitignore:
-1..env
-2..venv/
-3.__pycache__/
-4.*.pyc
-5.instance/
+.env
+.venv/
+__pycache__/
+*.pyc
+instance/
 
 --------------------------------
 
@@ -478,21 +478,21 @@ Google Gemini API
 
 Used for selected AI features such as:
 
-1.Resume generation
-2.Resume optimization
-3.Career assistance
-4.Interview questions
-5.Skill generation
-6.Career recommendations
-7.AI analysis
-8.Groq API
+Resume generation
+Resume optimization
+Career assistance
+Interview questions
+Skill generation
+Career recommendations
+AI analysis
+Groq API
 
 Used for selected fast AI operations such as:
 
-9.Skill generation
-10.Skill demand analysis
-11.Career analysis
-12.AI responses
+Skill generation
+Skill demand analysis
+Career analysis
+AI responses
 
 API keys are loaded through environment variables.
 
