@@ -377,76 +377,78 @@ The project also includes a knowledge-based response system for selected technic
                     │ Employability    │
                     │ Insights          │
                     └──────────────────┘
-🧩 Major Modules
+---
 
-The platform consists of multiple integrated modules:
+## 🛠️ Technology Stack
 
-GenAI Universal Resume Builder
-Resume Analyzer
-Job Intelligence
-Skill Demand Analyzer
-Company Requirement Analysis
-Company-Wise Interview Preparation
-AI Exams & Practice Tests
-AI Mock Interview
-Personalized Interview Roadmap
-Skill Gap Analysis
-Company Rejection Pattern Analysis
-Resume Skill Truth Checker
-AI Doubt-to-Interview Question Converter
-Interview Readiness Score
-Career Chatbot
-Employability Analysis
-🛠️ Technology Stack
-Frontend
-HTML5
-CSS3
-JavaScript
-Responsive Web Interface
-Interactive UI components
-Charts and visualizations
-Backend
-Python
-Flask
-REST APIs
-Flask Blueprints
-Artificial Intelligence
-Generative AI
-Google Gemini API
-Groq API
-AI-based text generation
-Resume analysis
-Job and skill analysis
-Interview generation
-Machine Learning
-Python
-Scikit-learn
-TF-IDF
-Logistic Regression
-Text classification
-Natural Language Processing
-Database
-SQLite
-SQLAlchemy
-Authentication
-Google OAuth
-Authlib
-Session-based authentication
-External APIs / Data Sources
-Job APIs
-Adzuna API
-Real-time job data sources
-JSON-based career datasets
-📁 Project Structure
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Responsive Web Design
+- Interactive UI Components
+- Charts and Data Visualization
+
+### Backend
+
+- Python
+- Flask
+- Flask Blueprints
+- REST APIs
+
+### Artificial Intelligence
+
+- Generative AI
+- Google Gemini API
+- Groq API
+- AI-based Text Generation
+- Resume Optimization
+- Interview Question Generation
+- Career Assistance
+- Skill Analysis
+
+### Machine Learning
+
+- Python
+- Scikit-learn
+- TF-IDF
+- Logistic Regression
+- Natural Language Processing
+- Text Classification
+
+### Database
+
+- SQLite
+- SQLAlchemy
+
+### Authentication
+
+- Google OAuth
+- Authlib
+- Session-based Authentication
+
+### External APIs
+
+- Adzuna API
+- Job Search APIs
+- Career and Skill Datasets
+
+---
+
+## 📁 Project Structure
+
+```text
 CAREERGENIE-AI-POWERED-CAREER-INTELLIGENCE-AND-EMPLOYABILITY-PLATFORM/
 │
 ├── career_intelligence/
+│   └── Career intelligence modules
 │
 ├── data/
-│   └── Skills and career datasets
+│   └── Career and skill datasets
 │
 ├── genai_modules/
-│   └── AI modules
+│   └── Generative AI modules
 │
 ├── output/
 │   └── Generated outputs
@@ -466,7 +468,7 @@ CAREERGENIE-AI-POWERED-CAREER-INTELLIGENCE-AND-EMPLOYABILITY-PLATFORM/
 ├── services/
 │   ├── ai_engine.py
 │   ├── aggregator.py
-│   └── Gemini services
+│   └── AI service modules
 │
 ├── static/
 │   ├── css/
